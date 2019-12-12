@@ -20,6 +20,9 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
+#include "can.h"
+#include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -41,9 +44,6 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-CAN_HandleTypeDef hcan1;
-CAN_HandleTypeDef hcan2;
-CAN_HandleTypeDef hcan3;
 
 /* USER CODE BEGIN PV */
 
@@ -51,10 +51,6 @@ CAN_HandleTypeDef hcan3;
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-static void MX_GPIO_Init(void);
-static void MX_CAN1_Init(void);
-static void MX_CAN2_Init(void);
-static void MX_CAN3_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -96,6 +92,7 @@ int main(void)
   MX_CAN1_Init();
   MX_CAN2_Init();
   MX_CAN3_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
 
 
@@ -149,142 +146,6 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-}
-
-/**
-  * @brief CAN1 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_CAN1_Init(void)
-{
-
-  /* USER CODE BEGIN CAN1_Init 0 */
-
-  /* USER CODE END CAN1_Init 0 */
-
-  /* USER CODE BEGIN CAN1_Init 1 */
-
-  /* USER CODE END CAN1_Init 1 */
-  hcan1.Instance = CAN1;
-  hcan1.Init.Prescaler = 16;
-  hcan1.Init.Mode = CAN_MODE_NORMAL;
-  hcan1.Init.SyncJumpWidth = CAN_SJW_1TQ;
-  hcan1.Init.TimeSeg1 = CAN_BS1_1TQ;
-  hcan1.Init.TimeSeg2 = CAN_BS2_1TQ;
-  hcan1.Init.TimeTriggeredMode = DISABLE;
-  hcan1.Init.AutoBusOff = DISABLE;
-  hcan1.Init.AutoWakeUp = DISABLE;
-  hcan1.Init.AutoRetransmission = DISABLE;
-  hcan1.Init.ReceiveFifoLocked = DISABLE;
-  hcan1.Init.TransmitFifoPriority = DISABLE;
-  if (HAL_CAN_Init(&hcan1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN CAN1_Init 2 */
-
-  /* USER CODE END CAN1_Init 2 */
-
-}
-
-/**
-  * @brief CAN2 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_CAN2_Init(void)
-{
-
-  /* USER CODE BEGIN CAN2_Init 0 */
-
-  /* USER CODE END CAN2_Init 0 */
-
-  /* USER CODE BEGIN CAN2_Init 1 */
-
-  /* USER CODE END CAN2_Init 1 */
-  hcan2.Instance = CAN2;
-  hcan2.Init.Prescaler = 16;
-  hcan2.Init.Mode = CAN_MODE_NORMAL;
-  hcan2.Init.SyncJumpWidth = CAN_SJW_1TQ;
-  hcan2.Init.TimeSeg1 = CAN_BS1_1TQ;
-  hcan2.Init.TimeSeg2 = CAN_BS2_1TQ;
-  hcan2.Init.TimeTriggeredMode = DISABLE;
-  hcan2.Init.AutoBusOff = DISABLE;
-  hcan2.Init.AutoWakeUp = DISABLE;
-  hcan2.Init.AutoRetransmission = DISABLE;
-  hcan2.Init.ReceiveFifoLocked = DISABLE;
-  hcan2.Init.TransmitFifoPriority = DISABLE;
-  if (HAL_CAN_Init(&hcan2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN CAN2_Init 2 */
-
-  /* USER CODE END CAN2_Init 2 */
-
-}
-
-/**
-  * @brief CAN3 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_CAN3_Init(void)
-{
-
-  /* USER CODE BEGIN CAN3_Init 0 */
-
-  /* USER CODE END CAN3_Init 0 */
-
-  /* USER CODE BEGIN CAN3_Init 1 */
-
-  /* USER CODE END CAN3_Init 1 */
-  hcan3.Instance = CAN3;
-  hcan3.Init.Prescaler = 16;
-  hcan3.Init.Mode = CAN_MODE_NORMAL;
-  hcan3.Init.SyncJumpWidth = CAN_SJW_1TQ;
-  hcan3.Init.TimeSeg1 = CAN_BS1_1TQ;
-  hcan3.Init.TimeSeg2 = CAN_BS2_1TQ;
-  hcan3.Init.TimeTriggeredMode = DISABLE;
-  hcan3.Init.AutoBusOff = DISABLE;
-  hcan3.Init.AutoWakeUp = DISABLE;
-  hcan3.Init.AutoRetransmission = DISABLE;
-  hcan3.Init.ReceiveFifoLocked = DISABLE;
-  hcan3.Init.TransmitFifoPriority = DISABLE;
-  if (HAL_CAN_Init(&hcan3) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN CAN3_Init 2 */
-
-  /* USER CODE END CAN3_Init 2 */
-
-}
-
-/**
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_GPIO_Init(void)
-{
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
-
-  /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LD1_Pin|LD3_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pins : LD1_Pin LD3_Pin */
-  GPIO_InitStruct.Pin = LD1_Pin|LD3_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
 }
 
 /* USER CODE BEGIN 4 */

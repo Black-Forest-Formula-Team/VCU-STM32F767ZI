@@ -58,10 +58,32 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define BOTS_Pin GPIO_PIN_1
+#define BOTS_GPIO_Port GPIOF
+#define HVOK_IN_Pin GPIO_PIN_2
+#define HVOK_IN_GPIO_Port GPIOF
+#define HV_unlock_Pin GPIO_PIN_3
+#define HV_unlock_GPIO_Port GPIOF
+#define Throttle_IN1_Pin GPIO_PIN_0
+#define Throttle_IN1_GPIO_Port GPIOA
+#define Throttle_IN2_Pin GPIO_PIN_1
+#define Throttle_IN2_GPIO_Port GPIOA
 #define LD1_Pin GPIO_PIN_0
 #define LD1_GPIO_Port GPIOB
+#define INV1_RX_Pin GPIO_PIN_12
+#define INV1_RX_GPIO_Port GPIOB
 #define LD3_Pin GPIO_PIN_14
 #define LD3_GPIO_Port GPIOB
+#define INV2_RX_Pin GPIO_PIN_8
+#define INV2_RX_GPIO_Port GPIOA
+#define SysEl_RX_Pin GPIO_PIN_11
+#define SysEl_RX_GPIO_Port GPIOA
+#define SysEl_TX_Pin GPIO_PIN_12
+#define SysEl_TX_GPIO_Port GPIOA
+#define INV2_TX_Pin GPIO_PIN_15
+#define INV2_TX_GPIO_Port GPIOA
+#define INV2_TXB6_Pin GPIO_PIN_6
+#define INV2_TXB6_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
