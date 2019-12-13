@@ -1,0 +1,106 @@
+.TH "C:/Users/BFFT_Konstr_3/Documents/STM_Board_Config/BFFT_VCU_V1/src/main.c" 3 "Fri Dec 13 2019" "BFFT_VCU_V1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/BFFT_Konstr_3/Documents/STM_Board_Config/BFFT_VCU_V1/src/main.c \- : Main program body  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'main\&.h'\fP
+.br
+\fC#include 'adc\&.h'\fP
+.br
+\fC#include 'can\&.h'\fP
+.br
+\fC#include 'gpio\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSystemClock_Config\fP (void)"
+.br
+.RI "System Clock Configuration\&. "
+.ti -1c
+.RI "int \fBmain\fP (void)"
+.br
+.RI "The application entry point\&. "
+.ti -1c
+.RI "void \fBError_Handler\fP (void)"
+.br
+.RI "This function is executed in case of error occurrence\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+: Main program body 
+
+
+.PP
+\fBAttention\fP
+.RS 4
+
+.RE
+.PP
+.SS "(C) Copyright (c) 2019 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.PP
+Definition in file \fBmain\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void Error_Handler (void)"
+
+.PP
+This function is executed in case of error occurrence\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+Definition at line 157 of file main\&.c\&.
+.PP
+Referenced by MX_ADC1_Init(), MX_CAN1_Init(), MX_CAN2_Init(), MX_CAN3_Init(), and SystemClock_Config()\&.
+.SS "int main (void)"
+
+.PP
+The application entry point\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fIint\fP 
+.RE
+.PP
+
+.PP
+Definition at line 67 of file main\&.c\&.
+.PP
+References MX_ADC1_Init(), MX_CAN1_Init(), MX_CAN2_Init(), MX_CAN3_Init(), MX_GPIO_Init(), and SystemClock_Config()\&.
+.SS "void SystemClock_Config (void)"
+
+.PP
+System Clock Configuration\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+Configure the main internal regulator output voltage
+.PP
+Initializes the CPU, AHB and APB busses clocks
+.PP
+Initializes the CPU, AHB and APB busses clocks
+.PP
+Definition at line 115 of file main\&.c\&.
+.PP
+References Error_Handler()\&.
+.PP
+Referenced by main()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BFFT_VCU_V1 from the source code\&.

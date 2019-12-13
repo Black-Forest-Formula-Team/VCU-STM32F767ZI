@@ -1,0 +1,93 @@
+.TH "STM32F7xx_System_Private_Functions" 3 "Fri Dec 13 2019" "BFFT_VCU_V1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+STM32F7xx_System_Private_Functions
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSystemInit\fP (void)"
+.br
+.RI "Setup the microcontroller system Initialize the Embedded Flash Interface, the PLL and update the SystemFrequency variable\&. "
+.ti -1c
+.RI "void \fBSystemCoreClockUpdate\fP (void)"
+.br
+.RI "Update SystemCoreClock variable according to Clock Register Values\&. The SystemCoreClock variable contains the core clock (HCLK), it can be used by the user application to setup the SysTick timer or configure other parameters\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Function Documentation"
+.PP 
+.SS "void SystemCoreClockUpdate (void)"
+
+.PP
+Update SystemCoreClock variable according to Clock Register Values\&. The SystemCoreClock variable contains the core clock (HCLK), it can be used by the user application to setup the SysTick timer or configure other parameters\&. 
+.PP
+\fBNote\fP
+.RS 4
+Each time the core clock (HCLK) changes, this function must be called to update SystemCoreClock variable value\&. Otherwise, any configuration based on this variable will be incorrect\&. 
+.br
+.PP
+- The system frequency computed by this function is not the real frequency in the chip\&. It is calculated based on the predefined constant and the selected clock source:
+.RE
+.PP
+.IP "\(bu" 2
+If SYSCLK source is HSI, SystemCoreClock will contain the \fBHSI_VALUE(*)\fP
+.IP "\(bu" 2
+If SYSCLK source is HSE, SystemCoreClock will contain the \fBHSE_VALUE(**)\fP
+.IP "\(bu" 2
+If SYSCLK source is PLL, SystemCoreClock will contain the \fBHSE_VALUE(**)\fP or \fBHSI_VALUE(*)\fP multiplied/divided by the PLL factors\&.
+.PP
+.PP
+(*) HSI_VALUE is a constant defined in \fBstm32f7xx_hal_conf\&.h\fP file (default value 16 MHz) but the real value may vary depending on the variations in voltage and temperature\&. 
+.br
+.PP
+(**) HSE_VALUE is a constant defined in \fBstm32f7xx_hal_conf\&.h\fP file (default value 25 MHz), user has to ensure that HSE_VALUE is same as the real frequency of the crystal used\&. Otherwise, this function may have wrong result\&.
+.PP
+.IP "\(bu" 2
+The result of this function could be not correct when using fractional value for HSE crystal\&.
+.PP
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+Definition at line 220 of file system_stm32f7xx\&.c\&.
+.PP
+References AHBPrescTable, HSE_VALUE, HSI_VALUE, and SystemCoreClock\&.
+.SS "void SystemInit (void)"
+
+.PP
+Setup the microcontroller system Initialize the Embedded Flash Interface, the PLL and update the SystemFrequency variable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+Definition at line 151 of file system_stm32f7xx\&.c\&.
+.PP
+References VECT_TAB_OFFSET\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BFFT_VCU_V1 from the source code\&.
