@@ -24,7 +24,6 @@
 #include "can.h"
 #include "gpio.h"
 
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -57,6 +56,17 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+int _write(int file, char *ptr, int len)  //for Debugging
+{
+	int DataIdx;
+
+	for (DataIdx = 0; DataIdx < len; DataIdx++)
+	{
+	   ITM_SendChar( *ptr++ );
+	}
+
+	return len;
+}
 
 /* USER CODE END 0 */
 
@@ -91,7 +101,6 @@ int main(void)
   MX_GPIO_Init();
   MX_CAN1_Init();
   MX_CAN2_Init();
-  MX_CAN3_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
 
@@ -102,7 +111,6 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -157,11 +165,8 @@ void SystemClock_Config(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-	while(1)
-	{
-
-
-	}
+		printf("unecpected ERROR");
+		while(1);
   /* USER CODE END Error_Handler_Debug */
 }
 

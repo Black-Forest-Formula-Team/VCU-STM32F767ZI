@@ -8,19 +8,29 @@
   ******************************************************************************
   * @attention
   *
-  *Each sensor class have to include this header as mother class
+  *Each new Sensor type have to include this sensor type
   *
   ******************************************************************************
   */
 /* USER CODE END Header */
 
+
 #ifndef SENSORS_H_
 #define SENSORS_H_
+
+
+/* Begin includes */
+
+#include "stdio.h"
+
+/* End includes */
+
+using namespace std;
 
 template <typename T>
 class Sensors {
 private:
-		typedef T sensorValue();
+		typedef T sensorValue;
 
 public:
 		Sensors();
@@ -30,11 +40,10 @@ public:
 
 		virtual void pickSensorData() = 0;
 
+
 	#ifdef DEBUG
 		void printOut(){ cout << sensorValue;};
 	#endif  /* DEBUG */
-
-
 };
 
 #endif /* SENSORS_H_ */
