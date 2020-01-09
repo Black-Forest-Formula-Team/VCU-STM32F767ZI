@@ -32,6 +32,7 @@
   ******************************************************************************
   */ 
 
+
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f7xx_hal.h"
 
@@ -587,6 +588,7 @@ void HAL_DisableMemorySwappingBank(void)
 {
   CLEAR_BIT(SYSCFG->MEMRMP, SYSCFG_MEMRMP_SWP_FB);
 }
+
 #endif /* STM32F767xx || STM32F769xx || STM32F777xx || STM32F779xx */
 
 /**

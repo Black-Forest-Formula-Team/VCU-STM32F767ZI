@@ -1,3 +1,19 @@
+/*BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           Inverter.h.h
+  * @brief
+  *
+  * @author 		Maurice Hugenschmidt, Alexander Sperka
+  ******************************************************************************
+  * @attention
+  *
+  *
+  *
+  ******************************************************************************
+  */
+/*END Header */
+
 #ifndef INVERTER_H_
 #define INVERTER_H_
 
@@ -14,7 +30,7 @@ using namespace std;
 class Inverter {
 private:
 	CAN_HandleTypeDef canInterface;
-	uint8_t canChannel;
+	uint8_t deviceAddress;
 	uint16_t rpm = 0;
 
 
@@ -22,7 +38,7 @@ private:
 	float motorTemp, inverterTemp;
 
 public:
-		Inverter(CAN_HandleTypeDef* canInteface, uint8_t canChannel);
+		Inverter(CAN_HandleTypeDef* canInteface, uint8_t deviceAddress);
 		int Init();
 		virtual ~Inverter();
 
