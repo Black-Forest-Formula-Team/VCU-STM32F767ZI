@@ -1,8 +1,8 @@
-.TH "C:/Users/BFFT_Konstr_3/Documents/STM_Board_Config/BFFT_VCU_V1/inc/main.h" 3 "Fri Dec 13 2019" "BFFT_VCU_V1" \" -*- nroff -*-
+.TH "/Users/maurice/git/VCU-STM32F767ZI/inc/main.h" 3 "Wed Jan 15 2020" "BFFT_VCU_V1" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-C:/Users/BFFT_Konstr_3/Documents/STM_Board_Config/BFFT_VCU_V1/inc/main.h \- : Header for \fBmain\&.c\fP file\&. This file contains the common defines of the application\&.  
+/Users/maurice/git/VCU-STM32F767ZI/inc/main.h \- : Header for main\&.c file\&. This file contains the common defines of the application\&.  
 
 .SH SYNOPSIS
 .br
@@ -62,12 +62,6 @@ C:/Users/BFFT_Konstr_3/Documents/STM_Board_Config/BFFT_VCU_V1/inc/main.h \- : He
 .RI "#define \fBLD3_GPIO_Port\fP   GPIOB"
 .br
 .ti -1c
-.RI "#define \fBINV2_RX_Pin\fP   GPIO_PIN_8"
-.br
-.ti -1c
-.RI "#define \fBINV2_RX_GPIO_Port\fP   GPIOA"
-.br
-.ti -1c
 .RI "#define \fBSysEl_RX_Pin\fP   GPIO_PIN_11"
 .br
 .ti -1c
@@ -80,16 +74,10 @@ C:/Users/BFFT_Konstr_3/Documents/STM_Board_Config/BFFT_VCU_V1/inc/main.h \- : He
 .RI "#define \fBSysEl_TX_GPIO_Port\fP   GPIOA"
 .br
 .ti -1c
-.RI "#define \fBINV2_TX_Pin\fP   GPIO_PIN_15"
+.RI "#define \fBINV2_TX_Pin\fP   GPIO_PIN_6"
 .br
 .ti -1c
-.RI "#define \fBINV2_TX_GPIO_Port\fP   GPIOA"
-.br
-.ti -1c
-.RI "#define \fBINV2_TXB6_Pin\fP   GPIO_PIN_6"
-.br
-.ti -1c
-.RI "#define \fBINV2_TXB6_GPIO_Port\fP   GPIOB"
+.RI "#define \fBINV2_TX_GPIO_Port\fP   GPIOB"
 .br
 .in -1c
 .SS "Functions"
@@ -102,7 +90,7 @@ C:/Users/BFFT_Konstr_3/Documents/STM_Board_Config/BFFT_VCU_V1/inc/main.h \- : He
 .in -1c
 .SH "Detailed Description"
 .PP 
-: Header for \fBmain\&.c\fP file\&. This file contains the common defines of the application\&. 
+: Header for main\&.c file\&. This file contains the common defines of the application\&. 
 
 
 .PP
@@ -150,30 +138,14 @@ Definition at line 74 of file main\&.h\&.
 
 .PP
 Definition at line 73 of file main\&.h\&.
-.SS "#define INV2_RX_GPIO_Port   GPIOA"
+.SS "#define INV2_TX_GPIO_Port   GPIOB"
 
 .PP
-Definition at line 78 of file main\&.h\&.
-.SS "#define INV2_RX_Pin   GPIO_PIN_8"
+Definition at line 82 of file main\&.h\&.
+.SS "#define INV2_TX_Pin   GPIO_PIN_6"
 
 .PP
-Definition at line 77 of file main\&.h\&.
-.SS "#define INV2_TX_GPIO_Port   GPIOA"
-
-.PP
-Definition at line 84 of file main\&.h\&.
-.SS "#define INV2_TX_Pin   GPIO_PIN_15"
-
-.PP
-Definition at line 83 of file main\&.h\&.
-.SS "#define INV2_TXB6_GPIO_Port   GPIOB"
-
-.PP
-Definition at line 86 of file main\&.h\&.
-.SS "#define INV2_TXB6_Pin   GPIO_PIN_6"
-
-.PP
-Definition at line 85 of file main\&.h\&.
+Definition at line 81 of file main\&.h\&.
 .SS "#define LD1_GPIO_Port   GPIOB"
 
 .PP
@@ -193,19 +165,19 @@ Definition at line 75 of file main\&.h\&.
 .SS "#define SysEl_RX_GPIO_Port   GPIOA"
 
 .PP
-Definition at line 80 of file main\&.h\&.
+Definition at line 78 of file main\&.h\&.
 .SS "#define SysEl_RX_Pin   GPIO_PIN_11"
 
 .PP
-Definition at line 79 of file main\&.h\&.
+Definition at line 77 of file main\&.h\&.
 .SS "#define SysEl_TX_GPIO_Port   GPIOA"
 
 .PP
-Definition at line 82 of file main\&.h\&.
+Definition at line 80 of file main\&.h\&.
 .SS "#define SysEl_TX_Pin   GPIO_PIN_12"
 
 .PP
-Definition at line 81 of file main\&.h\&.
+Definition at line 79 of file main\&.h\&.
 .SS "#define Throttle_IN1_GPIO_Port   GPIOA"
 
 .PP
@@ -236,9 +208,9 @@ This function is executed in case of error occurrence\&.
 .PP
 
 .PP
-Definition at line 157 of file main\&.c\&.
+Definition at line 166 of file main\&.cpp\&.
 .PP
-Referenced by MX_ADC1_Init(), MX_CAN1_Init(), MX_CAN2_Init(), MX_CAN3_Init(), and SystemClock_Config()\&.
+Referenced by MX_ADC1_Init(), MX_CAN1_Init(), MX_CAN2_Init(), and SystemClock_Config()\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for BFFT_VCU_V1 from the source code\&.

@@ -1,0 +1,113 @@
+.TH "Inverter" 3 "Wed Jan 15 2020" "BFFT_VCU_V1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Inverter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Inverter\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInverter\fP (CAN_HandleTypeDef *canInteface, uint8_t \fBdeviceAddress\fP)"
+.br
+.ti -1c
+.RI "int \fBInit\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Inverter\fP ()"
+.br
+.ti -1c
+.RI "float \fBgetTorque\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBsetTorque\fP (double \fBtorque\fP)"
+.br
+.ti -1c
+.RI "float \fBgetMotorTemp\fP ()"
+.br
+.ti -1c
+.RI "float \fBgetInverterTemp\fP ()"
+.br
+.ti -1c
+.RI "uint16_t \fBgetRPM\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "CAN_HandleTypeDef \fBcanInterface\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBdeviceAddress\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBrpm\fP = 0"
+.br
+.ti -1c
+.RI "float \fBtorque\fP = 0"
+.br
+.ti -1c
+.RI "float \fBmotorTemp\fP"
+.br
+.ti -1c
+.RI "float \fBinverterTemp\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 30 of file Inverter\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Inverter::Inverter (CAN_HandleTypeDef * canInteface, uint8_t deviceAddress)"
+
+.SS "virtual Inverter::~Inverter ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "float Inverter::getInverterTemp ()"
+
+.SS "float Inverter::getMotorTemp ()"
+
+.SS "uint16_t Inverter::getRPM ()"
+
+.SS "float Inverter::getTorque ()"
+
+.SS "int Inverter::Init ()"
+
+.SS "uint8_t Inverter::setTorque (double torque)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "CAN_HandleTypeDef Inverter::canInterface\fC [private]\fP"
+
+.PP
+Definition at line 32 of file Inverter\&.h\&.
+.SS "uint8_t Inverter::deviceAddress\fC [private]\fP"
+
+.PP
+Definition at line 33 of file Inverter\&.h\&.
+.SS "float Inverter::inverterTemp\fC [private]\fP"
+
+.PP
+Definition at line 38 of file Inverter\&.h\&.
+.SS "float Inverter::motorTemp\fC [private]\fP"
+
+.PP
+Definition at line 38 of file Inverter\&.h\&.
+.SS "uint16_t Inverter::rpm = 0\fC [private]\fP"
+
+.PP
+Definition at line 34 of file Inverter\&.h\&.
+.SS "float Inverter::torque = 0\fC [private]\fP"
+
+.PP
+Definition at line 37 of file Inverter\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BFFT_VCU_V1 from the source code\&.

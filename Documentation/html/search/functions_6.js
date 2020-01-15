@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['hal_5fadc_5fmspdeinit_215',['HAL_ADC_MspDeInit',['../adc_8c.html#a3f61f2c2af0f122f81a87af8ad7b4360',1,'adc.c']]],
-  ['hal_5fadc_5fmspinit_216',['HAL_ADC_MspInit',['../adc_8c.html#ac3139540667c403c5dfd37a99c610b1c',1,'adc.c']]],
-  ['hal_5fcan_5fmspdeinit_217',['HAL_CAN_MspDeInit',['../can_8c.html#a4b39e42353b2781bc75d83c018640b67',1,'can.c']]],
-  ['hal_5fcan_5fmspinit_218',['HAL_CAN_MspInit',['../can_8c.html#a2778ce7f3a2de42769b6de9fec4cedb9',1,'can.c']]],
-  ['hal_5fmspinit_219',['HAL_MspInit',['../stm32f7xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f',1,'stm32f7xx_hal_msp.c']]],
-  ['hardfault_5fhandler_220',['HardFault_Handler',['../stm32f7xx__it_8c.html#a2bffc10d5bd4106753b7c30e86903bea',1,'HardFault_Handler(void):&#160;stm32f7xx_it.c'],['../stm32f7xx__it_8h.html#a2bffc10d5bd4106753b7c30e86903bea',1,'HardFault_Handler(void):&#160;stm32f7xx_it.c']]]
+  ['getcurrent_273',['getCurrent',['../class_b_m_s.html#a19a897c33ce1b30b9d2c27116cf671cf',1,'BMS']]],
+  ['getinvertertemp_274',['getInverterTemp',['../class_inverter.html#a95a986b8d23ad9b07077869aa1974ca3',1,'Inverter']]],
+  ['getmotortemp_275',['getMotorTemp',['../class_inverter.html#a574e86e6ed3db1c205707929145ada27',1,'Inverter']]],
+  ['getpeaktemp_276',['getPeakTemp',['../class_b_m_s.html#a926271d58b125d9a7f04d4a406c0ab8e',1,'BMS']]],
+  ['getrpm_277',['getRPM',['../class_inverter.html#a2b0d87154fe87cc3c4bfaed7754b4e8b',1,'Inverter']]],
+  ['getsoc_278',['getSoC',['../class_b_m_s.html#aa856c86fcd04d609c4c66dc15b1798c8',1,'BMS']]],
+  ['gettemp_279',['getTemp',['../class_b_m_s.html#a68529d9713f9ebcff82f850633c853c0',1,'BMS']]],
+  ['gettemperature_280',['getTemperature',['../classcan_temp_sensor.html#a626cb7cb355a2989ce94b80332b6072e',1,'canTempSensor']]],
+  ['gettorque_281',['getTorque',['../class_inverter.html#a6b86f964060c242212d66e09ab5d1887',1,'Inverter']]],
+  ['getvoltage_282',['getVoltage',['../class_b_m_s.html#a2e805c7026c307d853f82678440b496b',1,'BMS']]]
 ];

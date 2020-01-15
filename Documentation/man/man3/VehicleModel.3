@@ -1,0 +1,82 @@
+.TH "VehicleModel" 3 "Wed Jan 15 2020" "BFFT_VCU_V1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+VehicleModel
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <VehicleModel\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVehicleModel\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~VehicleModel\fP ()"
+.br
+.ti -1c
+.RI "float \fBcalculateTorque\fP ()"
+.br
+.ti -1c
+.RI "float \fBcalculateTorqueVectoring\fP ()"
+.br
+.ti -1c
+.RI "float \fBcheckDerating\fP ()"
+.br
+.ti -1c
+.RI "float \fBcalculateLookUpTableBattery\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBtorque\fP"
+.br
+.ti -1c
+.RI "bool \fBderating\fP"
+.br
+.ti -1c
+.RI "unsigned short int \fBlookupBattery\fP [1000]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 20 of file VehicleModel\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "VehicleModel::VehicleModel ()"
+
+.SS "virtual VehicleModel::~VehicleModel ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "float VehicleModel::calculateLookUpTableBattery ()"
+
+.SS "float VehicleModel::calculateTorque ()"
+
+.SS "float VehicleModel::calculateTorqueVectoring ()"
+
+.SS "float VehicleModel::checkDerating ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool VehicleModel::derating\fC [private]\fP"
+
+.PP
+Definition at line 31 of file VehicleModel\&.h\&.
+.SS "unsigned short int VehicleModel::lookupBattery[1000]\fC [private]\fP"
+
+.PP
+Definition at line 32 of file VehicleModel\&.h\&.
+.SS "float VehicleModel::torque\fC [private]\fP"
+
+.PP
+Definition at line 30 of file VehicleModel\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BFFT_VCU_V1 from the source code\&.

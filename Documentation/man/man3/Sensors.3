@@ -1,8 +1,8 @@
-.TH "Sensors< T >" 3 "Fri Dec 13 2019" "BFFT_VCU_V1" \" -*- nroff -*-
+.TH "Sensors" 3 "Wed Jan 15 2020" "BFFT_VCU_V1" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Sensors< T >
+Sensors
 .SH SYNOPSIS
 .br
 .PP
@@ -15,51 +15,35 @@ Sensors< T >
 .RI "\fBSensors\fP ()"
 .br
 .ti -1c
-.RI "virtual \fB~Sensors\fP ()"
-.br
-.ti -1c
-.RI "virtual typedef T \fBgetValue\fP ()"
-.br
-.ti -1c
-.RI "virtual void \fBpickSensorData\fP ()=0"
+.RI "\fB~Sensors\fP ()"
 .br
 .in -1c
-.SS "Private Types"
+.SS "Public Attributes"
 
 .in +1c
 .ti -1c
-.RI "typedef T \fBsensorValue\fP()"
+.RI "\fBcanTempSensor\fP \fBcoolantTemp\fP"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
-
-.SS "template<typename T>
-.br
-class Sensors< T >"
-
-.PP
-Definition at line 21 of file Sensors\&.h\&.
-.SH "Member Typedef Documentation"
-.PP 
-.SS "template<typename T > typedef T \fBSensors\fP< T >::sensorValue()\fC [private]\fP"
-
-.PP
-Definition at line 23 of file Sensors\&.h\&.
+Definition at line 27 of file Sensors\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "template<typename T > \fBSensors\fP< T >::\fBSensors\fP ()"
-
-.SS "template<typename T > virtual \fBSensors\fP< T >::~\fBSensors\fP ()\fC [virtual]\fP"
-
-.SH "Member Function Documentation"
-.PP 
-.SS "template<typename T > virtual typedef T \fBSensors\fP< T >::getValue ()\fC [inline]\fP, \fC [virtual]\fP"
+.SS "Sensors::Sensors ()"
 
 .PP
-Definition at line 29 of file Sensors\&.h\&.
-.SS "template<typename T > virtual void \fBSensors\fP< T >::pickSensorData ()\fC [pure virtual]\fP"
+Definition at line 20 of file Sensors\&.cpp\&.
+.SS "Sensors::~Sensors ()"
 
+.PP
+Definition at line 26 of file Sensors\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBcanTempSensor\fP Sensors::coolantTemp"
+
+.PP
+Definition at line 37 of file Sensors\&.h\&.
 
 .SH "Author"
 .PP 

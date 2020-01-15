@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['hadc1_245',['hadc1',['../adc_8c.html#a22b804736f5648d52f639b2647d4ed13',1,'hadc1():&#160;adc.c'],['../adc_8h.html#a22b804736f5648d52f639b2647d4ed13',1,'hadc1():&#160;adc.c']]],
-  ['hcan1_246',['hcan1',['../can_8c.html#a1618d731d18d69e906e8a357b7cd3c8d',1,'hcan1():&#160;can.c'],['../can_8h.html#a1618d731d18d69e906e8a357b7cd3c8d',1,'hcan1():&#160;can.c']]],
-  ['hcan2_247',['hcan2',['../can_8c.html#ab77168d14df04ccca5d48612ee21ced8',1,'hcan2():&#160;can.c'],['../can_8h.html#ab77168d14df04ccca5d48612ee21ced8',1,'hcan2():&#160;can.c']]],
-  ['hcan3_248',['hcan3',['../can_8c.html#ab99f1bc6f9064df2fffe2ac8714b5d93',1,'hcan3():&#160;can.c'],['../can_8h.html#ab99f1bc6f9064df2fffe2ac8714b5d93',1,'hcan3():&#160;can.c']]]
+  ['derating_325',['derating',['../class_vehicle_model.html#aba3fe25cc400fa47eb8566cce03620ca',1,'VehicleModel']]],
+  ['deviceaddress_326',['deviceAddress',['../classcan_temp_sensor.html#a5c6d9b23003e7320ec1eaf581b712723',1,'canTempSensor::deviceAddress()'],['../class_inverter.html#a0ddf5eb7bbf576e2a4276f14d257c3e9',1,'Inverter::deviceAddress()']]]
 ];

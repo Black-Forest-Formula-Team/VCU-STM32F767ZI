@@ -1,8 +1,8 @@
-.TH "C:/Users/BFFT_Konstr_3/Documents/STM_Board_Config/BFFT_VCU_V1/inc/can.h" 3 "Fri Dec 13 2019" "BFFT_VCU_V1" \" -*- nroff -*-
+.TH "/Users/maurice/git/VCU-STM32F767ZI/inc/can.h" 3 "Wed Jan 15 2020" "BFFT_VCU_V1" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-C:/Users/BFFT_Konstr_3/Documents/STM_Board_Config/BFFT_VCU_V1/inc/can.h
+/Users/maurice/git/VCU-STM32F767ZI/inc/can.h
 .SH SYNOPSIS
 .br
 .PP
@@ -18,9 +18,6 @@ C:/Users/BFFT_Konstr_3/Documents/STM_Board_Config/BFFT_VCU_V1/inc/can.h
 .ti -1c
 .RI "void \fBMX_CAN2_Init\fP (void)"
 .br
-.ti -1c
-.RI "void \fBMX_CAN3_Init\fP (void)"
-.br
 .in -1c
 .SS "Variables"
 
@@ -31,16 +28,13 @@ C:/Users/BFFT_Konstr_3/Documents/STM_Board_Config/BFFT_VCU_V1/inc/can.h
 .ti -1c
 .RI "CAN_HandleTypeDef \fBhcan2\fP"
 .br
-.ti -1c
-.RI "CAN_HandleTypeDef \fBhcan3\fP"
-.br
 .in -1c
 .SH "Function Documentation"
 .PP 
 .SS "void MX_CAN1_Init (void)"
 
 .PP
-Definition at line 32 of file can\&.c\&.
+Definition at line 30 of file can\&.c\&.
 .PP
 References Error_Handler(), and hcan1\&.
 .PP
@@ -48,17 +42,9 @@ Referenced by main()\&.
 .SS "void MX_CAN2_Init (void)"
 
 .PP
-Definition at line 54 of file can\&.c\&.
+Definition at line 52 of file can\&.c\&.
 .PP
 References Error_Handler(), and hcan2\&.
-.PP
-Referenced by main()\&.
-.SS "void MX_CAN3_Init (void)"
-
-.PP
-Definition at line 76 of file can\&.c\&.
-.PP
-References Error_Handler(), and hcan3\&.
 .PP
 Referenced by main()\&.
 .SH "Variable Documentation"
@@ -84,21 +70,15 @@ File Name : \fBCAN\&.c\fP Description : This file provides code for the configur
 .PP
 This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
 .PP
-Definition at line 27 of file can\&.c\&.
+Definition at line 26 of file can\&.c\&.
 .PP
 Referenced by MX_CAN1_Init()\&.
 .SS "CAN_HandleTypeDef hcan2"
 
 .PP
-Definition at line 28 of file can\&.c\&.
+Definition at line 27 of file can\&.c\&.
 .PP
 Referenced by MX_CAN2_Init()\&.
-.SS "CAN_HandleTypeDef hcan3"
-
-.PP
-Definition at line 29 of file can\&.c\&.
-.PP
-Referenced by MX_CAN3_Init()\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for BFFT_VCU_V1 from the source code\&.

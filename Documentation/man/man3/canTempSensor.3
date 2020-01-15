@@ -1,0 +1,143 @@
+.TH "canTempSensor" 3 "Wed Jan 15 2020" "BFFT_VCU_V1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+canTempSensor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <canTempSensor\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcanTempSensor\fP ()"
+.br
+.RI "Empty constructor\&. "
+.ti -1c
+.RI "\fBcanTempSensor\fP (CAN_HandleTypeDef *\fBcanInterface\fP, uint8_t \fBdeviceAddress\fP)"
+.br
+.RI "Constructor and initialization\&. "
+.ti -1c
+.RI "\fB~canTempSensor\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBinit\fP (CAN_HandleTypeDef *\fBcanInterface\fP, uint8_t \fBdeviceAddress\fP)"
+.br
+.RI "Initialization of the \fBSensors\fP\&. "
+.ti -1c
+.RI "float \fBgetTemperature\fP ()"
+.br
+.RI "Function to get the temperature as a float\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "CAN_HandleTypeDef * \fBcanInterface\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBdeviceAddress\fP"
+.br
+.ti -1c
+.RI "float \fBtemp\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 27 of file canTempSensor\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "canTempSensor::canTempSensor ()"
+
+.PP
+Empty constructor\&. 
+.PP
+Definition at line 22 of file canTempSensor\&.cpp\&.
+.SS "canTempSensor::canTempSensor (CAN_HandleTypeDef * canInterface, uint8_t deviceAddress)"
+
+.PP
+Constructor and initialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcanInterface\fP as reference of type CAN 
+.br
+\fIdeviceAddress\fP as address of the CAN device 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file canTempSensor\&.cpp\&.
+.PP
+References deviceAddress, and init()\&.
+.SS "canTempSensor::~canTempSensor ()"
+
+.PP
+Definition at line 24 of file canTempSensor\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "float canTempSensor::getTemperature ()"
+
+.PP
+Function to get the temperature as a float\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The temperature value 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file canTempSensor\&.cpp\&.
+.PP
+References temp\&.
+.SS "canTempSensor::init (CAN_HandleTypeDef * canInterface, uint8_t deviceAddress)"
+
+.PP
+Initialization of the \fBSensors\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcanInterface\fP as reference of type CAN 
+.br
+\fIdeviceAddress\fP as address of the CAN device 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+0 when Successful 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file canTempSensor\&.cpp\&.
+.PP
+References canInterface, and deviceAddress\&.
+.PP
+Referenced by canTempSensor()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "CAN_HandleTypeDef* canTempSensor::canInterface\fC [private]\fP"
+
+.PP
+Definition at line 30 of file canTempSensor\&.h\&.
+.PP
+Referenced by init()\&.
+.SS "uint8_t canTempSensor::deviceAddress\fC [private]\fP"
+
+.PP
+Definition at line 31 of file canTempSensor\&.h\&.
+.PP
+Referenced by canTempSensor(), and init()\&.
+.SS "float canTempSensor::temp\fC [private]\fP"
+
+.PP
+Definition at line 32 of file canTempSensor\&.h\&.
+.PP
+Referenced by getTemperature()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BFFT_VCU_V1 from the source code\&.
