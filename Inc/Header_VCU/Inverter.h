@@ -1,7 +1,7 @@
 /*BEGIN Header */
 /**
   ******************************************************************************
-  * @file           Inverter.h.h
+  * @file           Inverter.h
   * @brief
   *
   * @author 		Maurice Hugenschmidt, Alexander Sperka

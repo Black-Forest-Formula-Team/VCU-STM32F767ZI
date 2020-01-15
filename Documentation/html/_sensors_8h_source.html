@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BFFT_VCU_V1: C:/Users/BFFT_Konstr_3/Documents/STM_Board_Config/BFFT_VCU_V1/inc/Sensors.h Source File</title>
+<title>BFFT_VCU_V1: /Users/maurice/git/VCU-STM32F767ZI/inc/Header_VCU/Sensors.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,45 +89,47 @@ $(document).ready(function(){initNavTree('_sensors_8h_source.html','');});
 <div class="title">Sensors.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_sensors_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* USER CODE BEGIN Header */</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/* USER CODE END Header */</span></div>
+<a href="_sensors_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*BEGIN Header */</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*END Header */</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef SENSORS_H_</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define SENSORS_H_</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_sensors.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sensors.html">Sensors</a> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_sensors.html#a51f145ad2868e53f834c81a0785a2131">   23</a></span>&#160;        <span class="keyword">typedef</span> T <a class="code" href="class_sensors.html#a51f145ad2868e53f834c81a0785a2131">sensorValue</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_sensors.html#a1bb35a1f7e8fde8d664714f8104c2ef9">Sensors</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_sensors.html#a9e6d36ef74871b63e24b1da308e083bc">~Sensors</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_sensors.html#a5433a4b5f3036a3ff18dac3a9311e7dc">   29</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">typedef</span> T <a class="code" href="class_sensors.html#a5433a4b5f3036a3ff18dac3a9311e7dc">getValue</a>(){<span class="keywordflow">return</span> SensorValue;};</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_sensors.html#a9dc56a781d04ed66372224eb121f78cd">pickSensorData</a>() = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef SENSORS_H_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define SENSORS_H_</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/* Begin includes */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;stdio.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="can_temp_sensor_8h.html">canTempSensor.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/* End includes */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_sensors.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sensors.html">Sensors</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">    #ifdef DEBUG</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">void</span> printOut(){ cout &lt;&lt; <a class="code" href="class_sensors.html#a51f145ad2868e53f834c81a0785a2131">sensorValue</a>;};</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">    #endif  </span><span class="comment">/* DEBUG */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_sensors.html#a68ef7a2ec8dd0ffd9b35b70b50c0ab09">Sensors</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_sensors.html#ae8757a85e47bb4d61ef3e33cdf3e0d87">~Sensors</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_sensors.html#a022d14d30bb24230c1b96d47f67e814e">   37</a></span>&#160;    <a class="code" href="classcan_temp_sensor.html">canTempSensor</a> <a class="code" href="class_sensors.html#a022d14d30bb24230c1b96d47f67e814e">coolantTemp</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SENSORS_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SENSORS_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_sensors_html_a5433a4b5f3036a3ff18dac3a9311e7dc"><div class="ttname"><a href="class_sensors.html#a5433a4b5f3036a3ff18dac3a9311e7dc">Sensors::getValue</a></div><div class="ttdeci">virtual typedef T getValue()</div><div class="ttdef"><b>Definition:</b> <a href="_sensors_8h_source.html#l00029">Sensors.h:29</a></div></div>
-<div class="ttc" id="aclass_sensors_html"><div class="ttname"><a href="class_sensors.html">Sensors</a></div><div class="ttdef"><b>Definition:</b> <a href="_sensors_8h_source.html#l00021">Sensors.h:21</a></div></div>
-<div class="ttc" id="aclass_sensors_html_a51f145ad2868e53f834c81a0785a2131"><div class="ttname"><a href="class_sensors.html#a51f145ad2868e53f834c81a0785a2131">Sensors::sensorValue</a></div><div class="ttdeci">T sensorValue()</div><div class="ttdef"><b>Definition:</b> <a href="_sensors_8h_source.html#l00023">Sensors.h:23</a></div></div>
-<div class="ttc" id="aclass_sensors_html_a9dc56a781d04ed66372224eb121f78cd"><div class="ttname"><a href="class_sensors.html#a9dc56a781d04ed66372224eb121f78cd">Sensors::pickSensorData</a></div><div class="ttdeci">virtual void pickSensorData()=0</div></div>
-<div class="ttc" id="aclass_sensors_html_a9e6d36ef74871b63e24b1da308e083bc"><div class="ttname"><a href="class_sensors.html#a9e6d36ef74871b63e24b1da308e083bc">Sensors::~Sensors</a></div><div class="ttdeci">virtual ~Sensors()</div></div>
-<div class="ttc" id="aclass_sensors_html_a1bb35a1f7e8fde8d664714f8104c2ef9"><div class="ttname"><a href="class_sensors.html#a1bb35a1f7e8fde8d664714f8104c2ef9">Sensors::Sensors</a></div><div class="ttdeci">Sensors()</div></div>
+<div class="ttc" id="aclass_sensors_html_ae8757a85e47bb4d61ef3e33cdf3e0d87"><div class="ttname"><a href="class_sensors.html#ae8757a85e47bb4d61ef3e33cdf3e0d87">Sensors::~Sensors</a></div><div class="ttdeci">~Sensors()</div><div class="ttdef"><b>Definition:</b> <a href="_sensors_8cpp_source.html#l00026">Sensors.cpp:26</a></div></div>
+<div class="ttc" id="acan_temp_sensor_8h_html"><div class="ttname"><a href="can_temp_sensor_8h.html">canTempSensor.h</a></div><div class="ttdoc">This file Provides a Temperature Sensor Class for CAN.</div></div>
+<div class="ttc" id="aclasscan_temp_sensor_html"><div class="ttname"><a href="classcan_temp_sensor.html">canTempSensor</a></div><div class="ttdef"><b>Definition:</b> <a href="can_temp_sensor_8h_source.html#l00027">canTempSensor.h:27</a></div></div>
+<div class="ttc" id="aclass_sensors_html"><div class="ttname"><a href="class_sensors.html">Sensors</a></div><div class="ttdef"><b>Definition:</b> <a href="_sensors_8h_source.html#l00027">Sensors.h:27</a></div></div>
+<div class="ttc" id="aclass_sensors_html_a68ef7a2ec8dd0ffd9b35b70b50c0ab09"><div class="ttname"><a href="class_sensors.html#a68ef7a2ec8dd0ffd9b35b70b50c0ab09">Sensors::Sensors</a></div><div class="ttdeci">Sensors()</div><div class="ttdef"><b>Definition:</b> <a href="_sensors_8cpp_source.html#l00020">Sensors.cpp:20</a></div></div>
+<div class="ttc" id="aclass_sensors_html_a022d14d30bb24230c1b96d47f67e814e"><div class="ttname"><a href="class_sensors.html#a022d14d30bb24230c1b96d47f67e814e">Sensors::coolantTemp</a></div><div class="ttdeci">canTempSensor coolantTemp</div><div class="ttdef"><b>Definition:</b> <a href="_sensors_8h_source.html#l00037">Sensors.h:37</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="_sensors_8h.html">Sensors.h</a></li>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_d5d388041c2573344de52f2d2e955e75.html">Header_VCU</a></li><li class="navelem"><a class="el" href="_sensors_8h.html">Sensors.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

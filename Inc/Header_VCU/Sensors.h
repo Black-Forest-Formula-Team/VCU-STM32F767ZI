@@ -28,11 +28,12 @@ class Sensors
 {
 
 private:
-	Sensors();
-	~Sensors();
+
 
 
 public:
+	Sensors();
+	~Sensors();
 	canTempSensor coolantTemp;
 
 
