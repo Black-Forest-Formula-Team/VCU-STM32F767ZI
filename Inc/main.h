@@ -37,6 +37,30 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
+typedef enum
+{
+	  /**
+	   * success status.
+	   */
+	  STATUS_OK,
+	  /**
+	   * idle status.
+	   */
+	  STATUS_IDLE,
+	  /**
+	   * busy status.
+	   */
+	  STATUS_BUSY,
+	  /**
+	   * generic fail status.
+	   */
+	  STATUS_FAIL,
+	  /**
+	   * invalid argument status.
+	   */
+	  STATUS_ARGUMENT_INVALID,
+}vcu_status_t;
+
 
 /* USER CODE END ET */
 
