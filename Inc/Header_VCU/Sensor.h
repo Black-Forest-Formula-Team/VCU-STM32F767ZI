@@ -1,30 +1,30 @@
 /*BEGIN Header */
 /**
   ******************************************************************************
-  * @file           Sensors.h
+  * @file           Sensor.h
   * @brief          This file contains all Sensors
   *
-  * @author 		Philipp Klassen
+  * @author 		Maurice Hugenschmidt,Philipp Klassen
   ******************************************************************************
   * @attention
   *
-  *This Header contains all Sensors
+  *
   *
   ******************************************************************************
   */
 /*END Header */
 
 
-#ifndef SENSORS_H_
-#define SENSORS_H_
+#ifndef SENSOR_H_
+#define SENSOR_H_
 
 
 /* Begin includes */
 #include "stdio.h"
-#include "canTempSensor.h"
+
 /* End includes */
 
-class Sensors
+class Sensor
 {
 
 private:
@@ -37,12 +37,12 @@ private:
 	};
 
 public:
-	Sensors();
-	~Sensors();
+	Sensor();
+	~Sensor();
 	float getValue();
 	uint8_t getState();
 
 
 };
 
-#endif /* SENSORS_H_ */
+#endif /* SENSOR_H_ */

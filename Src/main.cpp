@@ -20,13 +20,13 @@
 
 /* Includes ------------------------------------------------------------------*/
 
+#include <Header_VCU/Sensor.h>
 #include "main.h"
 #include "adc.h"
 #include "can.h"
 #include "gpio.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <Header_VCU/Sensors.h>
 
 /* USER CODE END Includes */
 
@@ -47,7 +47,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-	Sensors Sensors;
+	Sensor Sensor;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

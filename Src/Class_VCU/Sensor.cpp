@@ -1,9 +1,9 @@
 /**
   ******************************************************************************
-  * @file         : Sensors.cpp
+  * @file         : Sensor.cpp
   * @brief        : This file provides all Sensors and the Initialization
   *
-  * @author		  :Maurice Hugenschmidt
+  * @author		  :Maurice Hugenschmidt, Philipp Klassen
   ******************************************************************************
   * @attention
   *
@@ -13,17 +13,28 @@
   */
 
 /* Begin includes */
-#include "Header_VCU/Sensors.h"
+#include "Header_VCU/Sensor.h"
 /* End includes */
 
 
-Sensors::Sensors()
+Sensor::Sensor()
 {
 
 
 }
 
-Sensors::~Sensors()
+Sensor::~Sensor()
+{
+
+
+}
+float getValue()
+{
+
+
+}
+
+uint8_t getState()
 {
 
 
