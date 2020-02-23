@@ -22,7 +22,7 @@
 
 class AnalogSensor: protected Sensor {
 
-private:
+protected:
 
 	int SensorPort;
 	float Sensorblabla;

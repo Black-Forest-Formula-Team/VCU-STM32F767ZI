@@ -27,7 +27,7 @@
 class Sensor
 {
 
-private:
+protected:
 
 	enum SensorState
 	{

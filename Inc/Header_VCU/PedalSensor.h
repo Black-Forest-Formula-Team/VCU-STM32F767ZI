@@ -16,7 +16,7 @@
 
 #include <Header_VCU/AnalogSensor.h>
 
-class PedalSensor: private AnalogSensor {
+class PedalSensor: protected AnalogSensor {
 
 private:
 	uint32_t pedalAngle;

@@ -21,7 +21,7 @@
 
 class CAN_Sensor: protected Sensor {
 
-private:
+protected:
 	struct CANData
 	{
 		int CanAdress;
