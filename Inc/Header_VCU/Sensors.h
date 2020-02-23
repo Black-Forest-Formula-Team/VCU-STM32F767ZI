@@ -4,7 +4,7 @@
   * @file           Sensors.h
   * @brief          This file contains all Sensors
   *
-  * @author 		Maurice Hugenschmidt
+  * @author 		Philipp Klassen
   ******************************************************************************
   * @attention
   *
@@ -29,12 +29,18 @@ class Sensors
 
 private:
 
-
+	enum SensorState
+	{
+		run,
+		transmit,
+		error,
+	};
 
 public:
 	Sensors();
 	~Sensors();
-	canTempSensor coolantTemp;
+	float getValue();
+	uint8_t getState();
 
 
 };
