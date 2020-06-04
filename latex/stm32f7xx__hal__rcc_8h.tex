@@ -1,0 +1,99 @@
+\hypertarget{stm32f7xx__hal__rcc_8h}{}\doxysection{Drivers/\+S\+T\+M32\+F7xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/stm32f7xx\+\_\+hal\+\_\+rcc.h File Reference}
+\label{stm32f7xx__hal__rcc_8h}\index{Drivers/STM32F7xx\_HAL\_Driver/Inc/stm32f7xx\_hal\_rcc.h@{Drivers/STM32F7xx\_HAL\_Driver/Inc/stm32f7xx\_hal\_rcc.h}}
+
+
+Header file of R\+CC H\+AL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f7xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f7xx\+\_\+hal\+\_\+rcc\+\_\+ex.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_r_c_c___osc_init_type_def}{R\+C\+C\+\_\+\+Osc\+Init\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em R\+CC Internal/\+External Oscillator (H\+SE, H\+SI, L\+SE and L\+SI) configuration structure definition ~\newline
+ \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_r_c_c___clk_init_type_def}{R\+C\+C\+\_\+\+Clk\+Init\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em R\+CC System, A\+HB and A\+PB busses clock configuration structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___system___clock___source___status_ga0d6c2b0b2d59e6591295649853bb2abd}{R\+C\+C\+\_\+\+S\+Y\+S\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+H\+SI}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6764639cf221e1ebc0b5448dcaed590a}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+S\+W\+S\+\_\+\+H\+SI}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___system___clock___source___status_ga3847769265bf19becf7b976a7e908a64}{R\+C\+C\+\_\+\+S\+Y\+S\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+H\+SE}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gae09a0202f441c1a43e69c62331d50a08}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+S\+W\+S\+\_\+\+H\+SE}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___system___clock___source___status_ga4f05019ec09da478d084f44dbaad7d6d}{R\+C\+C\+\_\+\+S\+Y\+S\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+P\+L\+L\+C\+LK}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2c67e2279804a83ef24438267d9d4a6c}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+S\+W\+S\+\_\+\+P\+LL}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___peripheral___clock___sleep___enable___disable_gaa3978a2e193b921dc24976880dce7a26}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+W\+W\+D\+G\+\_\+\+C\+L\+K\+\_\+\+S\+L\+E\+E\+P\+\_\+\+E\+N\+A\+B\+LE}}()~(R\+CC-\/$>$A\+P\+B1\+L\+P\+E\+NR $\vert$= (R\+C\+C\+\_\+\+A\+P\+B1\+L\+P\+E\+N\+R\+\_\+\+W\+W\+D\+G\+L\+P\+EN))
+\begin{DoxyCompactList}\small\item\em Enable or disable the A\+P\+B1 peripheral clock during Low Power (Sleep) mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___peripheral___clock___sleep___enable___disable_ga6e3a8ca9e554e3aa7aba57d034725655}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+C\+L\+K\+\_\+\+S\+L\+E\+E\+P\+\_\+\+E\+N\+A\+B\+LE}}()~(R\+CC-\/$>$A\+P\+B2\+L\+P\+E\+NR $\vert$= (R\+C\+C\+\_\+\+A\+P\+B2\+L\+P\+E\+N\+R\+\_\+\+S\+Y\+S\+C\+F\+G\+L\+P\+EN))
+\begin{DoxyCompactList}\small\item\em Enable or disable the A\+P\+B2 peripheral clock during Low Power (Sleep) mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___h_s_i___configuration_gaab944f562b53fc74bcc0e4958388fd42}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+H\+S\+I\+\_\+\+E\+N\+A\+B\+LE}}()~(R\+CC-\/$>$CR $\vert$= (R\+C\+C\+\_\+\+C\+R\+\_\+\+H\+S\+I\+ON))
+\begin{DoxyCompactList}\small\item\em Macros to enable or disable the Internal High Speed oscillator (H\+SI). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___h_s_i___configuration_ga74c3b20fdb9a7672c50aa97bb46537b1}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+H\+S\+I\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+V\+A\+L\+U\+E\+\_\+\+A\+D\+J\+U\+ST}}(\+\_\+\+\_\+\+H\+S\+I\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+V\+A\+L\+U\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Macro to adjust the Internal High Speed oscillator (H\+SI) calibration value. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___l_s_i___configuration_ga560de8b8991db4a296de878a7a8aa58b}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+L\+S\+I\+\_\+\+E\+N\+A\+B\+LE}}()~(R\+CC-\/$>$C\+SR $\vert$= (R\+C\+C\+\_\+\+C\+S\+R\+\_\+\+L\+S\+I\+ON))
+\begin{DoxyCompactList}\small\item\em Macros to enable or disable the Internal Low Speed oscillator (L\+SI). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___h_s_e___configuration_gaa3d98648399f15d02645ef84f6ca8e4b}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+H\+S\+E\+\_\+\+C\+O\+N\+F\+IG}}(\+\_\+\+\_\+\+S\+T\+A\+T\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Macro to configure the External High Speed oscillator (H\+SE). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___l_s_e___configuration_ga6b2b48f429e347c1c9c469122c64798b}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+L\+S\+E\+\_\+\+C\+O\+N\+F\+IG}}(\+\_\+\+\_\+\+S\+T\+A\+T\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Macro to configure the External Low Speed oscillator (L\+SE). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___internal___r_t_c___clock___configuration_gab7cc36427c31da645a0e38e181f8ce0f}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+R\+T\+C\+\_\+\+E\+N\+A\+B\+LE}}()~(R\+CC-\/$>$B\+D\+CR $\vert$= (R\+C\+C\+\_\+\+B\+D\+C\+R\+\_\+\+R\+T\+C\+EN))
+\begin{DoxyCompactList}\small\item\em Macros to enable or disable the R\+TC clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___internal___r_t_c___clock___configuration_ga7e10e306e7d9f3cd59d30dcb2c9cf61d}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+R\+T\+C\+\_\+\+C\+L\+K\+P\+R\+E\+S\+C\+A\+L\+ER}}(\+\_\+\+\_\+\+R\+T\+C\+C\+L\+K\+Source\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Macros to configure the R\+TC clock (R\+T\+C\+C\+LK). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___internal___r_t_c___clock___configuration_gad40d00ff1c984ebd011ea9f6e7f93c44}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+G\+E\+T\+\_\+\+R\+T\+C\+\_\+\+S\+O\+U\+R\+CE}}()~(R\+E\+A\+D\+\_\+\+B\+IT(R\+CC-\/$>$B\+D\+CR, R\+C\+C\+\_\+\+B\+D\+C\+R\+\_\+\+R\+T\+C\+S\+EL))
+\begin{DoxyCompactList}\small\item\em Macro to get the R\+TC clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___internal___r_t_c___clock___configuration_ga85dc62f0fcb14981c47d7f7da25e26d6}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+G\+E\+T\+\_\+\+R\+T\+C\+\_\+\+H\+S\+E\+\_\+\+P\+R\+E\+S\+C\+A\+L\+ER}}()~(R\+E\+A\+D\+\_\+\+B\+IT(R\+CC-\/$>$C\+F\+GR, R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+R\+T\+C\+P\+RE) $\vert$ R\+C\+C\+\_\+\+B\+D\+C\+R\+\_\+\+R\+T\+C\+S\+EL)
+\begin{DoxyCompactList}\small\item\em Get the R\+TC and H\+SE clock divider (R\+T\+C\+P\+RE). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___internal___r_t_c___clock___configuration_ga3bf7da608ff985873ca8e248fb1dc4f0}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+B\+A\+C\+K\+U\+P\+R\+E\+S\+E\+T\+\_\+\+F\+O\+R\+CE}}()~(R\+CC-\/$>$B\+D\+CR $\vert$= (R\+C\+C\+\_\+\+B\+D\+C\+R\+\_\+\+B\+D\+R\+ST))
+\begin{DoxyCompactList}\small\item\em Macros to force or release the Backup domain reset. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___p_l_l___configuration_gaaf196a2df41b0bcbc32745c2b218e696}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+E\+N\+A\+B\+LE}}()~S\+E\+T\+\_\+\+B\+IT(R\+CC-\/$>$CR, R\+C\+C\+\_\+\+C\+R\+\_\+\+P\+L\+L\+ON)
+\begin{DoxyCompactList}\small\item\em Macros to enable or disable the main P\+LL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___p_l_l___configuration_gaf9a8466f991888332ec978dc92c62d7d}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+P\+L\+L\+S\+O\+U\+R\+C\+E\+\_\+\+C\+O\+N\+F\+IG}}(\+\_\+\+\_\+\+P\+L\+L\+S\+O\+U\+R\+C\+E\+\_\+\+\_\+)~M\+O\+D\+I\+F\+Y\+\_\+\+R\+EG(R\+CC-\/$>$P\+L\+L\+C\+F\+GR, R\+C\+C\+\_\+\+P\+L\+L\+C\+F\+G\+R\+\_\+\+P\+L\+L\+S\+RC, (\+\_\+\+\_\+\+P\+L\+L\+S\+O\+U\+R\+C\+E\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the P\+LL clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___p_l_l___configuration_gabca62f581e6c2553cca7ef0d7a2a4b7f}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+P\+L\+L\+M\+\_\+\+C\+O\+N\+F\+IG}}(\+\_\+\+\_\+\+P\+L\+L\+M\+\_\+\+\_\+)~M\+O\+D\+I\+F\+Y\+\_\+\+R\+EG(R\+CC-\/$>$P\+L\+L\+C\+F\+GR, R\+C\+C\+\_\+\+P\+L\+L\+C\+F\+G\+R\+\_\+\+P\+L\+LM, (\+\_\+\+\_\+\+P\+L\+L\+M\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the P\+LL multiplication factor. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___p_l_l___i2_s___configuration_ga3927ddd738bac3fe4d99a277e1d5830f}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+I2\+S\+\_\+\+C\+O\+N\+F\+IG}}(\+\_\+\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Macro to configure the I2S clock source (I2\+S\+C\+LK). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___p_l_l___i2_s___configuration_ga397893a952906f8caa8579a56c3a17a6}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+P\+L\+L\+I2\+S\+\_\+\+E\+N\+A\+B\+LE}}()~(R\+CC-\/$>$CR $\vert$= (R\+C\+C\+\_\+\+C\+R\+\_\+\+P\+L\+L\+I2\+S\+ON))
+\begin{DoxyCompactList}\small\item\em Macros to enable or disable the P\+L\+L\+I2S. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___get___clock__source_ga32f72b8c5b7e97b415867c57f9fafed6}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+S\+Y\+S\+C\+L\+K\+\_\+\+C\+O\+N\+F\+IG}}(\+\_\+\+\_\+\+R\+C\+C\+\_\+\+S\+Y\+S\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+\_\+)~M\+O\+D\+I\+F\+Y\+\_\+\+R\+EG(R\+CC-\/$>$C\+F\+GR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga0eea5e5f7743a7e8995b8beeb18355c1}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+SW}}, (\+\_\+\+\_\+\+R\+C\+C\+\_\+\+S\+Y\+S\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the system clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___get___clock__source_gac99c2453d9e77c8b457acc0210e754c2}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+G\+E\+T\+\_\+\+S\+Y\+S\+C\+L\+K\+\_\+\+S\+O\+U\+R\+CE}}()~(R\+CC-\/$>$C\+F\+GR \& \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga15bf2269500dc97e137315f44aa015c9}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+S\+WS}})
+\begin{DoxyCompactList}\small\item\em Macro to get the clock source used as system clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___get___clock__source_ga9e21c193560567cfc3f908d733d9b19b}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+L\+S\+E\+D\+R\+I\+V\+E\+\_\+\+C\+O\+N\+F\+IG}}(\+\_\+\+\_\+\+R\+C\+C\+\_\+\+L\+S\+E\+D\+R\+I\+V\+E\+\_\+\+\_\+)~(M\+O\+D\+I\+F\+Y\+\_\+\+R\+EG(R\+CC-\/$>$B\+D\+CR, R\+C\+C\+\_\+\+B\+D\+C\+R\+\_\+\+L\+S\+E\+D\+RV, (uint32\+\_\+t)(\+\_\+\+\_\+\+R\+C\+C\+\_\+\+L\+S\+E\+D\+R\+I\+V\+E\+\_\+\+\_\+) ))
+\begin{DoxyCompactList}\small\item\em Macro to configures the External Low Speed oscillator (L\+SE) drive capability. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___get___clock__source_ga3ea1390f8124e2b3b8d53e95541d6e53}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+G\+E\+T\+\_\+\+P\+L\+L\+\_\+\+O\+S\+C\+S\+O\+U\+R\+CE}}()~((uint32\+\_\+t)(R\+CC-\/$>$P\+L\+L\+C\+F\+GR \& R\+C\+C\+\_\+\+P\+L\+L\+C\+F\+G\+R\+\_\+\+P\+L\+L\+S\+RC))
+\begin{DoxyCompactList}\small\item\em Macro to get the oscillator used as P\+LL clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___m_c_ox___clock___config_ga7e5f7f1efc92794b6f0e96068240b45e}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+M\+C\+O1\+\_\+\+C\+O\+N\+F\+IG}}(\+\_\+\+\_\+\+M\+C\+O\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+M\+C\+O\+D\+I\+V\+\_\+\+\_\+)~M\+O\+D\+I\+F\+Y\+\_\+\+R\+EG(R\+CC-\/$>$C\+F\+GR, (R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+M\+C\+O1 $\vert$ R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+M\+C\+O1\+P\+RE), ((\+\_\+\+\_\+\+M\+C\+O\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+\_\+) $\vert$ (\+\_\+\+\_\+\+M\+C\+O\+D\+I\+V\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Macro to configure the M\+C\+O1 clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___m_c_ox___clock___config_gabb7360422910dd65312786fc49722d25}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+M\+C\+O2\+\_\+\+C\+O\+N\+F\+IG}}(\+\_\+\+\_\+\+M\+C\+O\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+M\+C\+O\+D\+I\+V\+\_\+\+\_\+)~M\+O\+D\+I\+F\+Y\+\_\+\+R\+EG(R\+CC-\/$>$C\+F\+GR, (R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+M\+C\+O2 $\vert$ R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+M\+C\+O2\+P\+RE), ((\+\_\+\+\_\+\+M\+C\+O\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+\_\+) $\vert$ ((\+\_\+\+\_\+\+M\+C\+O\+D\+I\+V\+\_\+\+\_\+) $<$$<$ 3)));
+\begin{DoxyCompactList}\small\item\em Macro to configure the M\+C\+O2 clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_ga180fb20a37b31a6e4f7e59213a6c0405}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+IT}}(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint8\+\_\+t $\ast$) R\+C\+C\+\_\+\+C\+I\+R\+\_\+\+B\+Y\+T\+E1\+\_\+\+A\+D\+D\+R\+E\+SS $\vert$= (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable R\+CC interrupt (Perform Byte access to R\+C\+C\+\_\+\+C\+IR\mbox{[}14\+:8\mbox{]} bits to enable the selected interrupts). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_gafc4df8cd4df0a529d11f18bf1f7e9f50}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+IT}}(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint8\+\_\+t $\ast$) R\+C\+C\+\_\+\+C\+I\+R\+\_\+\+B\+Y\+T\+E1\+\_\+\+A\+D\+D\+R\+E\+SS \&= (uint8\+\_\+t)($\sim$(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Disable R\+CC interrupt (Perform Byte access to R\+C\+C\+\_\+\+C\+IR\mbox{[}14\+:8\mbox{]} bits to disable the selected interrupts). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_ga9d8ab157f58045b8daf8136bee54f139}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+IT}}(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint8\+\_\+t $\ast$) R\+C\+C\+\_\+\+C\+I\+R\+\_\+\+B\+Y\+T\+E2\+\_\+\+A\+D\+D\+R\+E\+SS = (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clear the R\+CC\textquotesingle{}s interrupt pending bits (Perform Byte access to R\+C\+C\+\_\+\+C\+IR\mbox{[}23\+:16\mbox{]} bits to clear the selected interrupt pending bits. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_ga134af980b892f362c05ae21922cd828d}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+G\+E\+T\+\_\+\+IT}}(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~((R\+CC-\/$>$C\+IR \& (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Check the R\+CC\textquotesingle{}s interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_gaf28c11b36035ef1e27883ff7ee2c46b0}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+R\+E\+S\+E\+T\+\_\+\+F\+L\+A\+GS}}()~(R\+CC-\/$>$C\+SR $\vert$= R\+C\+C\+\_\+\+C\+S\+R\+\_\+\+R\+M\+VF)
+\begin{DoxyCompactList}\small\item\em Set R\+M\+VF bit to clear the reset flags\+: R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+P\+I\+N\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+R\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+S\+F\+T\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+I\+W\+D\+G\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+W\+W\+D\+G\+R\+ST and R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+L\+P\+W\+R\+R\+ST. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_ga80017c6bf8a5c6f53a1a21bb8db93a82}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+M\+A\+SK}}~((uint8\+\_\+t)0x1F)
+\begin{DoxyCompactList}\small\item\em Check R\+CC flag is set or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of R\+CC H\+AL module. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2017 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 

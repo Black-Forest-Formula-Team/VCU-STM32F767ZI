@@ -1,0 +1,104 @@
+\hypertarget{group___r_c_c_ex___peripheral___clock___sleep___enable___disable}{}\doxysection{R\+C\+C\+Ex Peripheral Clock Sleep Enable Disable}
+\label{group___r_c_c_ex___peripheral___clock___sleep___enable___disable}\index{RCCEx Peripheral Clock Sleep Enable Disable@{RCCEx Peripheral Clock Sleep Enable Disable}}
+
+
+Enables or disables the A\+H\+B/\+A\+PB peripheral clock during Low Power (Sleep) mode.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga13e370f94b39c72876a321cdc5b31915}\label{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga13e370f94b39c72876a321cdc5b31915}} 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga13e370f94b39c72876a321cdc5b31915}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+F\+L\+I\+T\+F\+\_\+\+C\+L\+K\+\_\+\+S\+L\+E\+E\+P\+\_\+\+E\+N\+A\+B\+LE}}()~(R\+CC-\/$>$A\+H\+B1\+L\+P\+E\+NR $\vert$= (R\+C\+C\+\_\+\+A\+H\+B1\+L\+P\+E\+N\+R\+\_\+\+F\+L\+I\+T\+F\+L\+P\+EN))
+\begin{DoxyCompactList}\small\item\em Enable or disable the A\+H\+B1 peripheral clock during Low Power (Sleep) mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga03ec704e7309312630b3a572fb6f8856}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+R\+N\+G\+\_\+\+C\+L\+K\+\_\+\+S\+L\+E\+E\+P\+\_\+\+E\+N\+A\+B\+LE}}()~(R\+CC-\/$>$A\+H\+B2\+L\+P\+E\+NR $\vert$= (R\+C\+C\+\_\+\+A\+H\+B2\+L\+P\+E\+N\+R\+\_\+\+R\+N\+G\+L\+P\+EN))
+\begin{DoxyCompactList}\small\item\em Enable or disable the A\+H\+B2 peripheral clock during Low Power (Sleep) mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga387cf373f0b77ef8d434a3a6f93bbd11}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+F\+M\+C\+\_\+\+C\+L\+K\+\_\+\+S\+L\+E\+E\+P\+\_\+\+E\+N\+A\+B\+LE}}()~(R\+CC-\/$>$A\+H\+B3\+L\+P\+E\+NR $\vert$= (R\+C\+C\+\_\+\+A\+H\+B3\+L\+P\+E\+N\+R\+\_\+\+F\+M\+C\+L\+P\+EN))
+\begin{DoxyCompactList}\small\item\em Enable or disable the A\+H\+B3 peripheral clock during Low Power (Sleep) mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga975142c90b4e1baf21b361524518235d}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+T\+I\+M2\+\_\+\+C\+L\+K\+\_\+\+S\+L\+E\+E\+P\+\_\+\+E\+N\+A\+B\+LE}}()~(R\+CC-\/$>$A\+P\+B1\+L\+P\+E\+NR $\vert$= (R\+C\+C\+\_\+\+A\+P\+B1\+L\+P\+E\+N\+R\+\_\+\+T\+I\+M2\+L\+P\+EN))
+\begin{DoxyCompactList}\small\item\em Enable or disable the A\+P\+B1 peripheral clock during Low Power (Sleep) mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga6ce02f1b2689c664010bebc2363d1db4}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+T\+I\+M1\+\_\+\+C\+L\+K\+\_\+\+S\+L\+E\+E\+P\+\_\+\+E\+N\+A\+B\+LE}}()~(R\+CC-\/$>$A\+P\+B2\+L\+P\+E\+NR $\vert$= (R\+C\+C\+\_\+\+A\+P\+B2\+L\+P\+E\+N\+R\+\_\+\+T\+I\+M1\+L\+P\+EN))
+\begin{DoxyCompactList}\small\item\em Enable or disable the A\+P\+B2 peripheral clock during Low Power (Sleep) mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Enables or disables the A\+H\+B/\+A\+PB peripheral clock during Low Power (Sleep) mode. 
+
+\begin{DoxyNote}{Note}
+Peripheral clock gating in S\+L\+E\+EP mode can be used to further reduce power consumption. 
+
+After wakeup from S\+L\+E\+EP mode, the peripheral clock is enabled again. 
+
+By default, all peripheral clocks are enabled during S\+L\+E\+EP mode. 
+\end{DoxyNote}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga387cf373f0b77ef8d434a3a6f93bbd11}\label{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga387cf373f0b77ef8d434a3a6f93bbd11}} 
+\index{RCCEx Peripheral Clock Sleep Enable Disable@{RCCEx Peripheral Clock Sleep Enable Disable}!\_\_HAL\_RCC\_FMC\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_FMC\_CLK\_SLEEP\_ENABLE}}
+\index{\_\_HAL\_RCC\_FMC\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_FMC\_CLK\_SLEEP\_ENABLE}!RCCEx Peripheral Clock Sleep Enable Disable@{RCCEx Peripheral Clock Sleep Enable Disable}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_FMC\_CLK\_SLEEP\_ENABLE}{\_\_HAL\_RCC\_FMC\_CLK\_SLEEP\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+F\+M\+C\+\_\+\+C\+L\+K\+\_\+\+S\+L\+E\+E\+P\+\_\+\+E\+N\+A\+B\+LE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(R\+CC-\/$>$A\+H\+B3\+L\+P\+E\+NR $\vert$= (R\+C\+C\+\_\+\+A\+H\+B3\+L\+P\+E\+N\+R\+\_\+\+F\+M\+C\+L\+P\+EN))}
+
+
+
+Enable or disable the A\+H\+B3 peripheral clock during Low Power (Sleep) mode. 
+
+\begin{DoxyNote}{Note}
+Peripheral clock gating in S\+L\+E\+EP mode can be used to further reduce power consumption. 
+
+After wakeup from S\+L\+E\+EP mode, the peripheral clock is enabled again. 
+
+By default, all peripheral clocks are enabled during S\+L\+E\+EP mode. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga03ec704e7309312630b3a572fb6f8856}\label{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga03ec704e7309312630b3a572fb6f8856}} 
+\index{RCCEx Peripheral Clock Sleep Enable Disable@{RCCEx Peripheral Clock Sleep Enable Disable}!\_\_HAL\_RCC\_RNG\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_RNG\_CLK\_SLEEP\_ENABLE}}
+\index{\_\_HAL\_RCC\_RNG\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_RNG\_CLK\_SLEEP\_ENABLE}!RCCEx Peripheral Clock Sleep Enable Disable@{RCCEx Peripheral Clock Sleep Enable Disable}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_RNG\_CLK\_SLEEP\_ENABLE}{\_\_HAL\_RCC\_RNG\_CLK\_SLEEP\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+R\+N\+G\+\_\+\+C\+L\+K\+\_\+\+S\+L\+E\+E\+P\+\_\+\+E\+N\+A\+B\+LE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(R\+CC-\/$>$A\+H\+B2\+L\+P\+E\+NR $\vert$= (R\+C\+C\+\_\+\+A\+H\+B2\+L\+P\+E\+N\+R\+\_\+\+R\+N\+G\+L\+P\+EN))}
+
+
+
+Enable or disable the A\+H\+B2 peripheral clock during Low Power (Sleep) mode. 
+
+\begin{DoxyNote}{Note}
+Peripheral clock gating in S\+L\+E\+EP mode can be used to further reduce power consumption. 
+
+After wakeup from S\+L\+E\+EP mode, the peripheral clock is enabled again. 
+
+By default, all peripheral clocks are enabled during S\+L\+E\+EP mode. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga6ce02f1b2689c664010bebc2363d1db4}\label{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga6ce02f1b2689c664010bebc2363d1db4}} 
+\index{RCCEx Peripheral Clock Sleep Enable Disable@{RCCEx Peripheral Clock Sleep Enable Disable}!\_\_HAL\_RCC\_TIM1\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_TIM1\_CLK\_SLEEP\_ENABLE}}
+\index{\_\_HAL\_RCC\_TIM1\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_TIM1\_CLK\_SLEEP\_ENABLE}!RCCEx Peripheral Clock Sleep Enable Disable@{RCCEx Peripheral Clock Sleep Enable Disable}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_TIM1\_CLK\_SLEEP\_ENABLE}{\_\_HAL\_RCC\_TIM1\_CLK\_SLEEP\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+T\+I\+M1\+\_\+\+C\+L\+K\+\_\+\+S\+L\+E\+E\+P\+\_\+\+E\+N\+A\+B\+LE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(R\+CC-\/$>$A\+P\+B2\+L\+P\+E\+NR $\vert$= (R\+C\+C\+\_\+\+A\+P\+B2\+L\+P\+E\+N\+R\+\_\+\+T\+I\+M1\+L\+P\+EN))}
+
+
+
+Enable or disable the A\+P\+B2 peripheral clock during Low Power (Sleep) mode. 
+
+\begin{DoxyNote}{Note}
+Peripheral clock gating in S\+L\+E\+EP mode can be used to further reduce power consumption. 
+
+After wakeup from S\+L\+E\+EP mode, the peripheral clock is enabled again. 
+
+By default, all peripheral clocks are enabled during S\+L\+E\+EP mode. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga975142c90b4e1baf21b361524518235d}\label{group___r_c_c_ex___peripheral___clock___sleep___enable___disable_ga975142c90b4e1baf21b361524518235d}} 
+\index{RCCEx Peripheral Clock Sleep Enable Disable@{RCCEx Peripheral Clock Sleep Enable Disable}!\_\_HAL\_RCC\_TIM2\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_TIM2\_CLK\_SLEEP\_ENABLE}}
+\index{\_\_HAL\_RCC\_TIM2\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_TIM2\_CLK\_SLEEP\_ENABLE}!RCCEx Peripheral Clock Sleep Enable Disable@{RCCEx Peripheral Clock Sleep Enable Disable}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_TIM2\_CLK\_SLEEP\_ENABLE}{\_\_HAL\_RCC\_TIM2\_CLK\_SLEEP\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+T\+I\+M2\+\_\+\+C\+L\+K\+\_\+\+S\+L\+E\+E\+P\+\_\+\+E\+N\+A\+B\+LE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(R\+CC-\/$>$A\+P\+B1\+L\+P\+E\+NR $\vert$= (R\+C\+C\+\_\+\+A\+P\+B1\+L\+P\+E\+N\+R\+\_\+\+T\+I\+M2\+L\+P\+EN))}
+
+
+
+Enable or disable the A\+P\+B1 peripheral clock during Low Power (Sleep) mode. 
+
+\begin{DoxyNote}{Note}
+Peripheral clock gating in S\+L\+E\+EP mode can be used to further reduce power consumption. 
+
+After wakeup from S\+L\+E\+EP mode, the peripheral clock is enabled again. 
+
+By default, all peripheral clocks are enabled during S\+L\+E\+EP mode. 
+\end{DoxyNote}

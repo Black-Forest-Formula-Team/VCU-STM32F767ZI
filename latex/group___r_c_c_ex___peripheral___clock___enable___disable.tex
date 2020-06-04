@@ -1,0 +1,151 @@
+\hypertarget{group___r_c_c_ex___peripheral___clock___enable___disable}{}\doxysection{R\+C\+C\+Ex\+\_\+\+Peripheral\+\_\+\+Clock\+\_\+\+Enable\+\_\+\+Disable}
+\label{group___r_c_c_ex___peripheral___clock___enable___disable}\index{RCCEx\_Peripheral\_Clock\_Enable\_Disable@{RCCEx\_Peripheral\_Clock\_Enable\_Disable}}
+
+
+Enables or disables the A\+H\+B/\+A\+PB peripheral clock.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___clock___enable___disable_ga0e00f0ad54ffe188998d9fa4dbc211f2}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+B\+K\+P\+S\+R\+A\+M\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE}}()
+\begin{DoxyCompactList}\small\item\em Enables or disables the A\+H\+B1 peripheral clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___clock___enable___disable_ga01b37cc75f9a14a55b9e89e8ccfac8af}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+R\+N\+G\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE}}()
+\begin{DoxyCompactList}\small\item\em Enable or disable the A\+H\+B2 peripheral clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___clock___enable___disable_ga4f95da0bcb204e40ca556b27290a7541}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+F\+M\+C\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE}}()
+\begin{DoxyCompactList}\small\item\em Enables or disables the A\+H\+B3 peripheral clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___clock___enable___disable_ga2e895257faa38376b9cdfcd756909a43}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+T\+I\+M2\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE}}()
+\begin{DoxyCompactList}\small\item\em Enable or disable the Low Speed A\+PB (A\+P\+B1) peripheral clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___clock___enable___disable_gad693d7300ed7134b60bb1a645e762358}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+T\+I\+M1\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE}}()
+\begin{DoxyCompactList}\small\item\em Enable or disable the High Speed A\+PB (A\+P\+B2) peripheral clock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Enables or disables the A\+H\+B/\+A\+PB peripheral clock. 
+
+\begin{DoxyNote}{Note}
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it. 
+\end{DoxyNote}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c_ex___peripheral___clock___enable___disable_ga0e00f0ad54ffe188998d9fa4dbc211f2}\label{group___r_c_c_ex___peripheral___clock___enable___disable_ga0e00f0ad54ffe188998d9fa4dbc211f2}} 
+\index{RCCEx\_Peripheral\_Clock\_Enable\_Disable@{RCCEx\_Peripheral\_Clock\_Enable\_Disable}!\_\_HAL\_RCC\_BKPSRAM\_CLK\_ENABLE@{\_\_HAL\_RCC\_BKPSRAM\_CLK\_ENABLE}}
+\index{\_\_HAL\_RCC\_BKPSRAM\_CLK\_ENABLE@{\_\_HAL\_RCC\_BKPSRAM\_CLK\_ENABLE}!RCCEx\_Peripheral\_Clock\_Enable\_Disable@{RCCEx\_Peripheral\_Clock\_Enable\_Disable}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_BKPSRAM\_CLK\_ENABLE}{\_\_HAL\_RCC\_BKPSRAM\_CLK\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+B\+K\+P\+S\+R\+A\+M\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{                                        \_\_IO uint32\_t tmpreg; \(\backslash\)}
+\DoxyCodeLine{                                        SET\_BIT(RCC-\/>AHB1ENR, RCC\_AHB1ENR\_BKPSRAMEN);\(\backslash\)}
+\DoxyCodeLine{                                        \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */} \(\backslash\)}
+\DoxyCodeLine{                                        tmpreg = READ\_BIT(RCC-\/>AHB1ENR, RCC\_AHB1ENR\_BKPSRAMEN);\(\backslash\)}
+\DoxyCodeLine{                                        UNUSED(tmpreg); \(\backslash\)}
+\DoxyCodeLine{                                      \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Enables or disables the A\+H\+B1 peripheral clock. 
+
+\begin{DoxyNote}{Note}
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_c_c_ex___peripheral___clock___enable___disable_ga4f95da0bcb204e40ca556b27290a7541}\label{group___r_c_c_ex___peripheral___clock___enable___disable_ga4f95da0bcb204e40ca556b27290a7541}} 
+\index{RCCEx\_Peripheral\_Clock\_Enable\_Disable@{RCCEx\_Peripheral\_Clock\_Enable\_Disable}!\_\_HAL\_RCC\_FMC\_CLK\_ENABLE@{\_\_HAL\_RCC\_FMC\_CLK\_ENABLE}}
+\index{\_\_HAL\_RCC\_FMC\_CLK\_ENABLE@{\_\_HAL\_RCC\_FMC\_CLK\_ENABLE}!RCCEx\_Peripheral\_Clock\_Enable\_Disable@{RCCEx\_Peripheral\_Clock\_Enable\_Disable}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_FMC\_CLK\_ENABLE}{\_\_HAL\_RCC\_FMC\_CLK\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+F\+M\+C\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{                                        \_\_IO uint32\_t tmpreg; \(\backslash\)}
+\DoxyCodeLine{                                        SET\_BIT(RCC-\/>AHB3ENR, RCC\_AHB3ENR\_FMCEN);\(\backslash\)}
+\DoxyCodeLine{                                        \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */} \(\backslash\)}
+\DoxyCodeLine{                                        tmpreg = READ\_BIT(RCC-\/>AHB3ENR, RCC\_AHB3ENR\_FMCEN);\(\backslash\)}
+\DoxyCodeLine{                                        UNUSED(tmpreg); \(\backslash\)}
+\DoxyCodeLine{                                      \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Enables or disables the A\+H\+B3 peripheral clock. 
+
+\begin{DoxyNote}{Note}
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_c_c_ex___peripheral___clock___enable___disable_ga01b37cc75f9a14a55b9e89e8ccfac8af}\label{group___r_c_c_ex___peripheral___clock___enable___disable_ga01b37cc75f9a14a55b9e89e8ccfac8af}} 
+\index{RCCEx\_Peripheral\_Clock\_Enable\_Disable@{RCCEx\_Peripheral\_Clock\_Enable\_Disable}!\_\_HAL\_RCC\_RNG\_CLK\_ENABLE@{\_\_HAL\_RCC\_RNG\_CLK\_ENABLE}}
+\index{\_\_HAL\_RCC\_RNG\_CLK\_ENABLE@{\_\_HAL\_RCC\_RNG\_CLK\_ENABLE}!RCCEx\_Peripheral\_Clock\_Enable\_Disable@{RCCEx\_Peripheral\_Clock\_Enable\_Disable}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_RNG\_CLK\_ENABLE}{\_\_HAL\_RCC\_RNG\_CLK\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+R\+N\+G\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{                                        \_\_IO uint32\_t tmpreg; \(\backslash\)}
+\DoxyCodeLine{                                        SET\_BIT(RCC-\/>AHB2ENR, RCC\_AHB2ENR\_RNGEN);\(\backslash\)}
+\DoxyCodeLine{                                        \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */} \(\backslash\)}
+\DoxyCodeLine{                                        tmpreg = READ\_BIT(RCC-\/>AHB2ENR, RCC\_AHB2ENR\_RNGEN);\(\backslash\)}
+\DoxyCodeLine{                                        UNUSED(tmpreg); \(\backslash\)}
+\DoxyCodeLine{                                      \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Enable or disable the A\+H\+B2 peripheral clock. 
+
+\begin{DoxyNote}{Note}
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_c_c_ex___peripheral___clock___enable___disable_gad693d7300ed7134b60bb1a645e762358}\label{group___r_c_c_ex___peripheral___clock___enable___disable_gad693d7300ed7134b60bb1a645e762358}} 
+\index{RCCEx\_Peripheral\_Clock\_Enable\_Disable@{RCCEx\_Peripheral\_Clock\_Enable\_Disable}!\_\_HAL\_RCC\_TIM1\_CLK\_ENABLE@{\_\_HAL\_RCC\_TIM1\_CLK\_ENABLE}}
+\index{\_\_HAL\_RCC\_TIM1\_CLK\_ENABLE@{\_\_HAL\_RCC\_TIM1\_CLK\_ENABLE}!RCCEx\_Peripheral\_Clock\_Enable\_Disable@{RCCEx\_Peripheral\_Clock\_Enable\_Disable}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_TIM1\_CLK\_ENABLE}{\_\_HAL\_RCC\_TIM1\_CLK\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+T\+I\+M1\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{                                        \_\_IO uint32\_t tmpreg; \(\backslash\)}
+\DoxyCodeLine{                                        SET\_BIT(RCC-\/>APB2ENR, RCC\_APB2ENR\_TIM1EN);\(\backslash\)}
+\DoxyCodeLine{                                        \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */} \(\backslash\)}
+\DoxyCodeLine{                                        tmpreg = READ\_BIT(RCC-\/>APB2ENR, RCC\_APB2ENR\_TIM1EN);\(\backslash\)}
+\DoxyCodeLine{                                        UNUSED(tmpreg); \(\backslash\)}
+\DoxyCodeLine{                                      \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Enable or disable the High Speed A\+PB (A\+P\+B2) peripheral clock. 
+
+\begin{DoxyNote}{Note}
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_c_c_ex___peripheral___clock___enable___disable_ga2e895257faa38376b9cdfcd756909a43}\label{group___r_c_c_ex___peripheral___clock___enable___disable_ga2e895257faa38376b9cdfcd756909a43}} 
+\index{RCCEx\_Peripheral\_Clock\_Enable\_Disable@{RCCEx\_Peripheral\_Clock\_Enable\_Disable}!\_\_HAL\_RCC\_TIM2\_CLK\_ENABLE@{\_\_HAL\_RCC\_TIM2\_CLK\_ENABLE}}
+\index{\_\_HAL\_RCC\_TIM2\_CLK\_ENABLE@{\_\_HAL\_RCC\_TIM2\_CLK\_ENABLE}!RCCEx\_Peripheral\_Clock\_Enable\_Disable@{RCCEx\_Peripheral\_Clock\_Enable\_Disable}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_TIM2\_CLK\_ENABLE}{\_\_HAL\_RCC\_TIM2\_CLK\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+T\+I\+M2\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{                                        \_\_IO uint32\_t tmpreg; \(\backslash\)}
+\DoxyCodeLine{                                        SET\_BIT(RCC-\/>APB1ENR, RCC\_APB1ENR\_TIM2EN);\(\backslash\)}
+\DoxyCodeLine{                                        \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */} \(\backslash\)}
+\DoxyCodeLine{                                        tmpreg = READ\_BIT(RCC-\/>APB1ENR, RCC\_APB1ENR\_TIM2EN);\(\backslash\)}
+\DoxyCodeLine{                                        UNUSED(tmpreg); \(\backslash\)}
+\DoxyCodeLine{                                      \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Enable or disable the Low Speed A\+PB (A\+P\+B1) peripheral clock. 
+
+\begin{DoxyNote}{Note}
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it. 
+\end{DoxyNote}

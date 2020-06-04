@@ -1,0 +1,89 @@
+\hypertarget{stm32f7xx__hal__i2c_8h}{}\doxysection{Drivers/\+S\+T\+M32\+F7xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/stm32f7xx\+\_\+hal\+\_\+i2c.h File Reference}
+\label{stm32f7xx__hal__i2c_8h}\index{Drivers/STM32F7xx\_HAL\_Driver/Inc/stm32f7xx\_hal\_i2c.h@{Drivers/STM32F7xx\_HAL\_Driver/Inc/stm32f7xx\_hal\_i2c.h}}
+
+
+Header file of I2C H\+AL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f7xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f7xx\+\_\+hal\+\_\+i2c\+\_\+ex.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___i2_c___error___code__definition_ga0b8ca289091d942032c89484b6211d0d}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+NE}}~(0x00000000U)
+\item 
+\#define \mbox{\hyperlink{group___i2_c___error___code__definition_gab9f6e39431ee764ada50fd63f0ad2fbf}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+B\+E\+RR}}~(0x00000001U)
+\item 
+\#define \mbox{\hyperlink{group___i2_c___error___code__definition_ga048b36222884bfe80ce2d37fa868690b}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+R\+LO}}~(0x00000002U)
+\item 
+\#define \mbox{\hyperlink{group___i2_c___error___code__definition_gad1cc236ad6ba5cafe66aecb0dbedc65a}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+AF}}~(0x00000004U)
+\item 
+\#define \mbox{\hyperlink{group___i2_c___error___code__definition_ga38d8f9beb4c681eba786f6154d4f594a}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+VR}}~(0x00000008U)
+\item 
+\#define \mbox{\hyperlink{group___i2_c___error___code__definition_gae1091e9e82dcfcfef247b214a11c9db3}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+MA}}~(0x00000010U)
+\item 
+\#define \mbox{\hyperlink{group___i2_c___error___code__definition_gaeb3bedf36d78ddf3284a68494ab9d089}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+T\+I\+M\+E\+O\+UT}}~(0x00000020U)
+\item 
+\#define \mbox{\hyperlink{group___i2_c___error___code__definition_ga98027ff2d2fda2c793b07168ded747a4}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+I\+ZE}}~(0x00000040U)
+\item 
+\#define \mbox{\hyperlink{group___i2_c___error___code__definition_gacb922e1386469dce306f548cfd5c1277}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+M\+A\+\_\+\+P\+A\+R\+AM}}~(0x00000080U)
+\item 
+\#define \mbox{\hyperlink{group___i2_c___error___code__definition_gac2d3acb9e918667866677dc6b3e92cd8}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}}~(0x00000200U)
+\item 
+\#define \mbox{\hyperlink{group___i2_c___exported___macros_ga74c8fd72a78882720c28448ce8bd33d8}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+I2\+C\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group___h_a_l__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a91ba08634e08d7287940f1bc5a37eeff}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+S\+ET}})
+\begin{DoxyCompactList}\small\item\em Reset I2C handle state. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c___exported___macros_gac9d8b249b06b2d30f987acc9ceebd1d9}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+IT}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$C\+R1 $\vert$= (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the specified I2C interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c___exported___macros_ga33d0c7202ae298fa3ae128c5da49d455}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+I2\+C\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+IT}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$C\+R1 \&= ($\sim$(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Disable the specified I2C interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c___exported___macros_ga932024bf4a259e0cdaf9e50b38e3d41a}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+I2\+C\+\_\+\+G\+E\+T\+\_\+\+I\+T\+\_\+\+S\+O\+U\+R\+CE}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~((((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$C\+R1 \& (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)) ? S\+ET \+: R\+E\+S\+ET)
+\begin{DoxyCompactList}\small\item\em Check whether the specified I2C interrupt source is enabled or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c___exported___macros_gafbc0a6e4113be03100fbae1314a8b395}{I2\+C\+\_\+\+F\+L\+A\+G\+\_\+\+M\+A\+SK}}~(0x0001\+F\+F\+F\+FU)
+\begin{DoxyCompactList}\small\item\em Check whether the specified I2C flag is set or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c___exported___macros_ga933e2ea67e86db857a06b70a93be1186}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+I2\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+L\+AG}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the I2C pending flags which are cleared by writing 1 in a specific bit. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c___exported___macros_gacff412c47b0c1d63ef3b2a07f65988b7}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+N\+A\+B\+LE}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~(S\+E\+T\+\_\+\+B\+IT((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$C\+R1,  \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga953b0d38414808db79da116842ed3262}{I2\+C\+\_\+\+C\+R1\+\_\+\+PE}}))
+\begin{DoxyCompactList}\small\item\em Enable the specified I2C peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c___exported___macros_ga3d6a35da02ca72537a15570912c80412}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+I2\+C\+\_\+\+D\+I\+S\+A\+B\+LE}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~(C\+L\+E\+A\+R\+\_\+\+B\+IT((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$C\+R1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga953b0d38414808db79da116842ed3262}{I2\+C\+\_\+\+C\+R1\+\_\+\+PE}}))
+\begin{DoxyCompactList}\small\item\em Disable the specified I2C peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c___exported___macros_ga11f1b2e130ffa7e62d82ff1ebdb3f4f4}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+I2\+C\+\_\+\+G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+N\+A\+CK}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~(S\+E\+T\+\_\+\+B\+IT((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$C\+R2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga8bcbbaf564cb68e3afed79c3cd34aa1f}{I2\+C\+\_\+\+C\+R2\+\_\+\+N\+A\+CK}}))
+\begin{DoxyCompactList}\small\item\em Generate a Non-\/\+Acknowledge I2C peripheral in Slave mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___h_a_l__state__structure__definition_gaef355af8eab251ae2a19ee164ad81c37}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+State\+Type\+Def}} \{ \newline
+\mbox{\hyperlink{group___h_a_l__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a91ba08634e08d7287940f1bc5a37eeff}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+S\+ET}} = 0x00U, 
+\mbox{\hyperlink{group___h_a_l__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37af859ce60c5e462b0bfde3a5010bc72d1}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+A\+DY}} = 0x20U, 
+\mbox{\hyperlink{group___h_a_l__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a0c503d6c0388f0d872b368557e278b5a}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+SY}} = 0x24U, 
+\mbox{\hyperlink{group___h_a_l__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37acb3a9e3d4d1076e0f4e65f91ca0161bc}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+S\+Y\+\_\+\+TX}} = 0x21U, 
+\newline
+\mbox{\hyperlink{group___h_a_l__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a4ea4ecc2dc3cb64c4877c123d9d73170}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+S\+Y\+\_\+\+RX}} = 0x22U, 
+\mbox{\hyperlink{group___h_a_l__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a13518f06f54c7515100e86bb8d6e0779}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+L\+I\+S\+T\+EN}} = 0x28U, 
+\mbox{\hyperlink{group___h_a_l__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a14d22553a60819b276582e08459f30b0}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+S\+Y\+\_\+\+T\+X\+\_\+\+L\+I\+S\+T\+EN}} = 0x29U, 
+\mbox{\hyperlink{group___h_a_l__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a8aec2547eedf1c9924f8efed33e3b5c5}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+X\+\_\+\+L\+I\+S\+T\+EN}} = 0x2\+AU, 
+\newline
+\mbox{\hyperlink{group___h_a_l__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a2c6f6d1fef0847f9da51153b5c295249}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+B\+O\+RT}} = 0x60U, 
+\mbox{\hyperlink{group___h_a_l__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a378abf24301fe7a23620fd78ff3f168b}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+I\+M\+E\+O\+UT}} = 0x\+A0U, 
+\mbox{\hyperlink{group___h_a_l__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37afe3c9b304462901099426a0d414be2a2}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+R\+R\+OR}} = 0x\+E0U
+ \}
+\item 
+enum \mbox{\hyperlink{group___h_a_l__mode__structure__definition_gabcbb7b844f2ffd63c4e530c117882062}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def}} \{ \mbox{\hyperlink{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a98c8fd642b7ac45a23479bd597fc7a71}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+NE}} = 0x00U, 
+\mbox{\hyperlink{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a1eea98660a170dd7b191c9dfe46da6d2}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+S\+T\+ER}} = 0x10U, 
+\mbox{\hyperlink{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a817358d19d278261f2047a5ec8ec6b53}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+A\+VE}} = 0x20U, 
+\mbox{\hyperlink{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a3f592bd942f973242aac6b7df79f3f1e}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+EM}} = 0x40U
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of I2C H\+AL module. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2017 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 

@@ -32,7 +32,6 @@
   ******************************************************************************
   */ 
 
-
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f7xx_hal.h"
 
@@ -51,11 +50,11 @@
   * @{
   */
 /**
- * @brief STM32F7xx HAL Driver version number V1.2.7
+ * @brief STM32F7xx HAL Driver version number V1.2.8
    */
 #define __STM32F7xx_HAL_VERSION_MAIN   (0x01) /*!< [31:24] main version */
 #define __STM32F7xx_HAL_VERSION_SUB1   (0x02) /*!< [23:16] sub1 version */
-#define __STM32F7xx_HAL_VERSION_SUB2   (0x07) /*!< [15:8]  sub2 version */
+#define __STM32F7xx_HAL_VERSION_SUB2   (0x08) /*!< [15:8]  sub2 version */
 #define __STM32F7xx_HAL_VERSION_RC     (0x00) /*!< [7:0]  release candidate */ 
 #define __STM32F7xx_HAL_VERSION         ((__STM32F7xx_HAL_VERSION_MAIN << 24)\
                                         |(__STM32F7xx_HAL_VERSION_SUB1 << 16)\
@@ -320,14 +319,26 @@ uint32_t HAL_GetTickPrio(void)
 HAL_StatusTypeDef HAL_SetTickFreq(HAL_TickFreqTypeDef Freq)
 {
   HAL_StatusTypeDef status  = HAL_OK;
+  HAL_TickFreqTypeDef prevTickFreq;
+
   assert_param(IS_TICKFREQ(Freq));
 
   if (uwTickFreq != Freq)
   {
+    /* Back up uwTickFreq frequency */
+    prevTickFreq = uwTickFreq;
+
+    /* Update uwTickFreq global variable used by HAL_InitTick() */
     uwTickFreq = Freq;
 
     /* Apply the new tick Freq  */
     status = HAL_InitTick(uwTickPrio);
+
+    if (status != HAL_OK)
+    {
+      /* Restore previous tick frequency */
+      uwTickFreq = prevTickFreq;
+    }
   }
 
   return status;
@@ -588,7 +599,6 @@ void HAL_DisableMemorySwappingBank(void)
 {
   CLEAR_BIT(SYSCFG->MEMRMP, SYSCFG_MEMRMP_SWP_FB);
 }
-
 #endif /* STM32F767xx || STM32F769xx || STM32F777xx || STM32F779xx */
 
 /**

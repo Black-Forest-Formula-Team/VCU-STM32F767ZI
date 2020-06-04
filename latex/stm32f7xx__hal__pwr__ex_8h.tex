@@ -1,0 +1,39 @@
+\hypertarget{stm32f7xx__hal__pwr__ex_8h}{}\doxysection{Drivers/\+S\+T\+M32\+F7xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/stm32f7xx\+\_\+hal\+\_\+pwr\+\_\+ex.h File Reference}
+\label{stm32f7xx__hal__pwr__ex_8h}\index{Drivers/STM32F7xx\_HAL\_Driver/Inc/stm32f7xx\_hal\_pwr\_ex.h@{Drivers/STM32F7xx\_HAL\_Driver/Inc/stm32f7xx\_hal\_pwr\_ex.h}}
+
+
+Header file of P\+WR H\+AL Extension module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f7xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___exported___macro_gaa6904ae4fd3b27e546a1a9ca86fd0325}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+O\+V\+E\+R\+D\+R\+I\+V\+E\+\_\+\+E\+N\+A\+B\+LE}}()~(P\+WR-\/$>$C\+R1 $\vert$= (uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga034c9289598bc36001141083890598fa}{P\+W\+R\+\_\+\+C\+R1\+\_\+\+O\+D\+EN}})
+\begin{DoxyCompactList}\small\item\em Macros to enable or disable the Over drive mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___exported___macro_ga1f5fd3a41a03c729b283bf05af030716}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+O\+V\+E\+R\+D\+R\+I\+V\+E\+S\+W\+I\+T\+C\+H\+I\+N\+G\+\_\+\+E\+N\+A\+B\+LE}}()~(P\+WR-\/$>$C\+R1 $\vert$= (uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga570acaf0a109bf1678acb3eebd7aa84b}{P\+W\+R\+\_\+\+C\+R1\+\_\+\+O\+D\+S\+W\+EN}})
+\begin{DoxyCompactList}\small\item\em Macros to enable or disable the Over drive switching. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___exported___macro_gafbaac4011a44566b0ba2a563736cca09}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+U\+N\+D\+E\+R\+D\+R\+I\+V\+E\+\_\+\+E\+N\+A\+B\+LE}}()~(P\+WR-\/$>$C\+R1 $\vert$= (uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_gae462863ec79bc72219fc3e0c3180b39a}{P\+W\+R\+\_\+\+C\+R1\+\_\+\+U\+D\+EN}})
+\begin{DoxyCompactList}\small\item\em Macros to enable or disable the Under drive mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___exported___macro_ga846a66516ac8a6212f414f3d801169f9}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+G\+E\+T\+\_\+\+O\+D\+R\+U\+D\+R\+\_\+\+F\+L\+AG}}(\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)~((P\+WR-\/$>$C\+S\+R1 \& (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Check P\+WR flag is set or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___exported___macro_ga474f22f28c87cc54df405d83852fcac1}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+C\+L\+E\+A\+R\+\_\+\+O\+D\+R\+U\+D\+R\+\_\+\+F\+L\+AG}}()~(P\+WR-\/$>$C\+S\+R1 $\vert$= P\+W\+R\+\_\+\+F\+L\+A\+G\+\_\+\+U\+D\+R\+DY)
+\begin{DoxyCompactList}\small\item\em Clear the Under-\/\+Drive Ready flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___exported___macro_ga4f35c4eed3de35db5422548943cf8b1b}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+G\+E\+T\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+F\+L\+AG}}(\+\_\+\+\_\+\+W\+U\+F\+L\+A\+G\+\_\+\+\_\+)~(P\+WR-\/$>$C\+S\+R2 \& (\+\_\+\+\_\+\+W\+U\+F\+L\+A\+G\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Check Wake Up flag is set or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___exported___macro_gaf8743ab41addcd227d879ea209062f77}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+C\+L\+E\+A\+R\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+F\+L\+AG}}(\+\_\+\+\_\+\+W\+U\+F\+L\+A\+G\+\_\+\+\_\+)~(P\+WR-\/$>$C\+R2 $\vert$=  (\+\_\+\+\_\+\+W\+U\+F\+L\+A\+G\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clear the Wake\+Up pins flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of P\+WR H\+AL Extension module. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2017 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 

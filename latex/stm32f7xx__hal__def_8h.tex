@@ -1,0 +1,69 @@
+\hypertarget{stm32f7xx__hal__def_8h}{}\doxysection{Drivers/\+S\+T\+M32\+F7xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/stm32f7xx\+\_\+hal\+\_\+def.h File Reference}
+\label{stm32f7xx__hal__def_8h}\index{Drivers/STM32F7xx\_HAL\_Driver/Inc/stm32f7xx\_hal\_def.h@{Drivers/STM32F7xx\_HAL\_Driver/Inc/stm32f7xx\_hal\_def.h}}
+
+
+This file contains H\+AL common defines, enumeration, macros and structures definitions.  
+
+
+{\ttfamily \#include \char`\"{}stm32f7xx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Legacy/stm32\+\_\+hal\+\_\+legacy.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stm32f7xx__hal__def_8h_a5850085e1bb7a96a417756f235b16aea}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$State = 0U)
+\begin{DoxyCompactList}\small\item\em Reset the Handle\textquotesingle{}s State field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stm32f7xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}\label{stm32f7xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}} 
+enum \mbox{\hyperlink{stm32f7xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} 
+\begin{DoxyCompactList}\small\item\em H\+AL Status structures definition ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{stm32f7xx__hal__def_8h_ab367482e943333a1299294eadaad284b}\label{stm32f7xx__hal__def_8h_ab367482e943333a1299294eadaad284b}} 
+enum \mbox{\hyperlink{stm32f7xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def}} 
+\begin{DoxyCompactList}\small\item\em H\+AL Lock structures definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains H\+AL common defines, enumeration, macros and structures definitions. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2017 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{stm32f7xx__hal__def_8h_a5850085e1bb7a96a417756f235b16aea}\label{stm32f7xx__hal__def_8h_a5850085e1bb7a96a417756f235b16aea}} 
+\index{stm32f7xx\_hal\_def.h@{stm32f7xx\_hal\_def.h}!\_\_HAL\_RESET\_HANDLE\_STATE@{\_\_HAL\_RESET\_HANDLE\_STATE}}
+\index{\_\_HAL\_RESET\_HANDLE\_STATE@{\_\_HAL\_RESET\_HANDLE\_STATE}!stm32f7xx\_hal\_def.h@{stm32f7xx\_hal\_def.h}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RESET\_HANDLE\_STATE}{\_\_HAL\_RESET\_HANDLE\_STATE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$State = 0U)}
+
+
+
+Reset the Handle\textquotesingle{}s State field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+H\+A\+N\+D\+L\+E$<$/strong$>$} & specifies the Peripheral Handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This macro can be used for the following purpose\+:
+\begin{DoxyItemize}
+\item When the Handle is declared as local variable; before passing it as parameter to H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Init() for the first time, it is mandatory to use this macro to set to 0 the Handle\textquotesingle{}s \char`\"{}\+State\char`\"{} field. Otherwise, \char`\"{}\+State\char`\"{} field may have any random value and the first time the function H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Init() is called, the low level hardware initialization will be missed (i.\+e. H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Msp\+Init() will not be executed).
+\item When there is a need to reconfigure the low level hardware\+: instead of calling H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+De\+Init() then H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Init(), user can make a call to this macro then H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Init(). In this later function, when the Handle\textquotesingle{}s \char`\"{}\+State\char`\"{} field is set to 0, it will execute the function H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Msp\+Init() which will reconfigure the low level hardware. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

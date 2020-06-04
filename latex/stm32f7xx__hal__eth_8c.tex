@@ -1,0 +1,129 @@
+\hypertarget{stm32f7xx__hal__eth_8c}{}\doxysection{Drivers/\+S\+T\+M32\+F7xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Src/stm32f7xx\+\_\+hal\+\_\+eth.c File Reference}
+\label{stm32f7xx__hal__eth_8c}\index{Drivers/STM32F7xx\_HAL\_Driver/Src/stm32f7xx\_hal\_eth.c@{Drivers/STM32F7xx\_HAL\_Driver/Src/stm32f7xx\_hal\_eth.c}}
+
+
+E\+TH H\+AL module driver. This file provides firmware functions to manage the following functionalities of the Ethernet (E\+TH) peripheral\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32f7xx\+\_\+hal.\+h\char`\"{}}\newline
+
+
+\doxysubsection{Detailed Description}
+E\+TH H\+AL module driver. This file provides firmware functions to manage the following functionalities of the Ethernet (E\+TH) peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team
+\begin{DoxyItemize}
+\item Initialization and de-\/initialization functions
+\item IO operation functions
+\item Peripheral Control functions
+\item Peripheral State and Errors functions
+\end{DoxyItemize}
+\end{DoxyAuthor}
+\begin{DoxyVerb}  ==============================================================================
+                    ##### How to use this driver #####
+  ==============================================================================
+    [..]
+      (#)Declare a ETH_HandleTypeDef handle structure, for example:
+         ETH_HandleTypeDef  heth;
+        
+      (#)Fill parameters of Init structure in heth handle
+  
+      (#)Call HAL_ETH_Init() API to initialize the Ethernet peripheral (MAC, DMA, ...) 
+
+      (#)Initialize the ETH low level resources through the HAL_ETH_MspInit() API:
+          (##) Enable the Ethernet interface clock using 
+               (+++) __HAL_RCC_ETHMAC_CLK_ENABLE();
+               (+++) __HAL_RCC_ETHMACTX_CLK_ENABLE();
+               (+++) __HAL_RCC_ETHMACRX_CLK_ENABLE();
+           
+          (##) Initialize the related GPIO clocks
+          (##) Configure Ethernet pin-out
+          (##) Configure Ethernet NVIC interrupt (IT mode)   
+    
+      (#)Initialize Ethernet DMA Descriptors in chain mode and point to allocated buffers:
+          (##) HAL_ETH_DMATxDescListInit(); for Transmission process
+          (##) HAL_ETH_DMARxDescListInit(); for Reception process
+
+      (#)Enable MAC and DMA transmission and reception:
+          (##) HAL_ETH_Start();
+
+      (#)Prepare ETH DMA TX Descriptors and give the hand to ETH DMA to transfer 
+         the frame to MAC TX FIFO:
+         (##) HAL_ETH_TransmitFrame();
+
+      (#)Poll for a received frame in ETH RX DMA Descriptors and get received 
+         frame parameters
+         (##) HAL_ETH_GetReceivedFrame(); (should be called into an infinite loop)
+
+      (#) Get a received frame when an ETH RX interrupt occurs:
+         (##) HAL_ETH_GetReceivedFrame_IT(); (called in IT mode only)
+
+      (#) Communicate with external PHY device:
+         (##) Read a specific register from the PHY  
+              HAL_ETH_ReadPHYRegister();
+         (##) Write data to a specific RHY register:
+              HAL_ETH_WritePHYRegister();
+
+      (#) Configure the Ethernet MAC after ETH peripheral initialization
+          HAL_ETH_ConfigMAC(); all MAC parameters should be filled.
+      
+      (#) Configure the Ethernet DMA after ETH peripheral initialization
+          HAL_ETH_ConfigDMA(); all DMA parameters should be filled.
+
+*** Callback registration ***
+  =============================================
+
+  The compilation define  USE_HAL_ETH_REGISTER_CALLBACKS when set to 1
+  allows the user to configure dynamically the driver callbacks.
+  Use Function @ref HAL_ETH_RegisterCallback() to register an interrupt callback.
+
+  Function @ref HAL_ETH_RegisterCallback() allows to register following callbacks:
+    (+) TxCpltCallback   : Tx Complete Callback.
+    (+) RxCpltCallback   : Rx Complete Callback.
+    (+) DMAErrorCallback : DMA Error Callback.
+    (+) MspInitCallback  : MspInit Callback.
+    (+) MspDeInitCallback: MspDeInit Callback.
+
+  This function takes as parameters the HAL peripheral handle, the Callback ID
+  and a pointer to the user callback function.
+
+  Use function @ref HAL_ETH_UnRegisterCallback() to reset a callback to the default
+  weak function.
+  @ref HAL_ETH_UnRegisterCallback takes as parameters the HAL peripheral handle,
+  and the Callback ID.
+  This function allows to reset following callbacks:
+    (+) TxCpltCallback   : Tx Complete Callback.
+    (+) RxCpltCallback   : Rx Complete Callback.
+    (+) DMAErrorCallback : DMA Error Callback.
+    (+) MspInitCallback  : MspInit Callback.
+    (+) MspDeInitCallback: MspDeInit Callback.
+
+  By default, after the HAL_ETH_Init and when the state is HAL_ETH_STATE_RESET
+  all callbacks are set to the corresponding weak functions:
+  examples @ref HAL_ETH_TxCpltCallback(), @ref HAL_ETH_RxCpltCallback().
+  Exception done for MspInit and MspDeInit functions that are
+  reset to the legacy weak function in the HAL_ETH_Init/ @ref HAL_ETH_DeInit only when
+  these callbacks are null (not registered beforehand).
+  if not, MspInit or MspDeInit are not null, the HAL_ETH_Init/ @ref HAL_ETH_DeInit
+  keep and use the user MspInit/MspDeInit callbacks (registered beforehand)
+
+  Callbacks can be registered/unregistered in HAL_ETH_STATE_READY state only.
+  Exception done MspInit/MspDeInit that can be registered/unregistered
+  in HAL_ETH_STATE_READY or HAL_ETH_STATE_RESET state,
+  thus registered (user) MspInit/DeInit callbacks can be used during the Init/DeInit.
+  In that case first register the MspInit/MspDeInit user callbacks
+  using @ref HAL_ETH_RegisterCallback() before calling @ref HAL_ETH_DeInit
+  or HAL_ETH_Init function.
+
+  When The compilation define USE_HAL_ETH_REGISTER_CALLBACKS is set to 0 or
+  not defined, the callback registration feature is not available and all callbacks
+  are set to the corresponding weak functions.\end{DoxyVerb}
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2017 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 

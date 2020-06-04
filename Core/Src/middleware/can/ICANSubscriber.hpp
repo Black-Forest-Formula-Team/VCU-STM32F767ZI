@@ -1,0 +1,22 @@
+/**
+* @file ICANSubscriber.hpp
+*
+* @brief
+* @author Alex
+* @date 30.03.2020
+*
+**/
+
+#ifndef ICANSUBSCRIBER_HPP_
+#define ICANSUBSCRIBER_HPP_
+
+#include "CANFrame.hpp"
+
+class ICANSubscriber
+{
+public:
+	virtual ~ICANSubscriber() = default;
+	virtual void update(CANFrame frame) = 0;
+};
+
+#endif /* ICANSUBSCRIBER_HPP_ */
