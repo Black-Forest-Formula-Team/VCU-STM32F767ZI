@@ -8,14 +8,12 @@
 *
 */
 #include "mymain.hpp"
-
-extern "C"
-{
-	#include "main.h"
-}
+#include "main.h"
+#include <device/inverter/Inverter.hpp>
 
 /*modul global values*/
-CANController canController1(hcan1);
+
+CANController canController1 = CANController(hcan1);
 CANFrameId canFrameIdLeftInverter = CANFrameId(0xAA);
 CANFrameId canFrameIdRightInverter = CANFrameId(0xBB);
 

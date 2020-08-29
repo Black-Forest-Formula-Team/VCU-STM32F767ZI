@@ -10,16 +10,15 @@
 #ifndef INC_MYMAIN_HPP_
 #define INC_MYMAIN_HPP_
 
-#include <device/inverter/Inverter.hpp>
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+void cppmain (void);
+void CAN1_irq_receive();
 
-	extern CANController canController1;
-	extern CANFrameId canFrameIdLeftInverter;
-	extern CANFrameId canFrameIdRightInverter;
-
-
-
-
-
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* INC_MYMAIN_HPP_ */

@@ -25,7 +25,7 @@
 #include "task.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "mymain.hpp"
 /* USER CODE END Includes */
   
 /* Private typedef -----------------------------------------------------------*/
