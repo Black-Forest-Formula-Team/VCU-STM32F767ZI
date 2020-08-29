@@ -1,5 +1,5 @@
-// use implementation in heap_useNewlib.c
-
+// Alexander Bierenstiel:
+// use implementation in heap_useNewlib.c instead
 #if 0
 
 /*
