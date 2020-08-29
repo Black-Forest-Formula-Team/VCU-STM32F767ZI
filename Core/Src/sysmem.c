@@ -1,4 +1,10 @@
-// use implementation in heap_useNewlib.c
+/*
+ * This file is STM's implementation for growing the heap when dynamic allocation requires the heap to expand.
+ * This implementation is not compatible with FreeRTOS. Thus it has been deactivated and instead
+ * the implementation heap_useNewlib.c is used to work correctly together with FreeRTOS.
+ *
+ * Author: Alexander Bierenstiel
+ */
 
 #if 0
 

@@ -156,7 +156,9 @@ void* _sbrk_r(struct _reent *pReent, int incr) {
 				- (&__HeapBase)) - ISR_STACK_LENGTH_BYTES;
 	};
 #endif
-	// inserted for debugging
+	/* Alexander Bierenstiel: inserted for debugging to check if
+	 * heap behavior with FreeRTOS and this implementation is now working.
+
 	extern char _sdata;
 	extern char _edata;
 	extern char _sbss;
@@ -172,6 +174,7 @@ void* _sbrk_r(struct _reent *pReent, int incr) {
 	char* my_stack_ptr = stack_ptr;
 	char* my_heap_limit = &__HeapLimit;
 	char* my_heap_isr_stack_limit = &__HeapLimit - ISR_STACK_LENGTH_BYTES;
+	*/
 
 	char *limit =
 			(xTaskGetSchedulerState() == taskSCHEDULER_NOT_STARTED) ?
