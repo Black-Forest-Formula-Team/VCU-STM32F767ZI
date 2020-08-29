@@ -8,7 +8,7 @@
 #ifndef SRC_SENSOR_DATA_HPP_
 #define SRC_SENSOR_DATA_HPP_
 
-#include <frutil/FreeRTOSUtils.hpp>
+#include "frutil/FreeRTOSUtils.hpp"
 #include "sensor_data.hpp"
 
 using namespace frutil;

@@ -1,3 +1,8 @@
+/*
+ * Alexander Bierenstiel: We added this file to fix STM's default heap implementation
+ * to be able to use FreeRTOS with stack allocation.
+ */
+
 /**
  * \file heap_useNewlib.c
  * \brief Wrappers required to use newlib malloc-family within FreeRTOS.
