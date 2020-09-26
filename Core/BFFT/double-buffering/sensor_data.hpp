@@ -8,11 +8,10 @@
 #ifndef SRC_SENSOR_DATA_HPP_
 #define SRC_SENSOR_DATA_HPP_
 
-#include "frutil/FreeRTOSUtils.hpp"
 #include "sensor_data.hpp"
 
-using namespace frutil;
-using namespace frutil::mutex;
+#include "MutexAllocatedLocally.hpp"
+#include "MutexGuardCertain.hpp"
 
 
 template <class T>
@@ -191,12 +190,12 @@ public:
 
 class SensorDataAccessGuard
 {
-	MutexCertainGuard _guard;
+	MutexGuardCertain _guard;
 
 public:
 	SensorData volatile &sensorData;
 
-	SensorDataAccessGuard(MutexCertainGuard guard, SensorData volatile &sensorData) : _guard(guard), sensorData(sensorData)
+	SensorDataAccessGuard(MutexGuardCertain guard, SensorData volatile &sensorData) : _guard(guard), sensorData(sensorData)
 	{}
 };
 
@@ -216,7 +215,7 @@ public:
 
 	SensorDataAccessGuard getAccessGuard()
 	{
-		return SensorDataAccessGuard(MutexCertainGuard(_mutex, Ticks::Max_Delay), _sensorData);
+		return SensorDataAccessGuard(MutexGuardCertain(_mutex, Ticks::Max_Delay), _sensorData);
 	}
 };
 

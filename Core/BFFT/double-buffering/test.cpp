@@ -7,9 +7,7 @@
  *      Author: Alex
  */
 
-
 #include "sensor_data.hpp"
-#include <frutil/FreeRTOSUtils.hpp>
 
 void test()
 {
