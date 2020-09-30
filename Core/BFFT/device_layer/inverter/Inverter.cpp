@@ -9,6 +9,6 @@
 */
 
 
-#include "Inverter.hpp"
+#include <device_layer/inverter/Inverter.hpp>
 
 

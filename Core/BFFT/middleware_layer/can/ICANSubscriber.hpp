@@ -10,7 +10,7 @@
 #ifndef ICANSUBSCRIBER_HPP_
 #define ICANSUBSCRIBER_HPP_
 
-#include "CANFrame.hpp"
+#include <middleware_layer/can/CANFrame.hpp>
 
 class ICANSubscriber
 {

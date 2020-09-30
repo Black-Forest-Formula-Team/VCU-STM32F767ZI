@@ -10,8 +10,8 @@
 #ifndef CANCONTROLLER_HPP_
 #define CANCONTROLLER_HPP_
 
-#include <CANControllerBase.hpp>
-#include "CANHandle.hpp"
+#include <middleware_layer/can/CANControllerBase.hpp>
+#include <middleware_layer/can/CANHandle.hpp>
 
 
 class CANController : public CANControllerBase

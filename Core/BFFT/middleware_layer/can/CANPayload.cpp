@@ -8,7 +8,7 @@
 *
 */
 
-#include "CANPayload.hpp"
+#include <middleware_layer/can/CANPayload.hpp>
 
 bool CANPayload::isValid() const
 {

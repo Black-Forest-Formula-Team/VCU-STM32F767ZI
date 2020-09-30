@@ -10,8 +10,8 @@
 #ifndef CANFRAME_HPP_
 #define CANFRAME_HPP_
 
-#include "CANFrameId.hpp"
-#include "CANPayload.hpp"
+#include <middleware_layer/can/CANFrameId.hpp>
+#include <middleware_layer/can/CANPayload.hpp>
 
 class CANFrame
 {

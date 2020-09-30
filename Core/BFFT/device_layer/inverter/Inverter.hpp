@@ -14,8 +14,8 @@
 
 #include <stdio.h>
 #include <cstring>
-#include "middleware/can/CANController.hpp"
-#include "middleware/can/CANFrameId.hpp"
+#include <middleware_layer/can/CANController.hpp>
+#include <middleware_layer/can/CANFrameId.hpp>
 
 class Inverter : ICANSubscriber
 {

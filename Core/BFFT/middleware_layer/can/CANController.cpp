@@ -8,7 +8,7 @@
 *
 */
 
-#include "CANController.hpp"
+#include <middleware_layer/can/CANController.hpp>
 
 
 

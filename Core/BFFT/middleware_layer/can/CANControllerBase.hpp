@@ -5,10 +5,10 @@
  *      Author: Alex
  */
 
-#ifndef BFFT_MIDDLEWARE_CAN_CANCONTROLLERBASE_HPP_
-#define BFFT_MIDDLEWARE_CAN_CANCONTROLLERBASE_HPP_
+#ifndef BFFT_MIDDLEWARE_LAYER_CAN_CANCONTROLLERBASE_HPP_
+#define BFFT_MIDDLEWARE_LAYER_CAN_CANCONTROLLERBASE_HPP_
 
-#include <ICANController.hpp>
+#include <middleware_layer/can/ICANController.hpp>
 #include <vector>
 
 
@@ -40,4 +40,4 @@ public:
 };
 
 
-#endif /* BFFT_MIDDLEWARE_CAN_CANCONTROLLERBASE_HPP_ */
+#endif /* BFFT_MIDDLEWARE_LAYER_CAN_CANCONTROLLERBASE_HPP_ */
