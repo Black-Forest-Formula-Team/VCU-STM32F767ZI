@@ -18,7 +18,7 @@ CANController::CANController(CANHandle &canHandle) : _canHandle(canHandle)
 }
 
 
-void CANController::publish(CANFrame frame)
+void CANController::receive(CANFrame frame)
 {
 	// update each subscriber that listens to the same frame id as the id of the given frame
 	for (auto it = _canFrameIds.begin(); it != _canFrameIds.end(); ++it)
@@ -86,7 +86,7 @@ void CANController::receiveFromISR(void)
 	CANFrame RxFrame = CANFrame(CANFrameId(canRxHeader.StdId,canRxHeader.ExtId,canRxHeader.IDE>>2), RxPayload);
 
 
-	publish(RxFrame);
+	receive(RxFrame);
 }
 
 

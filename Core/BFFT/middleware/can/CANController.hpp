@@ -20,12 +20,12 @@ class CANController
 	std::vector<ICANSubscriber*> _canSubscribers;
 	std::vector<CANFrameId> _canFrameIds;
 
-	void publish(CANFrame frame);
-
 public:
 	CANController(CANHandle &canHandle);
 
 	void addSubscriber(ICANSubscriber &subscriber, CANFrameId id);
+
+	void receive(CANFrame frame);
 
 	void receiveFromISR(void);
 
