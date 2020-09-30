@@ -7,7 +7,7 @@
  *      Author: Alex
  */
 
-#include <double_buffering/sensor_data.hpp>
+#include <sensor_data.hpp>
 
 void test()
 {

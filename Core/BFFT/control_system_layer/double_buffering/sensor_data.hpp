@@ -8,7 +8,6 @@
 #ifndef SRC_SENSOR_DATA_HPP_
 #define SRC_SENSOR_DATA_HPP_
 
-#include <double_buffering/sensor_data.hpp>
 #include "MutexAllocatedLocally.hpp"
 #include "MutexGuardCertain.hpp"
 
