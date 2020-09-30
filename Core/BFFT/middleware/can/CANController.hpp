@@ -27,7 +27,7 @@ public:
 
 	void addSubscriber(ICANSubscriber &subscriber, CANFrameId id);
 
-	void receive(void);
+	void receiveFromISR(void);
 
 	void send(CANFrame frame);
 

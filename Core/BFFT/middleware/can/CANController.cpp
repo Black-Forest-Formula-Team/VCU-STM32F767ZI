@@ -41,7 +41,7 @@ void CANController::addSubscriber(ICANSubscriber &subscriber, CANFrameId id)
 
 
 // shall be called from interrupt service procedure to distribute the received CAN frame to the subscribers
-void CANController::receive(void)
+void CANController::receiveFromISR(void)
 {
 
 	CAN_RxHeaderTypeDef canRxHeader;

@@ -108,8 +108,8 @@ void cppmain (void)
 */
 void CAN1_irq_receive()
 {
-	canController1.receive();
-	canController1.receive();
+	canController1.receiveFromISR();
+	canController1.receiveFromISR();
 
 }
 
