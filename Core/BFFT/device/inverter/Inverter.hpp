@@ -28,7 +28,7 @@ public:
 		_canController(canController),
 		_setTargetRevolutionSpeedId(setTargetRevolutionSpeedId)
 	{
-		_canController.addSubscriber(*this, _setTargetRevolutionSpeedId);
+		_canController.addSubscriber(_setTargetRevolutionSpeedId, *this);
 	}
 	virtual ~Inverter() = default;
 

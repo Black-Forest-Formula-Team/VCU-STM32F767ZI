@@ -16,9 +16,9 @@
 class ICANController
 {
 public:
-	virtual void addSubscriber(CANFrameId id, ICANSubscriber &subscriber);
-	virtual void receive(CANFrame frame);
-	virtual void send(CANFrame frame);
+	virtual void addSubscriber(CANFrameId id, ICANSubscriber &subscriber) = 0;
+	virtual void receive(CANFrame frame) = 0;
+	virtual void send(CANFrame frame) = 0;
 };
 
 

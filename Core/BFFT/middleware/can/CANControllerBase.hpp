@@ -18,13 +18,13 @@ class CANControllerBase : public ICANController
 	std::vector<ICANSubscriber*> _canSubscribers;
 
 public:
-	void CANControllerBase::addSubscriber(CANFrameId id, ICANSubscriber &subscriber) override
+	void addSubscriber(CANFrameId id, ICANSubscriber &subscriber) override
 	{
 		_canFrameIds.push_back(id);
 		_canSubscribers.push_back(&subscriber);
 	}
 
-	void CANControllerBase::receive(CANFrame frame) override
+	void receive(CANFrame frame) override
 	{
 		// update each subscriber that listens to the same frame id as the id of the given frame
 		for (auto it = _canFrameIds.begin(); it != _canFrameIds.end(); ++it)

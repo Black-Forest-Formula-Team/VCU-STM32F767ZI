@@ -18,27 +18,6 @@ CANController::CANController(CANHandle &canHandle) : _canHandle(canHandle)
 }
 
 
-void CANController::receive(CANFrame frame)
-{
-	// update each subscriber that listens to the same frame id as the id of the given frame
-	for (auto it = _canFrameIds.begin(); it != _canFrameIds.end(); ++it)
-	{
-		if (frame.id == *it)
-		{
-			const int index = it - _canFrameIds.begin();
-			ICANSubscriber *subscriber =_canSubscribers[index];
-			subscriber->receive(frame);
-		}
-	}
-}
-
-
-void CANController::addSubscriber(ICANSubscriber &subscriber, CANFrameId id)
-{
-	_canSubscribers.push_back(&subscriber);
-	_canFrameIds.push_back(id);
-}
-
 
 // shall be called from interrupt service procedure to distribute the received CAN frame to the subscribers
 void CANController::receiveFromISR(void)
