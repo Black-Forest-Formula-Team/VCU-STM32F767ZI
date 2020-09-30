@@ -16,7 +16,7 @@ class ICANSubscriber
 {
 public:
 	virtual ~ICANSubscriber() = default;
-	virtual void update(CANFrame frame) = 0;
+	virtual void receive(CANFrame frame) = 0;
 };
 
 #endif /* ICANSUBSCRIBER_HPP_ */

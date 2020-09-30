@@ -26,8 +26,8 @@ void CANController::publish(CANFrame frame)
 		if (frame.id == *it)
 		{
 			const int index = it - _canFrameIds.begin();
-			auto listener =_canSubscribers[index];
-			listener->update(frame);
+			ICANSubscriber *subscriber =_canSubscribers[index];
+			subscriber->receive(frame);
 		}
 	}
 }

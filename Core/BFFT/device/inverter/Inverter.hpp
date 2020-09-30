@@ -52,7 +52,7 @@ public:
 	{
 	}
 
-	void update(CANFrame frame) override
+	void receive(CANFrame frame) override
 	{
 		puts("InverterLeft: frame received");
 	}
@@ -66,7 +66,7 @@ public:
 	{
 	}
 
-	void update(CANFrame frame) override
+	void receive(CANFrame frame) override
 	{
 		puts("InverterRight: frame received");
 	}
