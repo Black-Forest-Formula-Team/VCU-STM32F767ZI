@@ -1,6 +1,6 @@
 /*
  * Alexander Bierenstiel: We added this file to fix STM's default heap implementation
- * to be able to use FreeRTOS with stack allocation.
+ * to be able to use FreeRTOS with dynamic allocation.
  */
 
 /**
