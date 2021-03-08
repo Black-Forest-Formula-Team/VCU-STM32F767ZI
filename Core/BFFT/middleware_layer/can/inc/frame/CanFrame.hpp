@@ -27,10 +27,11 @@ public:
 	, _payload(payload)
 	{}
 
+	// TODO: default constructor constructs nonsense object, remove this!
 	// constructor to enable default construction for arrays and etc.
-	CanFrame()
-	: CanFrame(FRAME_ID(), CanPayloadValidated())
-	{}
+	//CanFrame()
+	//: CanFrame(FRAME_ID(), CanPayloadValidated())
+	//{}
 
 	FRAME_ID getId() const
 	{

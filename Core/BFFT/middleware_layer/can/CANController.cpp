@@ -133,9 +133,7 @@ void CANController::send(CANFrame frame)
 /** function to start the CAN communication*/
 void CANController::start(void)
 {
-
 	if(HAL_CAN_Start(&_canHandle)) throw "Can can't start";
-
 }
 /**function to activate the Interrupt for CAN*/
 void CANController::activateInterrupt (void)

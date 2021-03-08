@@ -1,6 +1,10 @@
 /*
  * Alexander Bierenstiel: We added this file to fix STM's default heap implementation
  * to be able to use FreeRTOS with dynamic allocation.
+ *
+ * NOTE: IF YOU GET A MULTIPLE DEFINITION ERROR MAKE SURE TO COMMENT OUT THE ENTIRE FILE
+ * Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c. THIS REMOVES THE
+ * FAULTY IMPLEMENTATION WITH THIS FILE AND THE MULTIPLE DEFINITIOIN ERROR WILL BE GONE.
  */
 
 /**

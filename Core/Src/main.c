@@ -17,11 +17,9 @@
   ******************************************************************************
   */
 /* USER CODE END Header */
-
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
-#include "mymain.hpp"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -108,7 +106,8 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_ETH_Init();
+  // TODO: Ethernet fails to initialize. This needs further investigation.
+  //MX_ETH_Init();
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
   MX_CAN1_Init();
@@ -145,7 +144,7 @@ int main(void)
 
   /* Start scheduler */
   osKernelStart();
- 
+
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -168,14 +167,15 @@ void SystemClock_Config(void)
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
 
-  /** Configure LSE Drive Capability 
+  /** Configure LSE Drive Capability
   */
   HAL_PWR_EnableBkUpAccess();
-  /** Configure the main internal regulator output voltage 
+  /** Configure the main internal regulator output voltage
   */
   __HAL_RCC_PWR_CLK_ENABLE();
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE3);
-  /** Initializes the CPU, AHB and APB busses clocks 
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
@@ -189,7 +189,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  /** Initializes the CPU, AHB and APB busses clocks 
+  /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
@@ -227,7 +227,7 @@ static void MX_CAN1_Init(void)
 
   /* USER CODE END CAN1_Init 1 */
   hcan1.Instance = CAN1;
-  hcan1.Init.Prescaler = 8;
+  hcan1.Init.Prescaler = 2;
   hcan1.Init.Mode = CAN_MODE_NORMAL;
   hcan1.Init.SyncJumpWidth = CAN_SJW_1TQ;
   hcan1.Init.TimeSeg1 = CAN_BS1_12TQ;
@@ -243,19 +243,19 @@ static void MX_CAN1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN CAN1_Init 2 */
-//  CAN_FilterTypeDef s_filter_can;
-//
-//  	  s_filter_can.FilterMaskIdHigh = 0x0000;
-//  	  s_filter_can.FilterIdLow = 0x0000;
-//  	  s_filter_can.FilterMaskIdHigh = 0x0000;
-//  	  s_filter_can.FilterMaskIdLow = 0x0000;
-//  	  s_filter_can.FilterFIFOAssignment = CAN_RX_FIFO0;
-//  	  s_filter_can.FilterBank = 13;
-//  	  s_filter_can.FilterMode = CAN_FILTERMODE_IDMASK;
-//  	  s_filter_can.FilterScale = CAN_FILTERSCALE_16BIT;
-//  	  s_filter_can.FilterActivation = CAN_FILTER_ENABLE;
-//
-//  	  HAL_CAN_ConfigFilter(&hcan1, &s_filter_can);
+  CAN_FilterTypeDef s_filter_can;
+
+  	  s_filter_can.FilterMaskIdHigh = 0x0000;
+  	  s_filter_can.FilterIdLow = 0x0000;
+  	  s_filter_can.FilterMaskIdHigh = 0x0000;
+  	  s_filter_can.FilterMaskIdLow = 0x0000;
+  	  s_filter_can.FilterFIFOAssignment = CAN_RX_FIFO0;
+  	  s_filter_can.FilterBank = 13;
+  	  s_filter_can.FilterMode = CAN_FILTERMODE_IDMASK;
+  	  s_filter_can.FilterScale = CAN_FILTERSCALE_16BIT;
+  	  s_filter_can.FilterActivation = CAN_FILTER_ENABLE;
+
+  	  HAL_CAN_ConfigFilter(&hcan1, &s_filter_can);
   /* USER CODE END CAN1_Init 2 */
 
 }
@@ -437,6 +437,8 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
+	// TODO: used for testing if malloc now works with the FreeRTOS bugfix, remove this when no longer needed.
+	/*
 	char* my_data = (char*)malloc(20);
 	if (my_data == 0)
 	{
@@ -445,6 +447,7 @@ void StartDefaultTask(void *argument)
 
 		}
 	}
+	*/
 
 
   cppmain();
@@ -453,10 +456,10 @@ void StartDefaultTask(void *argument)
   {
     osDelay(1);
   }
-  /* USER CODE END 5 */ 
+  /* USER CODE END 5 */
 }
 
- /**
+/**
   * @brief  Period elapsed callback in non blocking mode
   * @note   This function is called  when TIM1 interrupt took place, inside
   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
@@ -485,7 +488,10 @@ void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
-
+	while(1)
+	{
+		puts("error");
+	}
   /* USER CODE END Error_Handler_Debug */
 }
 
@@ -498,7 +504,7 @@ void Error_Handler(void)
   * @retval None
   */
 void assert_failed(uint8_t *file, uint32_t line)
-{ 
+{
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */

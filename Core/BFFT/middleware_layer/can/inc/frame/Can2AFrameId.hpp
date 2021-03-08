@@ -15,7 +15,7 @@
 class Can2AFrameId final
 {
 private:
-	static constexpr  uint16_t HIGHEST_STANDARD_ID = (1 << 11) - 1;
+	static constexpr  uint16_t HIGHEST_AND_LOWEST_PRIORITY_STANDARD_ID = (1 << 11) - 1;
 
 	// 11 bits for standard id (SID). Bit numbering is SID10 <-to-> SID0.
 	// SID10 is most significant bit.
@@ -30,7 +30,7 @@ public:
 	Can2AFrameId(const uint16_t standardId)
 	: _standardId(standardId)
 	{
-		uint16_t mask_11_bits = ~HIGHEST_STANDARD_ID;
+		uint16_t mask_11_bits = ~HIGHEST_AND_LOWEST_PRIORITY_STANDARD_ID;
 
 		if (_standardId & mask_11_bits)
 		{
@@ -40,7 +40,7 @@ public:
 
 	// constructor to enable default construction for arrays and etc.
 	Can2AFrameId()
-	: Can2AFrameId(HIGHEST_STANDARD_ID)
+	: Can2AFrameId(HIGHEST_AND_LOWEST_PRIORITY_STANDARD_ID)
 	{}
 
 	bool operator==(const Can2AFrameId& rhs) const

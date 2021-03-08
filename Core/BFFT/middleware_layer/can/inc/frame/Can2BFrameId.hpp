@@ -15,8 +15,10 @@
 class Can2BFrameId final
 {
 private:
-	static constexpr  uint16_t HIGHEST_STANDARD_ID = (1 << 11) - 1;
-	static constexpr  uint32_t HIGHEST_EXTENDED_ID = (1 << 18) - 1;
+	static constexpr  uint16_t HIGHEST_AND_LOWEST_PRIORITY_STANDARD_ID = (1 << 11) - 1;
+	static constexpr  uint32_t HIGHEST_AND_LOWEST_PRIORITY_EXTENDED_ID = (1 << 18) - 1;
+
+	// TODO: Extended ID means the whole 29-bit identifier. Add sid_part and eid_part as member functions to query for those parts of the whole Extended id.
 
 	// 11 bits for standard id (SID). Bit numbering is SID10 <-to-> SID0.
 	// SID10 is most significant bit.
@@ -41,11 +43,11 @@ public:
 	: _standardId(standardId)
 	, _extendedId(extendedId)
 	{
-		if (_standardId & HIGHEST_STANDARD_ID)
+		if (_standardId & HIGHEST_AND_LOWEST_PRIORITY_STANDARD_ID)
 		{
 			// TODO: error
 		}
-		if (_extendedId && HIGHEST_EXTENDED_ID)
+		if (_extendedId && HIGHEST_AND_LOWEST_PRIORITY_EXTENDED_ID)
 		{
 			// TODO: error
 		}
@@ -53,7 +55,7 @@ public:
 
 	// constructor to enable default construction for arrays and etc.
 	Can2BFrameId()
-	: Can2BFrameId(HIGHEST_STANDARD_ID, HIGHEST_EXTENDED_ID)
+	: Can2BFrameId(HIGHEST_AND_LOWEST_PRIORITY_STANDARD_ID, HIGHEST_AND_LOWEST_PRIORITY_EXTENDED_ID)
 	{}
 
 	bool operator==(const Can2BFrameId& rhs) const

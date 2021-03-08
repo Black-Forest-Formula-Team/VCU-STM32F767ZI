@@ -28,10 +28,11 @@ public:
 		}
 	}
 
+	//TODO: default constructor constructs non-sense object, remove this!
 	// constructor to enable default construction for arrays and etc.
-	CanPayloadValidated()
-	: CanPayloadValidated(CanPayload())
-	{}
+	//CanPayloadValidated()
+	//: CanPayloadValidated(CanPayload())
+	//{}
 
 	CanPayload getPayload() const
 	{
