@@ -18,15 +18,22 @@ ____________________
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Introduction](#introduction)
-- [Installation](#installation)
+- [Getting started](#getting-started)
+  - [CAN Bus Communication](#can-bus)
+-[Inverter Control](#inverter-conctrol)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Introduction
-This project represents the VCU development of the Formula Student Team from Hochschule Offenburg (Germany). 
+This project represents the VCU development of the Formula Student Team from Hochschule Offenburg (Germany). The focus lays on the documentation for new team members which allows them a smooth start to improve our software.
 
 
 ____________________
-## Installation
+## Getting started
 
 
+### CAN Bus Communication
+
+
+# Inverter Control
+Dokumentation for inverterhandling (left and right inverter)
