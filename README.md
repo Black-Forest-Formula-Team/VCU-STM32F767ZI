@@ -38,3 +38,20 @@ ____________________
 
 # Inverter Control
 Dokumentation for inverterhandling (left and right inverter)
+
+## To-Do
+
+### Monitoring and Safety
+Implementation of saftey and monitoring function which triggers e.g. derating.
+
+### HiL-Testing
+Validate and check if the VCU works properly. Create test cases with our HiL-Box if all the functions are correctly implemented and applied.
+
+### Connect the Driver Interface
+The driver interface shows important data e.g. velocity. Implement classes/functions in the VCU to send sensor data to a display via CAN.
+
+### Sensor-Data
+Implementation of classes and functions to handle the sensor data (receiving).
+
+### Inverter Control
+Handle the control of the inverters and e-machine via CAN.
