@@ -22,6 +22,12 @@ ____________________
   - [Getting started](#getting-started)
     - [CAN Bus Communication](#can-bus-communication)
 - [Inverter Control](#inverter-control)
+  - [To-Do](#to-do)
+    - [Monitoring and Safety](#monitoring-and-safety)
+    - [HiL-Testing](#hil-testing)
+    - [Connect the Driver Interface](#connect-the-driver-interface)
+    - [Sensor-Data](#sensor-data)
+    - [Inverter Control](#inverter-control-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
