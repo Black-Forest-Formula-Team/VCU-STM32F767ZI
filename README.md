@@ -17,10 +17,11 @@ ____________________
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Introduction](#introduction)
-- [Getting started](#getting-started)
-  - [CAN Bus Communication](#can-bus)
--[Inverter Control](#inverter-conctrol)
+
+  - [Introduction](#introduction)
+  - [Getting started](#getting-started)
+    - [CAN Bus Communication](#can-bus-communication)
+- [Inverter Control](#inverter-control)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
