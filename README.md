@@ -42,8 +42,13 @@ Our VCU is a STM32-F767ZI board which uses the HAL-Lib for CAN-Communication.
 ____________________
 ## Getting started
 First of all check out the project structure in the [Wiki](https://github.com/Black-Forest-Formula-Team/VCU-STM32F767ZI/wiki/Project-Structure).
-HAL gets initialized in the main.c, the rest of the CAN-communication happens in mymain.ccp.
+1. To work on the project use the [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html). Install the latest version for your system.
+2. Clone this project when you are using GitHub Desktop or download the ZIP-file.
+3. Open the project in the STM32IDE
+4. For the VCU development use the "BFFT_Architecture_STM32_FreeRTOS(in VCU-STM32F767ZI-master)" only as you can see in the [project structure](https://github.com/Black-Forest-Formula-Team/VCU-STM32F767ZI/wiki/Project-Structure) also. Do not touch the others.
 
+
+HAL gets initialized in the main.c, the rest of the CAN-communication happens in mymain.ccp for now. In the future, CAN-communication has to be handled in seperate functions.
 
 
 ### CAN Bus Communication
