@@ -40,39 +40,62 @@ ____________________
 ## Getting started
 First of all check out the project structure in the [Wiki](https://github.com/Black-Forest-Formula-Team/VCU-STM32F767ZI/wiki/Project-Structure).
 HAL gets initialized in the main.c, the rest of the CAN-communication happens in mymain.ccp.
-<p><code>	if (HAL_CAN_Start(&hcan1) != HAL_OK)
 
+
+
+### CAN Bus Communication
+To enable the CAN-communication start CAN and activate notification to receive messeges.
+
+
+<p><code>
+
+	if (HAL_CAN_Start(&hcan1) != HAL_OK)
 	{
-
 		Error_Handler();
-
-
 	}
 
-
-	if (HAL_CAN_ActivateNotification(&hcan1,
-
-
-			CAN_IT_RX_FIFO0_MSG_PENDING | CAN_IT_RX_FIFO1_MSG_PENDING | CAN_IT_TX_MAILBOX_EMPTY) != HAL_OK)
-
-
+	if (HAL_CAN_ActivateNotification(&hcan1,CAN_IT_RX_FIFO0_MSG_PENDING | CAN_IT_RX_FIFO1_MSG_PENDING | CAN_IT_TX_MAILBOX_EMPTY) != HAL_OK)
 	{
-
-
 		Error_Handler();
-
-
 	}
   </code></p>
 
-### CAN Bus Communication
+#### Send a message
+In mymain.ccp you can find a simple example for sending one CAN-Message.
 
+<p><code>
+
+	// prepare header
+	CAN_TxHeaderTypeDef header;
+	// set standard id
+	header.StdId = 42;
+	// use standard id
+	header.IDE = CAN_ID_STD;
+	// this is a data frame, not a remote frame, because we have data to send
+	header.RTR = CAN_RTR_DATA;
+	// data length, we send eight bytes
+	header.DLC = 8;
+	uint8_t data[] = {1, 2, 3, 4, 5, 6, 7, 8};
+	uint32_t txMailbox_used_to_store;
+
+		if (HAL_CAN_AddTxMessage(&hcan1, &header, data, &txMailbox_used_to_store) != HAL_OK)
+		{
+			puts("error");
+			// Error_Handler();
+		}
+  </code></p>
+
+#### Receive a message
+Interrupt routine is implemented but has to be validated and adjusted.
 
 
 # Inverter Control
 Dokumentation for inverterhandling (left and right inverter). [Here](https://github.com/Black-Forest-Formula-Team/VCU-STM32F767ZI/wiki/Inverter-Control) you can find it in detail.
 
 ## To-Do
+
+### Receiving CAN-Messages
+Setting up CAN-Filter and Interrupts for receiving CAN-Messeges from sensors for example.
 
 ### Monitoring and Safety
 Implementation of saftey and monitoring function which triggers e.g. derating.
