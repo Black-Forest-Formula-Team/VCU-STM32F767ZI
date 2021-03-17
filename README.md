@@ -47,8 +47,7 @@ HAL gets initialized in the main.c, the rest of the CAN-communication happens in
 To enable the CAN-communication start CAN and activate notification to receive messeges.
 
 
-```
-	
+```	
 if (HAL_CAN_Start(&hcan1) != HAL_OK)
 {
 	Error_Handler();
@@ -57,15 +56,13 @@ if (HAL_CAN_Start(&hcan1) != HAL_OK)
 if (HAL_CAN_ActivateNotification(&hcan1,CAN_IT_RX_FIFO0_MSG_PENDING | CAN_IT_RX_FIFO1_MSG_PENDING | CAN_IT_TX_MAILBOX_EMPTY) != HAL_OK)
 {
 	Error_Handler();
-}
-	
+}	
 ```
 
 #### Send a message
 In mymain.ccp you can find a simple example for sending one CAN-Message.
 
 ```
-
 // prepare header
 CAN_TxHeaderTypeDef header;
 // set standard id
