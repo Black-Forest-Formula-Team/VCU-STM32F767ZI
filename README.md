@@ -46,13 +46,8 @@ HAL gets initialized in the main.c, the rest of the CAN-communication happens in
 ### CAN Bus Communication
 To enable the CAN-communication start CAN and activate notification to receive messeges.
 
-```
-* sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-* sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-* sudo apt update
-```
 
-<p><code>
+```
 	
 	if (HAL_CAN_Start(&hcan1) != HAL_OK)
 	{
@@ -64,12 +59,12 @@ To enable the CAN-communication start CAN and activate notification to receive m
 		Error_Handler();
 	}
 	
-  </code></p>
+```
 
 #### Send a message
 In mymain.ccp you can find a simple example for sending one CAN-Message.
 
-<p><code>
+```
 
 	// prepare header
 	CAN_TxHeaderTypeDef header;
@@ -89,7 +84,7 @@ In mymain.ccp you can find a simple example for sending one CAN-Message.
 			puts("error");
 			// Error_Handler();
 		}
-  </code></p>
+```
 
 #### Receive a message
 Interrupt routine is implemented but has to be validated and adjusted.
