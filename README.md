@@ -48,7 +48,6 @@ To enable the CAN-communication start CAN and activate notification to receive m
 
 
 <p><code>
-
 	if (HAL_CAN_Start(&hcan1) != HAL_OK)
 	{
 		Error_Handler();
