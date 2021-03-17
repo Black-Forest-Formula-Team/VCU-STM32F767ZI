@@ -49,15 +49,15 @@ To enable the CAN-communication start CAN and activate notification to receive m
 
 ```
 	
-	if (HAL_CAN_Start(&hcan1) != HAL_OK)
-	{
-		Error_Handler();
-	}
+if (HAL_CAN_Start(&hcan1) != HAL_OK)
+{
+	Error_Handler();
+}
 
-	if (HAL_CAN_ActivateNotification(&hcan1,CAN_IT_RX_FIFO0_MSG_PENDING | CAN_IT_RX_FIFO1_MSG_PENDING | CAN_IT_TX_MAILBOX_EMPTY) != HAL_OK)
-	{
-		Error_Handler();
-	}
+if (HAL_CAN_ActivateNotification(&hcan1,CAN_IT_RX_FIFO0_MSG_PENDING | CAN_IT_RX_FIFO1_MSG_PENDING | CAN_IT_TX_MAILBOX_EMPTY) != HAL_OK)
+{
+	Error_Handler();
+}
 	
 ```
 
@@ -66,24 +66,23 @@ In mymain.ccp you can find a simple example for sending one CAN-Message.
 
 ```
 
-	// prepare header
-	CAN_TxHeaderTypeDef header;
-	// set standard id
-	header.StdId = 42;
-	// use standard id
-	header.IDE = CAN_ID_STD;
-	// this is a data frame, not a remote frame, because we have data to send
-	header.RTR = CAN_RTR_DATA;
-	// data length, we send eight bytes
-	header.DLC = 8;
-	uint8_t data[] = {1, 2, 3, 4, 5, 6, 7, 8};
-	uint32_t txMailbox_used_to_store;
+// prepare header
+CAN_TxHeaderTypeDef header;
+// set standard id
+header.StdId = 42;
+// use standard id
+header.IDE = CAN_ID_STD;
+// this is a data frame, not a remote frame, because we have data to send
+header.RTR = CAN_RTR_DATA;
+// data length, we send eight bytes
+header.DLC = 8;
+uint8_t data[] = {1, 2, 3, 4, 5, 6, 7, 8};
+uint32_t txMailbox_used_to_store;
 
-		if (HAL_CAN_AddTxMessage(&hcan1, &header, data, &txMailbox_used_to_store) != HAL_OK)
-		{
-			puts("error");
-			// Error_Handler();
-		}
+if (HAL_CAN_AddTxMessage(&hcan1, &header, data, &txMailbox_used_to_store) != HAL_OK)
+{
+	Error_Handler();
+}
 ```
 
 #### Receive a message
