@@ -33,17 +33,44 @@ ____________________
 
 ## Introduction
 This project represents the VCU development of the Formula Student Team from Hochschule Offenburg (Germany). The focus lays on the documentation for new team members which allows them a smooth start to improve our software.
+Our VCU is a STM32-F767ZI board which uses the HAL-Lib for CAN-Communication.
 
 
 ____________________
 ## Getting started
+First of all check out the project structure in the [Wiki](https://github.com/Black-Forest-Formula-Team/VCU-STM32F767ZI/wiki/Project-Structure).
+HAL gets initialized in the main.c, the rest of the CAN-communication happens in mymain.ccp.
+<p><code>	if (HAL_CAN_Start(&hcan1) != HAL_OK)
 
+	{
+
+		Error_Handler();
+
+
+	}
+
+
+	if (HAL_CAN_ActivateNotification(&hcan1,
+
+
+			CAN_IT_RX_FIFO0_MSG_PENDING | CAN_IT_RX_FIFO1_MSG_PENDING | CAN_IT_TX_MAILBOX_EMPTY) != HAL_OK)
+
+
+	{
+
+
+		Error_Handler();
+
+
+	}
+  </code></p>
 
 ### CAN Bus Communication
 
 
+
 # Inverter Control
-Dokumentation for inverterhandling (left and right inverter)
+Dokumentation for inverterhandling (left and right inverter). [Here](https://github.com/Black-Forest-Formula-Team/VCU-STM32F767ZI/wiki/Inverter-Control) you can find it in detail.
 
 ## To-Do
 
