@@ -1,0 +1,13 @@
+reent.h:153:14:_sbrk_r	48	static,ignoring_inline_asm
+heap_useNewlib.c:224:7:sbrk	16	static
+heap_useNewlib.c:228:7:_sbrk	16	static
+malloc.h:136:13:__malloc_lock	24	static,ignoring_inline_asm
+malloc.h:138:13:__malloc_unlock	24	static,ignoring_inline_asm
+heap_useNewlib.c:265:6:__env_lock	8	static
+heap_useNewlib.c:269:6:__env_unlock	8	static
+heap_useNewlib.c:281:7:__wrap_malloc	24	static
+heap_useNewlib.c:291:7:__wrap__malloc_r	24	static
+heap_useNewlib.c:307:7:pvPortMalloc	24	static
+heap_useNewlib.c:311:6:vPortFree	16	static
+heap_useNewlib.c:316:8:xPortGetFreeHeapSize	48	static
+heap_useNewlib.c:325:6:vPortInitialiseBlocks	4	static

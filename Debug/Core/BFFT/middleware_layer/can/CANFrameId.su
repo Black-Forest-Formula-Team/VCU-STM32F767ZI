@@ -1,0 +1,5 @@
+CANFrameId.cpp:12:1:CANFrameId::CANFrameId(uint32_t, uint32_t, bool)	24	static
+CANFrameId.cpp:23:1:CANFrameId::CANFrameId(uint32_t)	16	static
+CANFrameId.cpp:29:1:CANFrameId::CANFrameId(uint32_t, uint32_t)	24	static
+CANFrameId.cpp:35:6:bool CANFrameId::operator==(const CANFrameId&) const	16	static
+CANFrameId.cpp:43:6:bool CANFrameId::operator!=(const CANFrameId&) const	16	static

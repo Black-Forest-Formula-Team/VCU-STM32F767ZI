@@ -1,0 +1,31 @@
+Ticks.hpp:19:2:Ticks::Ticks(TickType_t)	16	static
+SuspendSchedulerGuard.hpp:16:2:SuspendSchedulerGuard::SuspendSchedulerGuard()	16	static
+SuspendSchedulerGuard.hpp:21:2:SuspendSchedulerGuard::~SuspendSchedulerGuard()	16	static
+SuspendInterruptsGuard.hpp:15:2:SuspendInterruptsGuard::SuspendInterruptsGuard()	16	static
+SuspendInterruptsGuard.hpp:20:2:SuspendInterruptsGuard::~SuspendInterruptsGuard()	16	static
+Mutex.hpp:24:2:Mutex::Mutex(SemaphoreHandle_t)	16	static
+SuspendSchedulerAndInterruptsGuard.hpp:16:7:SuspendSchedulerAndInterruptsGuard::SuspendSchedulerAndInterruptsGuard()	16	static
+SuspendSchedulerAndInterruptsGuard.hpp:16:7:SuspendSchedulerAndInterruptsGuard::~SuspendSchedulerAndInterruptsGuard()	16	static
+Mutex.hpp:29:2:Mutex::~Mutex()	24	static
+Mutex.hpp:41:7:bool Mutex::tryTake(Ticks)	16	static
+Mutex.hpp:47:7:void Mutex::take(Ticks)	24	static
+Mutex.hpp:52:7:bool Mutex::tryGive()	16	static
+Mutex.hpp:58:7:void Mutex::give()	16	static
+MutexAllocatedLocally.hpp:19:2:MutexAllocatedLocally::MutexAllocatedLocally()	24	static
+MutexGuardCertain.hpp:21:2:MutexGuardCertain::MutexGuardCertain(Mutex&, Ticks)	24	static
+MutexGuardCertain.hpp:26:2:MutexGuardCertain::~MutexGuardCertain()	16	static
+sensor_data.hpp:21:11:allow_volatile_assignent<EntityQuantity<InverterLeft, PhysicalQuantity<float> > >::allow_volatile_assignent(PhysicalQuantity<float>) [inherited from EntityQuantity<InverterLeft, PhysicalQuantity<float> >]	16	static
+sensor_data.hpp:196:2:SensorDataAccessGuard::SensorDataAccessGuard(MutexGuardCertain, volatile SensorData&)	24	static
+sensor_data.hpp:189:7:SensorDataAccessGuard::~SensorDataAccessGuard()	16	static
+sensor_data.hpp:214:24:SensorDataAccessGuard SensorDataBuffer::getAccessGuard()	24	static
+MutexAllocatedLocally.hpp:15:7:MutexAllocatedLocally::~MutexAllocatedLocally()	16	static
+sensor_data.hpp:177:2:constexpr SensorData::SensorData()	64	static
+sensor_data.hpp:201:7:SensorDataBuffer::SensorDataBuffer()	16	static
+sensor_data.hpp:201:7:SensorDataBuffer::~SensorDataBuffer()	16	static
+test.cpp:12:6:void test()	168	static
+sensor_data.hpp:47:2:PhysicalQuantity<T>::PhysicalQuantity(T) [with T = float]	16	static
+sensor_data.hpp:76:2:EntityQuantity<E, Q>::EntityQuantity(Q) [with E = WheelFrontLeft; Q = PhysicalQuantity<float>]	16	static
+sensor_data.hpp:76:2:EntityQuantity<E, Q>::EntityQuantity(Q) [with E = InverterLeft; Q = PhysicalQuantity<float>]	16	static
+sensor_data.hpp:76:2:EntityQuantity<E, Q>::EntityQuantity(Q) [with E = InverterRight; Q = PhysicalQuantity<float>]	16	static
+sensor_data.hpp:23:20:volatile This& allow_volatile_assignent<T>::operator=(const This&) volatile [with T = EntityQuantity<InverterLeft, PhysicalQuantity<float> >]	16	static
+sensor_data.hpp:29:11:allow_volatile_assignent<T>::This& allow_volatile_assignent<T>::operator=(volatile This&) [with T = EntityQuantity<InverterLeft, PhysicalQuantity<float> >]	16	static

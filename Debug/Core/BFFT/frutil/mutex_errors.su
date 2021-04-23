@@ -1,0 +1,5 @@
+mutex_errors.cpp:11:6:void errorMutexHandleIsNullptr()	8	static
+mutex_errors.cpp:16:6:void errorCannotDeleteMutex()	8	static
+mutex_errors.cpp:21:6:void errorCannotCreateMutexOnHeap()	8	static
+mutex_errors.cpp:26:6:void errorCannotGiveMutex()	8	static
+mutex_errors.cpp:31:6:void errorCannotTakeMutex()	8	static

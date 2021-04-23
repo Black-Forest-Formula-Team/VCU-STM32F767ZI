@@ -1,0 +1,1 @@
+CANFrame.cpp:15:1:CANFrame::CANFrame(CANFrameId, CANPayload)	32	static

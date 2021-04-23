@@ -88,9 +88,11 @@ void cppmain (void)
 	/*start the Interrupts*/
 	canController1.activateInterrupt();
 
+
+	const uint32_t cu32CAN_RxID = 0u;
 	/*Filter function for the CAN*/
 	CAN_FilterTypeDef s_filter_can;
-	s_filter_can.FilterMaskIdHigh = 0x0000;
+	s_filter_can.FilterIdHigh = cu32CAN_RxID;
 	s_filter_can.FilterIdLow = 0x0000;
 	s_filter_can.FilterMaskIdHigh = 0x0000;
 	s_filter_can.FilterMaskIdLow = 0x0000;
