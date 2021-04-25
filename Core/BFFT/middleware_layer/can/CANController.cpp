@@ -25,7 +25,7 @@ void CANController::receiveFromISR(void)
 
 	CAN_RxHeaderTypeDef canRxHeader;
 
-	/*init with default value*/
+	/*Initialize with default value*/
 	canRxHeader.ExtId = 0;
 	canRxHeader.StdId = 0;
 
@@ -61,7 +61,7 @@ void CANController::receiveFromISR(void)
 //	canRxHeader.Timestamp;
 
 
-	/*ceate the RxFrame*/
+	/*Create the RxFrame*/
 	CANFrame RxFrame = CANFrame(CANFrameId(canRxHeader.StdId,canRxHeader.ExtId,canRxHeader.IDE>>2), RxPayload);
 
 
@@ -77,7 +77,7 @@ void CANController::send(CANFrame frame)
 
 /*mailbox handling*/
 
-	/*check if ther are any empty mailboxes*/
+	/*check if there are any empty mailboxes*/
 	if (HAL_CAN_GetTxMailboxesFreeLevel(&_canHandle))
 	{/*find the empty mailbox*/
 		/*check mailbox 0*/
