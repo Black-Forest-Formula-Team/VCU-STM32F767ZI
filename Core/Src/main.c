@@ -53,7 +53,14 @@ PCD_HandleTypeDef hpcd_USB_OTG_FS;
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityLow,
+  .stack_size = 128 * 4
+};
+/* Definitions for vThreadSystemAl */
+osThreadId_t vThreadSystemAlHandle;
+const osThreadAttr_t vThreadSystemAl_attributes = {
+  .name = "vThreadSystemAl",
+  .priority = (osPriority_t) osPriorityLow1,
   .stack_size = 128 * 4
 };
 /* USER CODE BEGIN PV */
@@ -68,6 +75,7 @@ static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_FS_PCD_Init(void);
 static void MX_CAN1_Init(void);
 void StartDefaultTask(void *argument);
+void vThreadSystemAlive(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -106,8 +114,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  // TODO: Ethernet fails to initialize. This needs further investigation.
-  //MX_ETH_Init();
+//  MX_ETH_Init();
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
   MX_CAN1_Init();
@@ -138,9 +145,16 @@ int main(void)
   /* creation of defaultTask */
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
+  /* creation of vThreadSystemAl */
+  vThreadSystemAlHandle = osThreadNew(vThreadSystemAlive, NULL, &vThreadSystemAl_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
+
+  /* USER CODE BEGIN RTOS_EVENTS */
+  /* add events, ... */
+  /* USER CODE END RTOS_EVENTS */
 
   /* Start scheduler */
   osKernelStart();
@@ -227,7 +241,7 @@ static void MX_CAN1_Init(void)
 
   /* USER CODE END CAN1_Init 1 */
   hcan1.Instance = CAN1;
-  hcan1.Init.Prescaler = 2;
+  hcan1.Init.Prescaler = 4;
   hcan1.Init.Mode = CAN_MODE_NORMAL;
   hcan1.Init.SyncJumpWidth = CAN_SJW_1TQ;
   hcan1.Init.TimeSeg1 = CAN_BS1_12TQ;
@@ -277,6 +291,8 @@ static void MX_ETH_Init(void)
   /* USER CODE END ETH_Init 1 */
   heth.Instance = ETH;
   heth.Init.AutoNegotiation = ETH_AUTONEGOTIATION_ENABLE;
+  heth.Init.Speed = ETH_SPEED_100M;
+  heth.Init.DuplexMode = ETH_MODE_FULLDUPLEX;
   heth.Init.PhyAddress = LAN8742A_PHY_ADDRESS;
   heth.Init.MACAddr[0] =   0x00;
   heth.Init.MACAddr[1] =   0x80;
@@ -459,7 +475,28 @@ void StartDefaultTask(void *argument)
   /* USER CODE END 5 */
 }
 
+/* USER CODE BEGIN Header_vThreadSystemAlive */
 /**
+* @brief Function implementing the vThreadSystemAl thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_vThreadSystemAlive */
+void vThreadSystemAlive(void *argument)
+{
+  /* USER CODE BEGIN vThreadSystemAlive */
+   TickType_t xPreviousWakeTime = xTaskGetTickCount();
+   const uint32_t cu32Delay = 250u;
+  /* Infinite loop */
+   while(1)
+   {
+      HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+      vTaskDelayUntil(&xPreviousWakeTime, cu32Delay/portTICK_RATE_MS);
+   }
+  /* USER CODE END vThreadSystemAlive */
+}
+
+ /**
   * @brief  Period elapsed callback in non blocking mode
   * @note   This function is called  when TIM1 interrupt took place, inside
   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
