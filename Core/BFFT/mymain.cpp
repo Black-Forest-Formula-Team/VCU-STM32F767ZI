@@ -83,6 +83,16 @@ void cppmain (void)
 			/*CAN send*/
 			canController1.send(leftInverterFrame);
 			canController1.send(rightInverterFrame);
+			leftInverterFrame.payload.data.uint8[0]++;
+			leftInverterFrame.payload.data.uint8[1]++;
+			leftInverterFrame.payload.data.uint8[2]++;
+			leftInverterFrame.payload.data.uint8[3]++;
+
+			rightInverterFrame.payload.data.uint8[0]++;
+			rightInverterFrame.payload.data.uint8[1]++;
+			rightInverterFrame.payload.data.uint8[2]++;
+			rightInverterFrame.payload.data.uint8[3]++;
+
 
 		}
 		else if (u8_pin_state == 0 && u8_last_pin_state == 1)

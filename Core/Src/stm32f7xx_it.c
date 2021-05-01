@@ -206,6 +206,12 @@ void CAN1_RX1_IRQHandler(void)
   HAL_CAN_IRQHandler(&hcan1);
   /* USER CODE BEGIN CAN1_RX1_IRQn 1 */
   //CAN1_irq_receive();
+  CAN_RxHeaderTypeDef header;
+    char data[8];
+    if (HAL_CAN_GetRxMessage(&hcan1, 0, &header, data) != HAL_OK)
+    {
+  	  halt();
+    }
   /* USER CODE END CAN1_RX1_IRQn 1 */
 }
 
