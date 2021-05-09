@@ -8,31 +8,22 @@
 #ifndef BFFT_FRUTIL_TICKS_HPP_
 #define BFFT_FRUTIL_TICKS_HPP_
 
+#include "FreeRTOS.h"
 
+
+/**
+ * @fn Ticks
+ * @brief Convert diverse units to ticks
+ */
 class Ticks
 {
 public:
-	static const Ticks Max_Delay;
+	const TickType_t cxTicks;
+	static const Ticks cMaxDelay;
 
-	const TickType_t ticks;
-
-	Ticks(TickType_t ticks): ticks(ticks)
-	{}
-
-	static Ticks fromTicks(TickType_t ticks)
-	{
-		return Ticks(ticks);
-	}
-
-	static Ticks fromMs(unsigned long ms)
-	{
-		// TODO: check for overflow
-		return Ticks(portTICK_RATE_MS * ms);
-	}
+	Ticks(const TickType_t cxTicks);
+	static Ticks fromTicks(const TickType_t cxTicks);
+	static Ticks fromMs(const uint32_t cu32ms);
 };
-
-// initialize static const member
-//const Ticks Ticks::Max_Delay = Ticks(0);
-
 
 #endif /* BFFT_FRUTIL_TICKS_HPP_ */
