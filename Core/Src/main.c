@@ -454,18 +454,6 @@ void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
 	// TODO: used for testing if malloc now works with the FreeRTOS bugfix, remove this when no longer needed.
-	/*
-	char* my_data = (char*)malloc(20);
-	if (my_data == 0)
-	{
-		while (1)
-		{
-
-		}
-	}
-	*/
-
-
   cppmain();
   /* Infinite loop */
   for(;;)

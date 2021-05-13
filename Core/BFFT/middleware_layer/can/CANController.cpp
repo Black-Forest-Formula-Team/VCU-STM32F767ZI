@@ -9,7 +9,7 @@
 */
 
 #include <middleware_layer/can/CANController.hpp>
-
+#include "main.h"
 
 
 CANController::CANController(CANHandle &canHandle) : _canHandle(canHandle)
@@ -133,7 +133,30 @@ void CANController::send(CANFrame frame)
 /** function to start the CAN communication*/
 void CANController::start(void)
 {
-	if(HAL_CAN_Start(&_canHandle)) throw "Can can't start";
+	if(HAL_CAN_Start(&_canHandle))
+	{
+		throw "Can can't start";
+	}
+
+	/*Filter function for the CAN*/
+		CAN_FilterTypeDef s_filter_can;
+		s_filter_can.FilterMaskIdHigh = 0x0000;
+		s_filter_can.FilterIdLow = 0x0000;
+		s_filter_can.FilterMaskIdHigh = 0x0000;
+		s_filter_can.FilterMaskIdLow = 0x0000;
+		s_filter_can.FilterFIFOAssignment = CAN_RX_FIFO0;
+		s_filter_can.FilterBank = 13;
+		s_filter_can.FilterMode = CAN_FILTERMODE_IDMASK;
+		s_filter_can.FilterScale = CAN_FILTERSCALE_16BIT;
+		s_filter_can.FilterActivation = CAN_FILTER_ENABLE;
+
+		HAL_StatusTypeDef ret = HAL_CAN_ConfigFilter(&hcan1, &s_filter_can);
+		if (ret == HAL_ERROR)
+		{
+			throw "RxFilter can't set";
+		}
+
+
 }
 /**function to activate the Interrupt for CAN*/
 void CANController::activateInterrupt (void)

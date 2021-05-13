@@ -13,7 +13,12 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+typedef enum
+{
+	TEST_INIT,
+	TEST_EXECUTE,
+	TEST_ERROR,
+} TEST_STATES;
 void cppmain (void);
 void CAN1_irq_receive();
 

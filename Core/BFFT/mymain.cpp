@@ -1,148 +1,120 @@
 /**
-* @file mymain.cpp
-*
-* @brief
-* @author Manuel Ehrhardt
-* @date 05.04.2020
-*
-*
+  Just a simple Task for FREERTOS.
+
+  @Company
+  	  BFFT
+
+  @File Name
+    mymain.cpp
+
+  @Summary
+    This is an example task that sends CAN Inverter Frames.
+
+  @Description
+    This source file sends Inverter CAN frames when the on board button is pressed
+    Generation Information :
+        Product Revision  :  STM32F7
+        Device            :  STM32F767ZI
+
+    The following file are tested against the following:
+        Compiler          :  GNU Tools for 	STM32 (9-2020-q2 update)
+        MPLAB             :  STM32CUBE IDE 1.6.0
 */
+
+/*
+    (c) 2021 Black Forest Formula Team (BFFT)
+
+
+    THIS SOFTWARE IS SUPPLIED BY BFFT "AS IS". NO WARRANTIES, WHETHER
+    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY
+    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS
+    FOR A PARTICULAR PURPOSE.
+
+    IN NO EVENT WILL BFFT BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
+    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
+    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF BFFT
+    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO
+    THE FULLEST EXTENT ALLOWED BY LAW, BFFT'S TOTAL LIABILITY ON ALL
+    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT
+    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO BFFT FOR THIS
+    SOFTWARE.
+*/
+
 #include <device_layer/inverter/Inverter.hpp>
 #include "mymain.hpp"
 #include "main.h"
 
-/*modul global values*/
+/*module global values*/
 
-CANController canController1 = CANController(hcan1);
-CANFrameId canFrameIdLeftInverter = CANFrameId(0xAA);
-CANFrameId canFrameIdRightInverter = CANFrameId(0xBB);
-
-
-// for testing
-extern "C" void halt()
-{
-	//while (1) {
-		puts("");
-	//}
-}
-
-/**
-* @brief main for using cpp
-* @author Manuel Ehrahrdt
-* @date 05.04.2020
-*
-*/
+volatile static CANController canController1 = CANController(hcan1);
+volatile static CANFrameId canFrameIdLeftInverter = CANFrameId(0xAA);
+volatile static CANFrameId canFrameIdRightInverter = CANFrameId(0xBB);
+volatile static TEST_STATE eMachineState = TEST_INIT;
+volatile static uint8_t u8_pin_state = 0;
+volatile static uint8_t u8_last_pin_state = 0;
+/*******************************************************************************************************************
+Routine Name	: cppmain
+Date Created	: 13-05-2021
+Author			:
+Description 	: initialize CAN
+Arguments		: void
+Returns  		: void
+Called by		: StartDefaultTask in main
+*******************************************************************************************************************/
 void cppmain (void)
 {
-	// MAKE A SIMPLE CAN SEND EXAMPLE
 
-	// Currently uses bitrate of 1 Mbit/s.
-
-	// Be aware that this example has not yet explicitly defined filters for receiving.
-	// So I dont know if something can be received yet.
-	// Make sure to do define filters if you want to receive the frames that you want to receive.
-
-
-	if (HAL_CAN_Start(&hcan1) != HAL_OK)
+	switch(eMachineState)
 	{
-		Error_Handler();
+		case TEST_INIT:
+			/*start the can controller*/
+			canController1.start();
+
+			/*start the Interrupts*/
+			canController1.activateInterrupt();
+
+			InverterLeft inverterLeft = InverterLeft(canController1);
+			InverterRight inverterRight = InverterRight(canController1);
+
+			CANPayload payload;
+			payload.bitLength = 8;
+			payload.data.uint8[0] = 0xAA;
+			payload.isRemoteFrame = false;
+			CANFrame leftInverterFrame = CANFrame(canFrameIdLeftInverter, payload);
+			CANFrame rightInverterFrame = CANFrame(canFrameIdRightInverter, payload);
+
+			eMachineState=TEST_EXECUTE;
+			break;
+
+		case TEST_EXECUTE:
+			/*read user-button*/
+			u8_pin_state = HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin);
+
+			if( u8_pin_state == 1 && u8_last_pin_state == 0)
+			{	/*button is push*/
+				/*toggle led*/
+				HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+				u8_last_pin_state = 1;
+				/*CAN send*/
+				canController1.send(leftInverterFrame);
+				canController1.send(rightInverterFrame);
+
+			}
+			else if (u8_pin_state == 0 && u8_last_pin_state == 1)
+			{
+				u8_last_pin_state = 0;
+			}
+			break;
+
+		case TEST_ERROR:
+		default:
+			while(1)
+			{
+				;
+			}
+			break;
+
 	}
-	if (HAL_CAN_ActivateNotification(&hcan1,
-			CAN_IT_RX_FIFO0_MSG_PENDING | CAN_IT_RX_FIFO1_MSG_PENDING | CAN_IT_TX_MAILBOX_EMPTY) != HAL_OK)
-	{
-		Error_Handler();
-	}
-
-
-	// prepare header
-	CAN_TxHeaderTypeDef header;
-	// set standard id
-	header.StdId = 42;
-	// use standard id
-	header.IDE = CAN_ID_STD;
-	// this is a data frame, not a remote frame, because we have data to send
-	header.RTR = CAN_RTR_DATA;
-	// data length, we send eight bytes
-	header.DLC = 8;
-	uint8_t data[] = {1, 2, 3, 4, 5, 6, 7, 8};
-	uint32_t txMailbox_used_to_store;
-
-
-
-	while (true)
-	{
-		if (HAL_CAN_AddTxMessage(&hcan1, &header, data, &txMailbox_used_to_store) != HAL_OK)
-		{
-			puts("error");
-			// Error_Handler();
-		}
-	}
-
-
-	// END OF SIMPLE EXAMPLE
-
-
-
-	/*start the can controller*/
-	canController1.start();
-	/*start the Interrupts*/
-	canController1.activateInterrupt();
-
-	/*Filter function for the CAN*/
-	CAN_FilterTypeDef s_filter_can;
-	s_filter_can.FilterMaskIdHigh = 0x0000;
-	s_filter_can.FilterIdLow = 0x0000;
-	s_filter_can.FilterMaskIdHigh = 0x0000;
-	s_filter_can.FilterMaskIdLow = 0x0000;
-	s_filter_can.FilterFIFOAssignment = CAN_RX_FIFO0;
-	s_filter_can.FilterBank = 13;
-	s_filter_can.FilterMode = CAN_FILTERMODE_IDMASK;
-	s_filter_can.FilterScale = CAN_FILTERSCALE_16BIT;
-	s_filter_can.FilterActivation = CAN_FILTER_ENABLE;
-
-	HAL_StatusTypeDef ret = HAL_CAN_ConfigFilter(&hcan1, &s_filter_can);
-	if (ret == HAL_ERROR) throw "RxFilter can't set";
-
-	InverterLeft inverterLeft = InverterLeft(canController1);
-	InverterRight inverterRight = InverterRight(canController1);
-
-	CANPayload payload;
-	payload.bitLength = 8;
-	payload.data.uint8[0] = 0xAA;
-	payload.isRemoteFrame = false;
-	CANFrame leftInverterFrame = CANFrame(canFrameIdLeftInverter, payload);
-	CANFrame rightInverterFrame = CANFrame(canFrameIdRightInverter, payload);
-
-
-
-
-
-	uint8_t u8_pin_state = 0;
-	uint8_t u8_last_pin_state = 0;
-
-
-	while(1)
-	{	/*read user-button*/
-		u8_pin_state = HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin);
-
-		if( u8_pin_state == 1 && u8_last_pin_state == 0)
-		{	/*button is push*/
-			/*toggle led*/
-			HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-			u8_last_pin_state = 1;
-			/*CAN send*/
-			canController1.send(leftInverterFrame);
-			canController1.send(rightInverterFrame);
-
-		}
-		else if (u8_pin_state == 0 && u8_last_pin_state == 1)
-		{
-			u8_last_pin_state = 0;
-		}
-	}
-
-
-
 
 
 }
@@ -156,7 +128,6 @@ void cppmain (void)
 */
 void CAN1_irq_receive()
 {
-	halt();
 	canController1.receiveFromISR();
 	canController1.receiveFromISR();
 
