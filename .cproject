@@ -236,21 +236,6 @@
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1067451155;com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1067451155.;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.533526242;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1401108770">
-			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1067451155;com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1067451155.;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1082346328;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.382213492">
-			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.release.2142253422;com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.release.2142253422.;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.881379313;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.682985841">
-			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.release.2142253422;com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.release.2142253422.;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.152698247;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.2133905870">
-			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-	</storageModule>
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="Debug">
 			<resource resourceType="PROJECT" workspacePath="/BFFT_Architecture_STM32"/>
@@ -259,4 +244,6 @@
 			<resource resourceType="PROJECT" workspacePath="/BFFT_Architecture_STM32"/>
 		</configuration>
 	</storageModule>
+	<storageModule moduleId="scannerConfiguration"/>
+	<storageModule moduleId="org.eclipse.cdt.core.pathentry"/>
 </cproject>
