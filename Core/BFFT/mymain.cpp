@@ -32,11 +32,11 @@ extern "C" void halt()
 * @date 05.04.2020
 *
 */
-void cppmain (void)
+extern "C" void cppmain(void)
 {
 	// MAKE A SIMPLE CAN SEND EXAMPLE
 
-	// Currently uses bitrate of 1 Mbit/s.
+	// Currently uses bitrate of 0.5 Mbit/s.
 
 	// Be aware that this example has not yet explicitly defined filters for receiving.
 	// So I dont know if something can be received yet.
