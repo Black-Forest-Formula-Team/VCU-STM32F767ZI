@@ -187,8 +187,8 @@ void CAN1_RX0_IRQHandler(void)
   /* USER CODE BEGIN CAN1_RX0_IRQn 1 */
   //CAN1_irq_receive();
   CAN_RxHeaderTypeDef header;
-  char data[8];
-  if (HAL_CAN_GetRxMessage(&hcan1, 0, &header, data) != HAL_OK)
+  uint8_t u8Data[8];
+  if (HAL_CAN_GetRxMessage(&hcan1, 0, &header, u8Data) != HAL_OK)
   {
 	  halt();
   }
