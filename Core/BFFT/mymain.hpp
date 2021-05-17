@@ -10,6 +10,9 @@
 #ifndef INC_MYMAIN_HPP_
 #define INC_MYMAIN_HPP_
 
+#include ".\device_layer\inverter\InverterRight.hpp"
+#include ".\device_layer\inverter\InverterLeft.hpp"
+
 #ifdef __cplusplus
 extern "C" {
 #endif

@@ -12,8 +12,13 @@
 
 
 
-CANFrame::CANFrame(CANFrameId id, CANPayload payload) : id(id), payload(payload)
+CANFrame::CANFrame(CANFrameId id, CANPayload payload) :
+   id(id),
+   payload(payload)
 {
-	if (!payload.isValid()) throw "Invalid CAN frame payload.";
+	if (!payload.isValid())
+	{
+	   throw "Invalid CAN frame payload.";
+	}
 }
 

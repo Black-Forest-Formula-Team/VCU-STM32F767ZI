@@ -7,7 +7,6 @@
 *
 *
 */
-#include <device_layer/inverter/Inverter.hpp>
 #include "mymain.hpp"
 #include "main.h"
 
