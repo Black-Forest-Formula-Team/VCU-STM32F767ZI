@@ -1,0 +1,5 @@
+Ticks.cpp:22:1:Ticks::Ticks(TickType_t)	16	static
+Ticks.cpp:32:7:static Ticks Ticks::fromTicks(TickType_t)	24	static
+Ticks.cpp:43:7:static Ticks Ticks::fromMs(uint32_t)	24	static
+Ticks.cpp:46:1:void __static_initialization_and_destruction_0(int, int)	16	static
+Ticks.cpp:46:1:cpp)	8	static

@@ -1,0 +1,9 @@
+main.c:88:5:main	8	static
+main.c:171:6:SystemClock_Config	232	static
+main.c:225:13:MX_CAN1_Init	48	static
+main.c:274:13:MX_USART3_UART_Init	8	static
+main.c:309:13:MX_GPIO_Init	56	static
+main.c:412:6:StartDefaultTask	24	static
+main.c:435:6:vThreadSystemAlive	24	static
+main.c:457:6:HAL_TIM_PeriodElapsedCallback	16	static
+main.c:474:6:Error_Handler	8	static

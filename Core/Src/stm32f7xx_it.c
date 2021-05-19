@@ -23,7 +23,6 @@
 #include "stm32f7xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "mymain.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -167,7 +166,7 @@ void DebugMon_Handler(void)
 void CAN1_TX_IRQHandler(void)
 {
   /* USER CODE BEGIN CAN1_TX_IRQn 0 */
-	halt();
+
   /* USER CODE END CAN1_TX_IRQn 0 */
   HAL_CAN_IRQHandler(&hcan1);
   /* USER CODE BEGIN CAN1_TX_IRQn 1 */
@@ -181,7 +180,7 @@ void CAN1_TX_IRQHandler(void)
 void CAN1_RX0_IRQHandler(void)
 {
   /* USER CODE BEGIN CAN1_RX0_IRQn 0 */
-	halt();
+
   /* USER CODE END CAN1_RX0_IRQn 0 */
   HAL_CAN_IRQHandler(&hcan1);
   /* USER CODE BEGIN CAN1_RX0_IRQn 1 */
@@ -190,7 +189,7 @@ void CAN1_RX0_IRQHandler(void)
   char data[8];
   if (HAL_CAN_GetRxMessage(&hcan1, 0, &header, data) != HAL_OK)
   {
-	  halt();
+
   }
   /* USER CODE END CAN1_RX0_IRQn 1 */
 }
@@ -201,7 +200,7 @@ void CAN1_RX0_IRQHandler(void)
 void CAN1_RX1_IRQHandler(void)
 {
   /* USER CODE BEGIN CAN1_RX1_IRQn 0 */
-	halt();
+
   /* USER CODE END CAN1_RX1_IRQn 0 */
   HAL_CAN_IRQHandler(&hcan1);
   /* USER CODE BEGIN CAN1_RX1_IRQn 1 */
@@ -215,7 +214,7 @@ void CAN1_RX1_IRQHandler(void)
 void CAN1_SCE_IRQHandler(void)
 {
   /* USER CODE BEGIN CAN1_SCE_IRQn 0 */
-	halt();
+
   /* USER CODE END CAN1_SCE_IRQn 0 */
   HAL_CAN_IRQHandler(&hcan1);
   /* USER CODE BEGIN CAN1_SCE_IRQn 1 */

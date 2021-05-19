@@ -1,0 +1,59 @@
+Can2AFrameId.hpp:30:2:Can2AFrameId::Can2AFrameId(uint16_t)	24	static
+Can2AFrameId.hpp:42:2:Can2AFrameId::Can2AFrameId()	16	static
+Can2AFrameId.hpp:46:7:bool Can2AFrameId::operator==(const Can2AFrameId&) const	16	static
+Can2BFrameId.hpp:42:2:Can2BFrameId::Can2BFrameId(uint16_t, uint32_t)	24	static
+Can2BFrameId.hpp:57:2:Can2BFrameId::Can2BFrameId()	16	static
+Can2BFrameId.hpp:61:7:bool Can2BFrameId::operator==(const Can2BFrameId&) const	16	static
+CanPayload.hpp:31:27:CanPayloadValidationCode CanPayload::checkValidity() const	48	static
+CanPayloadValidated.hpp:22:2:CanPayloadValidated::CanPayloadValidated(const CanPayload&)	24	static
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+ICanSender.hpp:16:7:constexpr ICanSender<CanFrame<Can2AFrameId> >::ICanSender()	16	static
+ICanSender.hpp:19:10:ICanSender<FRAME>::~ICanSender() [with FRAME = CanFrame<Can2AFrameId>]	16	static
+ICanSender.hpp:19:10:ICanSender<FRAME>::~ICanSender() [with FRAME = CanFrame<Can2AFrameId>]	16	static
+ICanReceiver.hpp:16:7:constexpr ICanReceiver<CanFrame<Can2AFrameId> >::ICanReceiver()	16	static
+ICanReceiver.hpp:19:10:ICanReceiver<FRAME>::~ICanReceiver() [with FRAME = CanFrame<Can2AFrameId>]	16	static
+ICanReceiver.hpp:19:10:ICanReceiver<FRAME>::~ICanReceiver() [with FRAME = CanFrame<Can2AFrameId>]	16	static
+ICanSender.hpp:16:7:constexpr ICanSender<CanFrame<Can2BFrameId> >::ICanSender()	16	static
+ICanSender.hpp:19:10:ICanSender<FRAME>::~ICanSender() [with FRAME = CanFrame<Can2BFrameId>]	16	static
+ICanSender.hpp:19:10:ICanSender<FRAME>::~ICanSender() [with FRAME = CanFrame<Can2BFrameId>]	16	static
+ICanReceiver.hpp:16:7:constexpr ICanReceiver<CanFrame<Can2BFrameId> >::ICanReceiver()	16	static
+ICanReceiver.hpp:19:10:ICanReceiver<FRAME>::~ICanReceiver() [with FRAME = CanFrame<Can2BFrameId>]	16	static
+ICanReceiver.hpp:19:10:ICanReceiver<FRAME>::~ICanReceiver() [with FRAME = CanFrame<Can2BFrameId>]	16	static
+Can2A2BControllerSTM32F767ZI.hpp:27:2:Can2A2BControllerSTM32F767ZI::Can2A2BControllerSTM32F767ZI(CAN_HandleTypeDef)	16	static
+Can2A2BControllerSTM32F767ZI.hpp:30:7:virtual void Can2A2BControllerSTM32F767ZI::receive(const Can2AFrame&)	16	static
+Can2A2BControllerSTM32F767ZI.hpp:35:7:virtual void Can2A2BControllerSTM32F767ZI::receive(const Can2BFrame&)	16	static
+Can2A2BControllerSTM32F767ZI.hpp:40:7:virtual void Can2A2BControllerSTM32F767ZI::send(const Can2AFrame&)	16	static
+Can2A2BControllerSTM32F767ZI.hpp:45:7:virtual void Can2A2BControllerSTM32F767ZI::send(const Can2BFrame&)	16	static
+ICanSubscriberRegistry.hpp:19:7:constexpr ICanSubscriberRegistry<Can2AFrameId, CanFrame<Can2AFrameId>, ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> > >::ICanSubscriberRegistry()	16	static
+array:94:12:std::array<Can2AFrameId, 32>::array()	24	static
+CanSubscriberRegistry.hpp:25:7:CanSubscriberRegistry<ICanSubscriberRegistry<Can2AFrameId, CanFrame<Can2AFrameId>, ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> > >, Can2AFrameId, CanFrame<Can2AFrameId>, ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> >, 32>::CanSubscriberRegistry()	16	static
+ICanSubscriberRegistry.hpp:19:7:constexpr ICanSubscriberRegistry<Can2BFrameId, CanFrame<Can2BFrameId>, ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> > >::ICanSubscriberRegistry()	16	static
+array:94:12:std::array<Can2BFrameId, 32>::array()	24	static
+CanSubscriberRegistry.hpp:25:7:CanSubscriberRegistry<ICanSubscriberRegistry<Can2BFrameId, CanFrame<Can2BFrameId>, ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> > >, Can2BFrameId, CanFrame<Can2BFrameId>, ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> >, 32>::CanSubscriberRegistry()	16	static
+test.cpp:11:13:void test()	920	static
+CanFrame.hpp:25:2:CanFrame<FRAME_ID>::CanFrame(const FRAME_ID&, const CanPayloadValidated&) [with FRAME_ID = Can2AFrameId]	24	static
+CanFrame.hpp:25:2:CanFrame<FRAME_ID>::CanFrame(const FRAME_ID&, const CanPayloadValidated&) [with FRAME_ID = Can2BFrameId]	24	static
+CanSubscriberRegistry.hpp:33:7:void CanSubscriberRegistry<I_CAN_SUBSCRIBER_REGISTRY, FRAME_ID, FRAME, SUBSCRIBER, MAX_NUM_SUBSCRIBERS>::addSubscriber(const FRAME_ID&, SUBSCRIBER&) [with I_CAN_SUBSCRIBER_REGISTRY = ICanSubscriberRegistry<Can2AFrameId, CanFrame<Can2AFrameId>, ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> > >; FRAME_ID = Can2AFrameId; FRAME = CanFrame<Can2AFrameId>; SUBSCRIBER = ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> >; unsigned int MAX_NUM_SUBSCRIBERS = 32]	32	static
+CanSubscriberRegistry.hpp:73:7:void CanSubscriberRegistry<I_CAN_SUBSCRIBER_REGISTRY, FRAME_ID, FRAME, SUBSCRIBER, MAX_NUM_SUBSCRIBERS>::removeSubscriber(const FRAME_ID&, const SUBSCRIBER&) [with I_CAN_SUBSCRIBER_REGISTRY = ICanSubscriberRegistry<Can2AFrameId, CanFrame<Can2AFrameId>, ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> > >; FRAME_ID = Can2AFrameId; FRAME = CanFrame<Can2AFrameId>; SUBSCRIBER = ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> >; unsigned int MAX_NUM_SUBSCRIBERS = 32]	32	static
+CanSubscriberRegistry.hpp:55:7:void CanSubscriberRegistry<I_CAN_SUBSCRIBER_REGISTRY, FRAME_ID, FRAME, SUBSCRIBER, MAX_NUM_SUBSCRIBERS>::removeSubscriber(const SUBSCRIBER&) [with I_CAN_SUBSCRIBER_REGISTRY = ICanSubscriberRegistry<Can2AFrameId, CanFrame<Can2AFrameId>, ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> > >; FRAME_ID = Can2AFrameId; FRAME = CanFrame<Can2AFrameId>; SUBSCRIBER = ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> >; unsigned int MAX_NUM_SUBSCRIBERS = 32]	24	static
+array:185:7:std::array<_Tp, _Nm>::value_type& std::array<_Tp, _Nm>::operator[](std::array<_Tp, _Nm>::size_type) [with _Tp = ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> >*; unsigned int _Nm = 32]	16	static
+array:185:7:std::array<_Tp, _Nm>::value_type& std::array<_Tp, _Nm>::operator[](std::array<_Tp, _Nm>::size_type) [with _Tp = Can2AFrameId; unsigned int _Nm = 32]	16	static
+array:55:7:static constexpr _Tp& std::__array_traits<_Tp, _Nm>::_S_ref(const _Tp (&)[_Nm], std::size_t) [with _Tp = ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> >*; unsigned int _Nm = 32]	16	static
+array:55:7:static constexpr _Tp& std::__array_traits<_Tp, _Nm>::_S_ref(const _Tp (&)[_Nm], std::size_t) [with _Tp = Can2AFrameId; unsigned int _Nm = 32]	16	static
+Can2A2BControllerSTM32F767ZI.hpp:17:7:Can2A2BControllerSTM32F767ZI::~Can2A2BControllerSTM32F767ZI()	16	static
+Can2A2BControllerSTM32F767ZI.hpp:17:7:virtual Can2A2BControllerSTM32F767ZI::~Can2A2BControllerSTM32F767ZI()	16	static
+CanSubscriberRegistry.hpp:33:7:void CanSubscriberRegistry<I_CAN_SUBSCRIBER_REGISTRY, FRAME_ID, FRAME, SUBSCRIBER, MAX_NUM_SUBSCRIBERS>::addSubscriber(const FRAME_ID&, SUBSCRIBER&) [with I_CAN_SUBSCRIBER_REGISTRY = ICanSubscriberRegistry<Can2BFrameId, CanFrame<Can2BFrameId>, ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> > >; FRAME_ID = Can2BFrameId; FRAME = CanFrame<Can2BFrameId>; SUBSCRIBER = ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> >; unsigned int MAX_NUM_SUBSCRIBERS = 32]	32	static
+CanSubscriberRegistry.hpp:55:7:void CanSubscriberRegistry<I_CAN_SUBSCRIBER_REGISTRY, FRAME_ID, FRAME, SUBSCRIBER, MAX_NUM_SUBSCRIBERS>::removeSubscriber(const SUBSCRIBER&) [with I_CAN_SUBSCRIBER_REGISTRY = ICanSubscriberRegistry<Can2BFrameId, CanFrame<Can2BFrameId>, ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> > >; FRAME_ID = Can2BFrameId; FRAME = CanFrame<Can2BFrameId>; SUBSCRIBER = ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> >; unsigned int MAX_NUM_SUBSCRIBERS = 32]	24	static
+CanSubscriberRegistry.hpp:73:7:void CanSubscriberRegistry<I_CAN_SUBSCRIBER_REGISTRY, FRAME_ID, FRAME, SUBSCRIBER, MAX_NUM_SUBSCRIBERS>::removeSubscriber(const FRAME_ID&, const SUBSCRIBER&) [with I_CAN_SUBSCRIBER_REGISTRY = ICanSubscriberRegistry<Can2BFrameId, CanFrame<Can2BFrameId>, ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> > >; FRAME_ID = Can2BFrameId; FRAME = CanFrame<Can2BFrameId>; SUBSCRIBER = ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> >; unsigned int MAX_NUM_SUBSCRIBERS = 32]	32	static
+CanSubscriberRegistry.hpp:91:7:void CanSubscriberRegistry<I_CAN_SUBSCRIBER_REGISTRY, FRAME_ID, FRAME, SUBSCRIBER, MAX_NUM_SUBSCRIBERS>::publish(const FRAME&) const [with I_CAN_SUBSCRIBER_REGISTRY = ICanSubscriberRegistry<Can2BFrameId, CanFrame<Can2BFrameId>, ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> > >; FRAME_ID = Can2BFrameId; FRAME = CanFrame<Can2BFrameId>; SUBSCRIBER = ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> >; unsigned int MAX_NUM_SUBSCRIBERS = 32]	32	static
+CanSubscriberRegistry.hpp:91:7:void CanSubscriberRegistry<I_CAN_SUBSCRIBER_REGISTRY, FRAME_ID, FRAME, SUBSCRIBER, MAX_NUM_SUBSCRIBERS>::publish(const FRAME&) const [with I_CAN_SUBSCRIBER_REGISTRY = ICanSubscriberRegistry<Can2AFrameId, CanFrame<Can2AFrameId>, ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> > >; FRAME_ID = Can2AFrameId; FRAME = CanFrame<Can2AFrameId>; SUBSCRIBER = ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> >; unsigned int MAX_NUM_SUBSCRIBERS = 32]	24	static
+array:185:7:std::array<_Tp, _Nm>::value_type& std::array<_Tp, _Nm>::operator[](std::array<_Tp, _Nm>::size_type) [with _Tp = ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> >*; unsigned int _Nm = 32]	16	static
+array:185:7:std::array<_Tp, _Nm>::value_type& std::array<_Tp, _Nm>::operator[](std::array<_Tp, _Nm>::size_type) [with _Tp = Can2BFrameId; unsigned int _Nm = 32]	16	static
+CanFrame.hpp:36:11:FRAME_ID CanFrame<FRAME_ID>::getId() const [with FRAME_ID = Can2BFrameId]	16	static
+array:189:7:constexpr const value_type& std::array<_Tp, _Nm>::operator[](std::array<_Tp, _Nm>::size_type) const [with _Tp = ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> >*; unsigned int _Nm = 32]	16	static
+array:189:7:constexpr const value_type& std::array<_Tp, _Nm>::operator[](std::array<_Tp, _Nm>::size_type) const [with _Tp = Can2BFrameId; unsigned int _Nm = 32]	16	static
+CanFrame.hpp:36:11:FRAME_ID CanFrame<FRAME_ID>::getId() const [with FRAME_ID = Can2AFrameId]	16	static
+array:189:7:constexpr const value_type& std::array<_Tp, _Nm>::operator[](std::array<_Tp, _Nm>::size_type) const [with _Tp = ICanSubscriber<Can2AFrameId, CanFrame<Can2AFrameId> >*; unsigned int _Nm = 32]	16	static
+array:189:7:constexpr const value_type& std::array<_Tp, _Nm>::operator[](std::array<_Tp, _Nm>::size_type) const [with _Tp = Can2AFrameId; unsigned int _Nm = 32]	16	static
+array:55:7:static constexpr _Tp& std::__array_traits<_Tp, _Nm>::_S_ref(const _Tp (&)[_Nm], std::size_t) [with _Tp = ICanSubscriber<Can2BFrameId, CanFrame<Can2BFrameId> >*; unsigned int _Nm = 32]	16	static
+array:55:7:static constexpr _Tp& std::__array_traits<_Tp, _Nm>::_S_ref(const _Tp (&)[_Nm], std::size_t) [with _Tp = Can2BFrameId; unsigned int _Nm = 32]	16	static
