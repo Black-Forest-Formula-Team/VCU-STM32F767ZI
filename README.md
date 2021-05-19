@@ -90,10 +90,10 @@ if (HAL_CAN_AddTxMessage(&hcan1, &header, data, &txMailbox_used_to_store) != HAL
 }
 ```
 
-#### Receive a message
+### Receive a message
 Interrupt routine is implemented and tested.
 
-### test load on Hil Box 
+### Test load on Hil Box 
  TX/RX load check on Hil-Box .
 
 
