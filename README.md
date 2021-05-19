@@ -91,16 +91,19 @@ if (HAL_CAN_AddTxMessage(&hcan1, &header, data, &txMailbox_used_to_store) != HAL
 ```
 
 #### Receive a message
-Interrupt routine is implemented but has to be validated and adjusted.
+Interrupt routine is implemented and tested.
+
+### test load on Hil Box 
+ TX/RX load check on Hil-Box .
 
 
 # Inverter Control
 Dokumentation for inverterhandling (left and right inverter). [Here](https://github.com/Black-Forest-Formula-Team/VCU-STM32F767ZI/wiki/Inverter-Control) you can find it in detail.
 
 ## To-Do
+### Inverter Control
+Handle the control of the inverters and e-machine via CAN.
 
-### Receiving CAN-Messages
-Setting up CAN-Filter and Interrupts for receiving CAN-Messeges from sensors for example.
 
 ### Monitoring and Safety
 Implementation of saftey and monitoring function which triggers e.g. derating.
@@ -114,5 +117,3 @@ The driver interface shows important data e.g. velocity. Implement classes/funct
 ### Sensor-Data
 Implementation of classes and functions to handle the sensor data (receiving).
 
-### Inverter Control
-Handle the control of the inverters and e-machine via CAN.
