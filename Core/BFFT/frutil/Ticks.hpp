@@ -18,12 +18,12 @@
 class Ticks
 {
 public:
-	const TickType_t cxTicks;
-	static const Ticks cMaxDelay;
+   const TickType_t cxTicks;
+   static const Ticks cMaxDelay;
 
-	Ticks(const TickType_t cxTicks);
-	static Ticks fromTicks(const TickType_t cxTicks);
-	static Ticks fromMs(const uint32_t cu32ms);
+   Ticks(const TickType_t cxTicks);
+   static Ticks fromTicks(const TickType_t cxTicks);
+   static Ticks fromMs(const uint32_t cu32ms);
 };
 
 #endif /* BFFT_FRUTIL_TICKS_HPP_ */

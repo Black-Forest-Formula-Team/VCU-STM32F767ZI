@@ -1,6 +1,6 @@
 Core/BFFT/device_layer/inverter/Inverter.o: \
  ../Core/BFFT/device_layer/inverter/Inverter.cpp \
- E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/device_layer/inverter/Inverter.hpp \
+ ../Core/BFFT/device_layer/inverter/Inverter.hpp \
  E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANController.hpp \
  E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANControllerBase.hpp \
  E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/ICANController.hpp \
@@ -41,7 +41,7 @@ Core/BFFT/device_layer/inverter/Inverter.o: \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
 
-E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/device_layer/inverter/Inverter.hpp:
+../Core/BFFT/device_layer/inverter/Inverter.hpp:
 
 E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANController.hpp:
 

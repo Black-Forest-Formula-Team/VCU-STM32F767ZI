@@ -1,0 +1,5 @@
+ICANSubscriber.hpp:15:7:constexpr ICANSubscriber::ICANSubscriber()	16	static
+ICANSubscriber.hpp:18:10:ICANSubscriber::~ICANSubscriber()	16	static
+ICANSubscriber.hpp:18:10:virtual ICANSubscriber::~ICANSubscriber()	16	static
+Inverter.cpp:21:1:Inverter::Inverter(CANController&, CANFrameId)	32	static
+Inverter.cpp:34:6:void Inverter::sendTargetRevolutionSpeed(float)	88	static

@@ -1,5 +1,7 @@
-Core/BFFT/test.o: ../Core/BFFT/test.cpp \
- E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/device_layer/inverter/Inverter.hpp \
+Core/BFFT/device_layer/inverter/InverterRight.o: \
+ ../Core/BFFT/device_layer/inverter/InverterRight.cpp \
+ ../Core/BFFT/device_layer/inverter/InverterRight.hpp \
+ ../Core/BFFT/device_layer/inverter/Inverter.hpp \
  E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANController.hpp \
  E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANControllerBase.hpp \
  E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/ICANController.hpp \
@@ -38,11 +40,11 @@ Core/BFFT/test.o: ../Core/BFFT/test.cpp \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
- ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/test.hpp \
- ../Core/Inc/main.h
+ ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
 
-E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/device_layer/inverter/Inverter.hpp:
+../Core/BFFT/device_layer/inverter/InverterRight.hpp:
+
+../Core/BFFT/device_layer/inverter/Inverter.hpp:
 
 E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANController.hpp:
 
@@ -121,7 +123,3 @@ E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BF
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:
 
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
-
-E:/SoftwareWorkingFolder/BlackForestFormulaTeam/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/test.hpp:
-
-../Core/Inc/main.h:
