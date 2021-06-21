@@ -19,7 +19,6 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
-#include <testCAN.hpp>
 #include "main.h"
 #include "stm32f7xx_it.h"
 /* Private includes ----------------------------------------------------------*/
