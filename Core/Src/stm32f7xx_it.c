@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
+#include <testCAN.hpp>
 #include "main.h"
 #include "stm32f7xx_it.h"
 /* Private includes ----------------------------------------------------------*/
@@ -166,7 +167,7 @@ void DebugMon_Handler(void)
 void CAN1_TX_IRQHandler(void)
 {
   /* USER CODE BEGIN CAN1_TX_IRQn 0 */
-
+	halt();
   /* USER CODE END CAN1_TX_IRQn 0 */
   HAL_CAN_IRQHandler(&hcan1);
   /* USER CODE BEGIN CAN1_TX_IRQn 1 */
@@ -180,18 +181,17 @@ void CAN1_TX_IRQHandler(void)
 void CAN1_RX0_IRQHandler(void)
 {
   /* USER CODE BEGIN CAN1_RX0_IRQn 0 */
-
+	halt();
   /* USER CODE END CAN1_RX0_IRQn 0 */
   HAL_CAN_IRQHandler(&hcan1);
   /* USER CODE BEGIN CAN1_RX0_IRQn 1 */
   //CAN1_irq_receive();
   CAN_RxHeaderTypeDef header;
-  uint8_t u8Data[8];
-  if (HAL_CAN_GetRxMessage(&hcan1, 0, &header, u8Data) != HAL_OK)
+  char data[8];
+  HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+  if (HAL_CAN_GetRxMessage(&hcan1, 0, &header, data) != HAL_OK)
   {
-     asm("NOP");
-     asm("NOP");
-     asm("NOP");
+	  halt();
   }
   /* USER CODE END CAN1_RX0_IRQn 1 */
 }
@@ -202,7 +202,7 @@ void CAN1_RX0_IRQHandler(void)
 void CAN1_RX1_IRQHandler(void)
 {
   /* USER CODE BEGIN CAN1_RX1_IRQn 0 */
-
+	halt();
   /* USER CODE END CAN1_RX1_IRQn 0 */
   HAL_CAN_IRQHandler(&hcan1);
   /* USER CODE BEGIN CAN1_RX1_IRQn 1 */
@@ -216,7 +216,7 @@ void CAN1_RX1_IRQHandler(void)
 void CAN1_SCE_IRQHandler(void)
 {
   /* USER CODE BEGIN CAN1_SCE_IRQn 0 */
-
+	halt();
   /* USER CODE END CAN1_SCE_IRQn 0 */
   HAL_CAN_IRQHandler(&hcan1);
   /* USER CODE BEGIN CAN1_SCE_IRQn 1 */

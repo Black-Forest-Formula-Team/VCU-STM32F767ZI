@@ -22,11 +22,10 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "main.h"
-#include "cmsis_os.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "testCAN.hpp"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,30 +47,11 @@
 /* USER CODE BEGIN Variables */
 
 /* USER CODE END Variables */
-/* Definitions for defaultTask */
-osThreadId_t defaultTaskHandle;
-const osThreadAttr_t defaultTask_attributes = {
-  .name = "defaultTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
-};
-/* Definitions for vThreadSystemAl */
-osThreadId_t vThreadSystemAlHandle;
-const osThreadAttr_t vThreadSystemAl_attributes = {
-  .name = "vThreadSystemAl",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow1,
-};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-   extern void cppmain(void);
+   
 /* USER CODE END FunctionPrototypes */
-
-void StartDefaultTask(void *argument);
-void vThreadSystemAlive(void *argument);
-
-void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /* Hook prototypes */
 void vApplicationIdleHook(void);
@@ -129,113 +109,6 @@ __weak void vApplicationMallocFailedHook(void)
    provide information on how the remaining heap might be fragmented). */
 }
 /* USER CODE END 5 */
-
-/**
-  * @brief  FreeRTOS initialization
-  * @param  None
-  * @retval None
-  */
-void MX_FREERTOS_Init(void) {
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
-  /* USER CODE END RTOS_MUTEX */
-
-  /* USER CODE BEGIN RTOS_SEMAPHORES */
-  /* add semaphores, ... */
-  /* USER CODE END RTOS_SEMAPHORES */
-
-  /* USER CODE BEGIN RTOS_TIMERS */
-  /* start timers, add new ones, ... */
-  /* USER CODE END RTOS_TIMERS */
-
-  /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
-  /* USER CODE END RTOS_QUEUES */
-
-  /* Create the thread(s) */
-  /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
-
-  /* creation of vThreadSystemAl */
-  vThreadSystemAlHandle = osThreadNew(vThreadSystemAlive, NULL, &vThreadSystemAl_attributes);
-
-  /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
-  /* USER CODE END RTOS_THREADS */
-
-  /* USER CODE BEGIN RTOS_EVENTS */
-  /* add events, ... */
-  /* USER CODE END RTOS_EVENTS */
-
-}
-
-/* USER CODE BEGIN Header_StartDefaultTask */
-/**
-  * @brief  Initial thread, is calling the cppmain where the work is done.
-  *         Should have low priority, otherwise preemption will not work and
-  *         other threads wont execute.
-  * @param  argument: Not used
-  * @retval None
-  */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void *argument)
-{
-  /* USER CODE BEGIN StartDefaultTask */
-   // TODO: used for testing if malloc now works with the FreeRTOS bugfix, remove this when no longer needed.
-   /*
-   char* my_data = (char*)malloc(20);
-   if (my_data == 0)
-   {
-      while (1)
-      {
-
-      }
-   }
-   */
-
-
-
-  const uint32_t cu32Delay = 250u;
-  /* Infinite loop */
-  while(1)
-  {
-     vtestCAN();
-     HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
-     vTaskDelay((TickType_t)(cu32Delay/portTICK_RATE_MS));
-  }
-
-  vTaskDelete(NULL);
-  /* USER CODE END StartDefaultTask */
-}
-
-/* USER CODE BEGIN Header_vThreadSystemAlive */
-/**
-* @brief Toggles a LED with a delay of cu32Delay [ms].
-*        Used for debugging.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_vThreadSystemAlive */
-void vThreadSystemAlive(void *argument)
-{
-  /* USER CODE BEGIN vThreadSystemAlive */
-  /* Infinite loop */
-   TickType_t xPreviousWakeTime = xTaskGetTickCount();
-   const uint32_t cu32Delay = 250u;
-   /* Infinite loop */
-   while (1)
-   {
-      HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-      vTaskDelayUntil(&xPreviousWakeTime, (TickType_t)(cu32Delay / portTICK_RATE_MS));
-   }
-
-   vTaskDelete(NULL);
-  /* USER CODE END vThreadSystemAlive */
-}
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */

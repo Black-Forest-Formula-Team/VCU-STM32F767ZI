@@ -1,3 +1,4 @@
+Ticks.hpp:19:2:Ticks::Ticks(TickType_t)	16	static
 SuspendSchedulerGuard.hpp:16:2:SuspendSchedulerGuard::SuspendSchedulerGuard()	16	static
 SuspendSchedulerGuard.hpp:21:2:SuspendSchedulerGuard::~SuspendSchedulerGuard()	16	static
 SuspendInterruptsGuard.hpp:15:2:SuspendInterruptsGuard::SuspendInterruptsGuard()	16	static

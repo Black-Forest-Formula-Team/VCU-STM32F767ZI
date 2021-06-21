@@ -213,7 +213,7 @@ public:
 
 	SensorDataAccessGuard getAccessGuard()
 	{
-		return SensorDataAccessGuard(MutexGuardCertain(_mutex, Ticks::cMaxDelay), _sensorData);
+		return SensorDataAccessGuard(MutexGuardCertain(_mutex, Ticks::Max_Delay), _sensorData);
 	}
 };
 

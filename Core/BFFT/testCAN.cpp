@@ -1,21 +1,16 @@
 /**
   Just a simple Task for testing CAN communication.
-
   @Company
   	  BFFT
-
   @File Name
     testCAN.cpp
-
   @Summary
     This is an example task that sends CAN Inverter Frames.
-
   @Description
     This source file sends Inverter CAN frames when the on board button is pressed
     Generation Information :
         Product Revision  :  STM32F7
         Device            :  STM32F767ZI
-
     The following file are tested against the following:
         Compiler          :  GNU Tools for 	STM32 (9-2020-q2 update)
         MPLAB             :  STM32CUBE IDE 1.6.0
@@ -23,13 +18,10 @@
 
 /*
     (c) 2021 Black Forest Formula Team (BFFT)
-
-
     THIS SOFTWARE IS SUPPLIED BY BFFT "AS IS". NO WARRANTIES, WHETHER
     EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY
     IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS
     FOR A PARTICULAR PURPOSE.
-
     IN NO EVENT WILL BFFT BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
     INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
     WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF BFFT
@@ -41,8 +33,6 @@
 */
 
 #include <device_layer/inverter/Inverter.hpp>
-#include "device_layer/inverter/InverterLeft.hpp"
-#include "device_layer/inverter/InverterRight.hpp"
 #include <testCAN.hpp>
 #include "main.h"
 /******************************************************************************************************************/
@@ -56,8 +46,8 @@
 CANController canController1       = CANController(hcan1);
 InverterLeft  inverterLeft         = InverterLeft(canController1);
 InverterRight inverterRight        = InverterRight(canController1);
-CANFrameId canFrameIdLeftInverter  = CANFrameId(inverterLeft.cu32CANID);
-CANFrameId canFrameIdRightInverter = CANFrameId(inverterRight.cu32CANID);
+CANFrameId canFrameIdLeftInverter  = CANFrameId(0xAA);
+CANFrameId canFrameIdRightInverter = CANFrameId(0xbb);
 CANPayload payload;
 CANFrame leftInverterFrame  = CANFrame(canFrameIdLeftInverter, payload);
 CANFrame rightInverterFrame = CANFrame(canFrameIdRightInverter, payload);
@@ -73,7 +63,6 @@ Description 	: Test CAN
 Arguments		: void
 Returns  		: void
 Called by		: StartDefaultTask in main
-
 Notes:-
 1) Error state is not yet defined or implemented.s
 *******************************************************************************************************************/
@@ -91,13 +80,13 @@ void vtestCAN (void)
 			payload.bitLength     = 64u;
 			payload.isRemoteFrame = false;
 			payload.data.uint8[0] = 0x11u ;
-         payload.data.uint8[1] = 0x22u;
-         payload.data.uint8[2] = 0x33u;
-         payload.data.uint8[3] = 0x44u;
-         payload.data.uint8[4] = 0x55u;
-         payload.data.uint8[5] = 0x66u;
-         payload.data.uint8[6] = 0x77u;
-         payload.data.uint8[7] = 0x88u;
+		    payload.data.uint8[1] = 0x22u;
+		    payload.data.uint8[2] = 0x33u;
+		    payload.data.uint8[3] = 0x44u;
+		    payload.data.uint8[4] = 0x55u;
+		    payload.data.uint8[5] = 0x66u;
+		    payload.data.uint8[6] = 0x77u;
+		    payload.data.uint8[7] = 0x88u;
 
 			eMachineState=TEST_IF_BUTTON_PRESSED;
 			break;
@@ -168,3 +157,18 @@ void CAN1_irq_receive()
 	canController1.receiveFromISR();
 }
 
+/*******************************************************************************************************************
+Routine Name	: CAN1_irq_receive
+Date Created	: 19-05-2021
+Author			: Manuel Erhadt
+Description 	: CAN recieve callback function.
+Arguments		: void
+Returns  		: void
+Called by		: Not used yet (checked call graph)
+*******************************************************************************************************************/
+extern "C" void halt()
+{
+	//while (1) {
+		puts("");
+	//}
+}
