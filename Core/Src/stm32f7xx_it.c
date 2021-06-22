@@ -23,12 +23,17 @@
 #include "stm32f7xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "mymain.hpp"
+#include <testCAN.hpp>
+#include <stdio.h>
+#include <stdint.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
-
+void halt(void)
+{
+	puts("....");
+}
 /* USER CODE END TD */
 
 /* Private define ------------------------------------------------------------*/
@@ -187,8 +192,8 @@ void CAN1_RX0_IRQHandler(void)
   /* USER CODE BEGIN CAN1_RX0_IRQn 1 */
   //CAN1_irq_receive();
   CAN_RxHeaderTypeDef header;
-  uint8_t u8Data[8];
-  if (HAL_CAN_GetRxMessage(&hcan1, 0, &header, u8Data) != HAL_OK)
+  uint8_t data[8];
+  if (HAL_CAN_GetRxMessage(&hcan1, 0, &header, data) != HAL_OK)
   {
 	  halt();
   }

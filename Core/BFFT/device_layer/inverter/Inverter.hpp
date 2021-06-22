@@ -17,11 +17,6 @@
 #include <middleware_layer/can/CANController.hpp>
 #include <middleware_layer/can/CANFrameId.hpp>
 
-
-/**
- * @fn Inverter
- * @brief Provides basic functionality for both inverters (right and left)
- */
 class Inverter : ICANSubscriber
 {
 private:
@@ -29,10 +24,52 @@ private:
 	CANFrameId _setTargetRevolutionSpeedId;
 
 public:
-	Inverter(CANController& rCanController, CANFrameId setTargetRevolutionSpeedId);
+	Inverter(CANController &canController, CANFrameId setTargetRevolutionSpeedId) :
+		_canController(canController),
+		_setTargetRevolutionSpeedId(setTargetRevolutionSpeedId)
+	{
+		_canController.addSubscriber(_setTargetRevolutionSpeedId, *this);
+	}
 	virtual ~Inverter() = default;
 
-	void sendTargetRevolutionSpeed(const float cfRevolutionSpeed);
+	void sendTargetRevolutionSpeed(float revolutionSpeed)
+	{
+		CANPayload payload = CANPayload();
+		memcpy(&payload.data.uint32[0], &revolutionSpeed, sizeof(payload.data.uint32[0]));
+		payload.bitLength = 32;
+		payload.isRemoteFrame = false;
+		CANFrame frame = CANFrame(_setTargetRevolutionSpeedId, payload);
+		_canController.send(frame);
+
+	}
+};
+
+
+class InverterLeft : Inverter
+{
+public:
+	InverterLeft(CANController &canController) : Inverter(canController, CANFrameId(0xAA))
+	{
+	}
+
+	void receive(CANFrame frame) override
+	{
+		puts("InverterLeft: frame received");
+	}
+};
+
+
+class InverterRight : Inverter
+{
+public:
+	InverterRight(CANController &canController) : Inverter(canController, CANFrameId(0xBB))
+	{
+	}
+
+	void receive(CANFrame frame) override
+	{
+		puts("InverterRight: frame received");
+	}
 };
 
 #endif /*__cplusplus*/

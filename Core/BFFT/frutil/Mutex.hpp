@@ -40,13 +40,13 @@ public:
 
 	bool tryTake(Ticks ticksToWait)
 	{
-		if (xSemaphoreTake(_mutexHandle, ticksToWait.cxTicks) == pdTRUE) {return true;}
+		if (xSemaphoreTake(_mutexHandle, ticksToWait.ticks) == pdTRUE) {return true;}
 		else {return false;}
 	}
 
 	void take(Ticks ticksToWait)
 	{
-		if (!tryTake(ticksToWait.cxTicks)) {errorCannotTakeMutex();}
+		if (!tryTake(ticksToWait.ticks)) {errorCannotTakeMutex();}
 	}
 
 	bool tryGive()
