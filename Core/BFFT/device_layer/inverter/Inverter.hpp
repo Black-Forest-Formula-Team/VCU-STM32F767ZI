@@ -20,7 +20,6 @@
 class Inverter : ICANSubscriber
 {
 private:
-
 	CANController& _canController;
 	CANFrameId _setTargetRevolutionSpeedId;
 

@@ -86,8 +86,8 @@ all: main-build
 main-build: BFFT_Architecture_STM32_FreeRTOS.elf secondary-outputs
 
 # Tool invocations
-BFFT_Architecture_STM32_FreeRTOS.elf: $(OBJS) $(USER_OBJS) E:\SoftwareWorkingFolder\VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c\VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "BFFT_Architecture_STM32_FreeRTOS.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"E:\SoftwareWorkingFolder\VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c\VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BFFT_Architecture_STM32_FreeRTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+BFFT_Architecture_STM32_FreeRTOS.elf: $(OBJS) $(USER_OBJS) E:\software\VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c\VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "BFFT_Architecture_STM32_FreeRTOS.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"E:\software\VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c\VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BFFT_Architecture_STM32_FreeRTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

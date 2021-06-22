@@ -1,6 +1,5 @@
-Core/Src/main.o: ../Core/Src/main.c \
- E:/SoftwareWorkingFolder/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/testCAN.hpp \
- ../Core/Inc/main.h ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
+Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
+ ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../Core/Inc/stm32f7xx_hal_conf.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h \
@@ -45,9 +44,8 @@ Core/Src/main.o: ../Core/Src/main.c \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
-
-E:/SoftwareWorkingFolder/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/testCAN.hpp:
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/testCAN.hpp
 
 ../Core/Inc/main.h:
 
@@ -142,3 +140,5 @@ E:/SoftwareWorkingFolder/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0
 ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+
+E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/testCAN.hpp:

@@ -18,13 +18,13 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include <testCAN.hpp>
 #include "main.h"
 #include "cmsis_os.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdlib.h"
+#include <testCAN.hpp>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -107,6 +107,9 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+//  MX_ETH_Init();
+//  MX_USART3_UART_Init();
+//  MX_USB_OTG_FS_PCD_Init();
   MX_CAN1_Init();
   /* USER CODE BEGIN 2 */
 
@@ -446,11 +449,10 @@ void StartDefaultTask(void *argument)
 	}
 	*/
 
-
-
   /* Infinite loop */
   for(;;)
   {
+
 	vtestCAN();
     osDelay(1);
   }
@@ -488,7 +490,7 @@ void Error_Handler(void)
   /* User can add his own implementation to report the HAL error return state */
 	while(1)
 	{
-		//puts("error");
+		puts("error");
 	}
   /* USER CODE END Error_Handler_Debug */
 }

@@ -1,16 +1,21 @@
 /**
   Just a simple Task for testing CAN communication.
+
   @Company
      BFFT
+
   @File Name
     testCAN.cpp
+
   @Summary
     This is an example task that sends CAN Inverter Frames.
+
   @Description
     This source file sends Inverter CAN frames when the on board button is pressed
     Generation Information :
         Product Revision  :  STM32F7
         Device            :  STM32F767ZI
+
     The following file are tested against the following:
         Compiler          :  GNU Tools for   STM32 (9-2020-q2 update)
         MPLAB             :  STM32CUBE IDE 1.6.0
@@ -18,10 +23,13 @@
 
 /*
     (c) 2021 Black Forest Formula Team (BFFT)
+
+
     THIS SOFTWARE IS SUPPLIED BY BFFT "AS IS". NO WARRANTIES, WHETHER
     EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY
     IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS
     FOR A PARTICULAR PURPOSE.
+
     IN NO EVENT WILL BFFT BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
     INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
     WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF BFFT
@@ -32,8 +40,8 @@
     SOFTWARE.
 */
 
-#ifndef TESTCAN_HPP
-#define TESTCAN_HPP
+#ifndef TESTCAN_H
+#define TESTCAN_H
 
 typedef enum
 {
