@@ -1,8 +1,0 @@
-ICANSubscriber.hpp:18:10:ICANSubscriber::~ICANSubscriber()	16	static
-ICANSubscriber.hpp:18:10:virtual ICANSubscriber::~ICANSubscriber()	16	static
-Inverter.hpp:33:10:Inverter::~Inverter()	16	static
-Inverter.hpp:33:10:virtual Inverter::~Inverter()	16	static
-InverterRight.cpp:17:1:InverterRight::InverterRight(CANController&)	48	static
-InverterRight.cpp:28:6:virtual void InverterRight::receive(CANFrame)	16	static
-InverterRight.hpp:28:4:InverterRight::~InverterRight()	16	static
-InverterRight.hpp:28:4:virtual InverterRight::~InverterRight()	16	static

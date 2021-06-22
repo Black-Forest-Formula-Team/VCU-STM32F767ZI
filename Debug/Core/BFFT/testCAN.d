@@ -1,13 +1,13 @@
 Core/BFFT/testCAN.o: ../Core/BFFT/testCAN.cpp \
- E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/device_layer/inverter/Inverter.hpp \
- E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/CANController.hpp \
- E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/CANControllerBase.hpp \
- E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/ICANController.hpp \
- E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/CANFrame.hpp \
- E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/CANFrameId.hpp \
- E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/CANPayload.hpp \
- E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/ICANSubscriber.hpp \
- E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/CANHandle.hpp \
+ E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/device_layer/inverter/Inverter.hpp \
+ E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANController.hpp \
+ E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANControllerBase.hpp \
+ E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/ICANController.hpp \
+ E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANFrame.hpp \
+ E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANFrameId.hpp \
+ E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANPayload.hpp \
+ E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/ICANSubscriber.hpp \
+ E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANHandle.hpp \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../Core/Inc/stm32f7xx_hal_conf.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h \
@@ -43,26 +43,26 @@ Core/BFFT/testCAN.o: ../Core/BFFT/testCAN.cpp \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h \
- E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/testCAN.hpp \
+ E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/testCAN.hpp \
  ../Core/Inc/main.h
 
-E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/device_layer/inverter/Inverter.hpp:
+E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/device_layer/inverter/Inverter.hpp:
 
-E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/CANController.hpp:
+E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANController.hpp:
 
-E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/CANControllerBase.hpp:
+E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANControllerBase.hpp:
 
-E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/ICANController.hpp:
+E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/ICANController.hpp:
 
-E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/CANFrame.hpp:
+E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANFrame.hpp:
 
-E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/CANFrameId.hpp:
+E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANFrameId.hpp:
 
-E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/CANPayload.hpp:
+E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANPayload.hpp:
 
-E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/ICANSubscriber.hpp:
+E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/ICANSubscriber.hpp:
 
-E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/middleware_layer/can/CANHandle.hpp:
+E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/middleware_layer/can/CANHandle.hpp:
 
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 
@@ -134,6 +134,6 @@ E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F7
 
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h:
 
-E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/testCAN.hpp:
+E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/testCAN.hpp:
 
 ../Core/Inc/main.h:

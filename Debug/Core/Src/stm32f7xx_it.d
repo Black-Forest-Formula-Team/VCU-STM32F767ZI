@@ -35,7 +35,7 @@ Core/Src/stm32f7xx_it.o: ../Core/Src/stm32f7xx_it.c ../Core/Inc/main.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h \
  ../Core/Inc/stm32f7xx_it.h \
- E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/testCAN.hpp
+ E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/testCAN.hpp
 
 ../Core/Inc/main.h:
 
@@ -111,4 +111,4 @@ Core/Src/stm32f7xx_it.o: ../Core/Src/stm32f7xx_it.c ../Core/Inc/main.h \
 
 ../Core/Inc/stm32f7xx_it.h:
 
-E:/software/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/VCU-STM32F767ZI-ae3c02b518f05f899225808f2aeb64a55390be0c/Core/BFFT/testCAN.hpp:
+E:/software/BFFT/branches/Refactoring_VCU_Core_BFFT_myMain/Core/BFFT/testCAN.hpp:
