@@ -1,0 +1,32 @@
+!SESSION 2021-08-28 15:04:22.925 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  D:\BFFT\BFFT\VCU-STM32F767ZI\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\BFFT\BFFT\VCU-STM32F767ZI\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-08-28 15:04:53.556
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-08-28 15:04:53.632
+!MESSAGE Log4j initialized with config file D:\BFFT\BFFT\VCU-STM32F767ZI\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-08-28 15:05:01.995
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2021-08-28 15:06:08.478 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  D:\BFFT\BFFT\VCU-STM32F767ZI\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\BFFT\BFFT\VCU-STM32F767ZI\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-08-28 15:06:21.444
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-08-28 15:06:21.521
+!MESSAGE Log4j initialized with config file D:\BFFT\BFFT\VCU-STM32F767ZI\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-08-28 15:06:30.223
+!MESSAGE Started RMI Server, listening on port 41337
